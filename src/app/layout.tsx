@@ -28,8 +28,8 @@ const varela = Varela_Round({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: seo.title,
-    template: `%s | ${site.nameHe}`,
+    default: site.nameEn,
+    template: `%s | ${site.nameEn}`,
   },
   description: seo.description,
   applicationName: site.nameEn,
