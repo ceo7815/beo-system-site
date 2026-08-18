@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { seo } from "@/lib/seo";
 import { site } from "@/lib/site";
 
+export const dynamic = "force-static";
+
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: `${site.nameEn} | ${site.nameHe}`,

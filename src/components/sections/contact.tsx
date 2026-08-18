@@ -7,7 +7,7 @@ import { useI18n } from "@/components/providers/i18n-provider";
 export function Contact() {
   const { lang, t } = useI18n();
   const [sent, setSent] = useState(false);
-  const [need, setNeed] = useState(t.needs[0]);
+  const [need, setNeed] = useState<string>(t.needs[0]);
   const [open, setOpen] = useState(false);
   const box = useRef<HTMLDivElement>(null);
 

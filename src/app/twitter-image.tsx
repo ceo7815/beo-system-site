@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 export const alt = site.nameEn;
 export const size = ogSize;
 export const contentType = "image/png";
-export const runtime = "nodejs";
+export const dynamic = "force-static";
 
 export default function TwitterImage() {
   return shareCard();
