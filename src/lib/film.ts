@@ -11,8 +11,8 @@ export type Shot = {
 
 export const shots: Shot[] = [
   {
-    file: "/film/01.png",
-    fileMobile: "/film/m/01.png",
+    file: "/film/01.webp",
+    fileMobile: "/film/m/01.webp",
     move: "enter",
     kicker: { he: "", en: "" },
     title: {
@@ -25,8 +25,8 @@ export const shots: Shot[] = [
     },
   },
   {
-    file: "/film/06.png",
-    fileMobile: "/film/m/06.png",
+    file: "/film/06.webp",
+    fileMobile: "/film/m/06.webp",
     move: "iris",
     kicker: { he: "01", en: "01" },
     title: { he: "אפליקציות\nואתרים", en: "Apps\nand websites" },
@@ -36,8 +36,8 @@ export const shots: Shot[] = [
     },
   },
   {
-    file: "/film/03.png",
-    fileMobile: "/film/m/03.png",
+    file: "/film/03.webp",
+    fileMobile: "/film/m/03.webp",
     move: "iris",
     kicker: { he: "02", en: "02" },
     title: { he: "סוכני AI", en: "AI agents" },
@@ -47,8 +47,8 @@ export const shots: Shot[] = [
     },
   },
   {
-    file: "/film/05.png",
-    fileMobile: "/film/m/05.png",
+    file: "/film/05.webp",
+    fileMobile: "/film/m/05.webp",
     move: "through",
     kicker: { he: "03", en: "03" },
     title: { he: "פיתוח בהתאמה אישית", en: "Custom development" },
@@ -58,8 +58,8 @@ export const shots: Shot[] = [
     },
   },
   {
-    file: "/film/04.png",
-    fileMobile: "/film/m/04.png",
+    file: "/film/04.webp",
+    fileMobile: "/film/m/04.webp",
     move: "enter",
     kicker: { he: "04", en: "04" },
     title: { he: "צ׳אטבוטים ואוטומציות", en: "Chatbots and automation" },
@@ -69,8 +69,8 @@ export const shots: Shot[] = [
     },
   },
   {
-    file: "/film/02.png",
-    fileMobile: "/film/m/02.png",
+    file: "/film/02.webp",
+    fileMobile: "/film/m/02.webp",
     move: "through",
     kicker: { he: "05", en: "05" },
     title: { he: "בינה מלאכותית", en: "Artificial intelligence" },
@@ -80,8 +80,8 @@ export const shots: Shot[] = [
     },
   },
   {
-    file: "/film/08.png",
-    fileMobile: "/film/m/08.png",
+    file: "/film/08.webp",
+    fileMobile: "/film/m/08.webp",
     move: "through",
     kicker: { he: "סיום", en: "Close" },
     title: { he: "יש פרוייקט ?\nבוא נדבר כמה דקות.", en: "Got a project?\nLet’s talk a few minutes." },

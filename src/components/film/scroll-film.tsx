@@ -128,7 +128,7 @@ export function ScrollFilm() {
             index={i}
             src={shot.file}
             srcMobile={shot.fileMobile}
-            still={shot.file.replace("/film/", "").replace(".png", "")}
+            still={shot.file.replace("/film/", "").replace(".webp", "")}
             label={shot.kicker[lang]}
           />
         ))}
@@ -152,11 +152,11 @@ export function ScrollFilm() {
       </div>
 
       {shots.map((shot, i) => {
-        const isApps = shot.file === "/film/06.png";
-        const isClose = shot.file === "/film/08.png";
-        const isOpen = shot.file === "/film/01.png";
-        const isCentered = shot.file === "/film/05.png" || shot.file === "/film/04.png";
-        const copyTop = shot.file === "/film/05.png";
+        const isApps = shot.file === "/film/06.webp";
+        const isClose = shot.file === "/film/08.webp";
+        const isOpen = shot.file === "/film/01.webp";
+        const isCentered = shot.file === "/film/05.webp" || shot.file === "/film/04.webp";
+        const copyTop = shot.file === "/film/05.webp";
         return (
         <div
           key={shot.file}

@@ -26,18 +26,20 @@ export function ShotMedia({
   return (
     <div data-shot={index} className="absolute inset-0 overflow-hidden bg-[#0c0814]">
       <picture>
-        <source media="(max-width: 767px)" srcSet={`${srcMobile}?v=12`} />
+        <source media="(max-width: 767px)" srcSet={srcMobile} type="image/webp" />
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           ref={imgRef}
           data-shot-img={index}
-          src={`${src}?v=12`}
+          src={src}
           alt=""
           draggable={false}
+          decoding="async"
+          fetchPriority={index === 0 ? "high" : "low"}
           onError={(e) => {
             const el = e.currentTarget;
             if (srcMobile && el.currentSrc.includes("/film/m/")) {
-              el.src = `${src}?v=12`;
+              el.src = src;
               return;
             }
             setFailed(true);

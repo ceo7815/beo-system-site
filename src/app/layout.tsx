@@ -102,6 +102,10 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="he" dir="rtl" className={`${rubik.variable} ${varela.variable} h-full antialiased`}>
+      <head>
+        <link rel="preload" as="image" href="/film/01.webp" type="image/webp" media="(min-width: 768px)" />
+        <link rel="preload" as="image" href="/film/m/01.webp" type="image/webp" media="(max-width: 767.98px)" />
+      </head>
       <body className="min-h-full bg-bg font-sans text-fg">
         <JsonLd data={organizationGraph()} />
         <I18nProvider>

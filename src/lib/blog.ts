@@ -22,7 +22,7 @@ export const posts: BlogPost[] = [
     n: "01",
     date: "2026-08-18",
     minutes: 6,
-    image: "/blog/agents.png",
+    image: "/blog/agents.webp",
     imageAlt: {
       he: "סוכן בינה מלאכותית שעובד מול מערכות הארגון",
       en: "An AI agent working against organization systems",
@@ -67,7 +67,7 @@ export const posts: BlogPost[] = [
     n: "02",
     date: "2026-08-18",
     minutes: 5,
-    image: "/blog/custom.png",
+    image: "/blog/custom.webp",
     imageAlt: {
       he: "פיתוח מערכת ניהול בהתאמה לעסק",
       en: "Custom business system development",
@@ -110,7 +110,7 @@ export const posts: BlogPost[] = [
     n: "03",
     date: "2026-08-18",
     minutes: 5,
-    image: "/blog/products.png",
+    image: "/blog/products.webp",
     imageAlt: {
       he: "אפליקציה ואתר ברמת פרודקשן",
       en: "A production-grade app and website",
