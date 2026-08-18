@@ -6,13 +6,13 @@ export const ogSize = { width: 1200, height: 630 } as const;
 
 export const seo = {
   title: "ביו סיסטם | פיתוח תוכנה ובינה מלאכותית",
-  titleEn: "Beo System | Software development and AI",
+  titleEn: "Beo System — Software. AI.",
   description:
     "ביו סיסטם — חברת פיתוח תוכנה עם AI. סוכני בינה מלאכותית, צ׳אטבוטים, אוטומציות, מערכות CRM, אפליקציות ואתרים.",
   descriptionEn:
     "Beo System — a software company with AI. Agents, chatbots, automations, CRM systems, apps and websites.",
   ogDescription:
-    "סוכני AI, מערכות בהתאמה, אפליקציות ואתרים. נבנים בשביל העסק, לא בשביל מצגת.",
+    "מבינים תוכנה. מבינים AI. סוכנים, מערכות ואפליקציות שנבנים לעסק שלך.",
   keywords: [
     "ביו סיסטם",
     "Beo System",
@@ -173,7 +173,7 @@ export function organizationGraph() {
           areaServed: ["IL", "AE"],
           availableLanguage: ["Hebrew", "English"],
         },
-        sameAs: [site.social.instagram, site.social.tiktok, site.social.facebook],
+        sameAs: [site.social.instagram, site.social.tiktok, site.social.facebook].filter(Boolean),
         areaServed: [
           { "@type": "Country", name: "Israel" },
           { "@type": "Country", name: "United Arab Emirates" },

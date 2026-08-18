@@ -127,7 +127,7 @@ export const legal = {
         },
         {
           type: "p",
-          text: "הצהרה זו ניתנת לפי חוק שוויון זכויות לאנשים עם מוגבלות, התשנ\"ח-1998, ובפרט לפי תקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות), התשע\"ג-2013. האתר beosystem.co.il הוא שירות ציבורי דיגיטלי של Beo System, ולכן חלה עליו חובת הנגשה שוויונית, ברמת נוחות, איכות ובטיחות זהה ככל הניתן.",
+          text: "הצהרה זו ניתנת לפי חוק שוויון זכויות לאנשים עם מוגבלות, התשנ\"ח-1998, ובפרט לפי תקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות), התשע\"ג-2013. האתר beosystem.com הוא שירות ציבורי דיגיטלי של Beo System, ולכן חלה עליו חובת הנגשה שוויונית, ברמת נוחות, איכות ובטיחות זהה ככל הניתן.",
         },
         {
           type: "h2",
@@ -222,7 +222,7 @@ export const legal = {
         },
         {
           type: "p",
-          text: "This statement is given under the Equal Rights for Persons with Disabilities Law, 5758-1998, and in particular the Equal Rights for Persons with Disabilities (Service Accessibility Adjustments) Regulations, 5773-2013. beosystem.co.il is a digital public-facing service of Beo System, and must be usable on an equal basis, at a comparable level of comfort, quality, and safety.",
+          text: "This statement is given under the Equal Rights for Persons with Disabilities Law, 5758-1998, and in particular the Equal Rights for Persons with Disabilities (Service Accessibility Adjustments) Regulations, 5773-2013. beosystem.com is a digital public-facing service of Beo System, and must be usable on an equal basis, at a comparable level of comfort, quality, and safety.",
         },
         {
           type: "h2",

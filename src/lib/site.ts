@@ -1,14 +1,14 @@
 export const site = {
   nameHe: "ביו סיסטם",
   nameEn: "Beo System",
-  url: "https://beosystem.co.il",
+  url: "https://beosystem.com",
   email: "ceo@beosystem.co.il",
   phone: "+33 6 32 51 90 53",
   phonePrefix: "+33",
   phoneLocal: "6 32 51 90 53",
   phoneTel: "+33632519053",
   whatsapp: "33632519053",
-  domain: "beosystem.co.il",
+  domain: "beosystem.com",
   places: [
     {
       he: "ישראל: החרושת 10, קריית ביאליק",
@@ -22,9 +22,9 @@ export const site = {
     },
   ],
   social: {
-    instagram: "https://www.instagram.com/beosystem",
-    tiktok: "https://www.tiktok.com/@beosystem",
-    facebook: "https://www.facebook.com/beosystem",
+    instagram: "",
+    tiktok: "",
+    facebook: "",
   },
 } as const;
 

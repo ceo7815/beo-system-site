@@ -88,19 +88,30 @@ export function SocialRail() {
         <span className="hud-btn-scan" aria-hidden />
         <AccessMark />
       </button>
-      {links.map(({ href, label, Icon, kind }) => (
-        <a
-          key={label}
-          href={href}
-          target="_blank"
-          rel="noreferrer"
-          className={`social-node social-node--${kind}`}
-          aria-label={label}
-        >
-          <span className="hud-btn-scan" aria-hidden />
-          <Icon />
-        </a>
-      ))}
+      {links.map(({ href, label, Icon, kind }) =>
+        href ? (
+          <a
+            key={label}
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+            className={`social-node social-node--${kind}`}
+            aria-label={label}
+          >
+            <span className="hud-btn-scan" aria-hidden />
+            <Icon />
+          </a>
+        ) : (
+          <span
+            key={label}
+            className={`social-node social-node--${kind}`}
+            aria-hidden
+          >
+            <span className="hud-btn-scan" aria-hidden />
+            <Icon />
+          </span>
+        ),
+      )}
     </nav>
   );
 }
