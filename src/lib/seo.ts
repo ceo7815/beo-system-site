@@ -1,24 +1,29 @@
 import type { Metadata } from "next";
-import { absUrl, site } from "@/lib/site";
+import { absUrl, services, site } from "@/lib/site";
 import { posts, type BlogPost } from "@/lib/blog";
 
 export const ogSize = { width: 1200, height: 630 } as const;
 
 export const seo = {
-  title: "ביו סיסטם | פיתוח תוכנה ובינה מלאכותית",
-  titleEn: "Beo System — Software. AI.",
+  title: "ביו סיסטם | פיתוח אפליקציות, אתרים ובינה מלאכותית",
+  titleEn: "Beo System — Apps, websites, and AI",
   description:
-    "ביו סיסטם — חברת פיתוח תוכנה עם AI. סוכני בינה מלאכותית, צ׳אטבוטים, אוטומציות, מערכות CRM, אפליקציות ואתרים.",
+    "ביו סיסטם (ביוסיסטם, Beo System) — חברת פיתוח אפליקציות, אתרים ומערכות AI. סוכני בינה מלאכותית, צ׳אטבוטים, אוטומציות ו-CRM לישראל ולדובאי.",
   descriptionEn:
-    "Beo System — a software company with AI. Agents, chatbots, automations, CRM systems, apps and websites.",
+    "Beo System (ביו סיסטם) — apps, websites, and AI systems. Agents, chatbots, automations, and CRM for Israel and Dubai.",
   ogDescription:
-    "מבינים תוכנה. מבינים AI. סוכנים, מערכות ואפליקציות שנבנים לעסק שלך.",
+    "ביו סיסטם — פיתוח אפליקציות, אתרים ובינה מלאכותית. מבינים תוכנה. מבינים AI.",
   keywords: [
     "ביו סיסטם",
+    "ביוסיסטם",
     "Beo System",
     "Beo Systems",
+    "beosystem",
+    "פיתוח אפליקציות",
+    "פיתוח אתרים",
     "פיתוח תוכנה",
     "בינה מלאכותית",
+    "חברת פיתוח תוכנה",
     "סוכני AI",
     "צ׳אטבוטים",
     "אוטומציות",
@@ -56,7 +61,7 @@ export function pageMetadata({
   socialDescription?: string;
 }): Metadata {
   const url = absUrl(path);
-  const ogTitle = path === "/" ? seo.titleEn : `${title} | ${site.nameEn}`;
+  const ogTitle = path === "/" ? seo.title : `${title} | ${site.nameEn}`;
   const share = socialDescription ?? description;
   const twitterImage =
     Array.isArray(images) && images.length
@@ -131,7 +136,7 @@ export function organizationGraph() {
         "@id": orgId,
         name: site.nameEn,
         legalName: site.nameEn,
-        alternateName: [site.nameHe, "Beo Systems", "Beo-system"],
+        alternateName: [site.nameHe, "ביוסיסטם", "Beo Systems", "Beo-system", "beosystem"],
         url: site.url,
         logo: {
           "@type": "ImageObject",
@@ -179,14 +184,36 @@ export function organizationGraph() {
           { "@type": "Country", name: "United Arab Emirates" },
         ],
         knowsLanguage: ["he", "en"],
+        knowsAbout: [
+          "פיתוח אפליקציות",
+          "פיתוח אתרים",
+          "בינה מלאכותית",
+          "סוכני AI",
+          "CRM",
+        ],
         description: seo.description,
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "שירותי ביו סיסטם",
+          itemListElement: services.map((item, index) => ({
+            "@type": "Offer",
+            position: index + 1,
+            itemOffered: {
+              "@type": "Service",
+              name: item.title,
+              description: item.body,
+              provider: { "@id": orgId },
+              areaServed: ["IL", "AE"],
+            },
+          })),
+        },
       },
       {
         "@type": "WebSite",
         "@id": siteId,
         url: site.url,
         name: site.nameEn,
-        alternateName: site.nameHe,
+        alternateName: [site.nameHe, "ביוסיסטם"],
         inLanguage: ["he-IL", "en"],
         publisher: { "@id": orgId },
         description: seo.description,
@@ -201,6 +228,45 @@ export function organizationGraph() {
         isPartOf: { "@id": siteId },
         about: { "@id": orgId },
         primaryImageOfPage: absUrl("/og.png"),
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${site.url}/#faq`,
+        inLanguage: "he-IL",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "מה זה ביו סיסטם / ביוסיסטם?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "ביו סיסטם (ביוסיסטם, Beo System) היא חברת פיתוח אפליקציות, אתרים ומערכות AI. סוכני בינה מלאכותית, צ׳אטבוטים, אוטומציות ו-CRM — לישראל ולדובאי.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "האם ביו סיסטם מפתחת אפליקציות ואתרים?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "כן. פיתוח אפליקציות מובייל, אתרי תדמית ומערכות ווב בהתאמה, עם חיבור לתהליך העסקי — לא דף שנשאר מצגת.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "מה ההבדל בין צ׳אטבוט לסוכן AI?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "צ׳אט עונה. סוכן פועל: קורא נתונים, כותב למערכת, פותח משימה, ומעביר לאדם כשצריך. בלי חיבור ל-CRM ולמערכות — זה עדיין בוט תשובות.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "איפה ביו סיסטם יושבת?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "ישראל: החרושת 10, קריית ביאליק. דובאי: Business Bay.",
+            },
+          },
+        ],
       },
     ],
   };
@@ -247,6 +313,7 @@ export function sitemapEntries() {
   return [
     { path: "/", lastModified: now, changeFrequency: "weekly" as const, priority: 1 },
     { path: "/about", lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/projects", lastModified: now, changeFrequency: "monthly" as const, priority: 0.8 },
     { path: "/blog", lastModified: now, changeFrequency: "weekly" as const, priority: 0.7 },
     ...posts.map((post) => ({
       path: `/blog/${post.slug}`,

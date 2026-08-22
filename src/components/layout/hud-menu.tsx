@@ -18,6 +18,7 @@ export function HudMenu() {
   const labels = {
     home: t.navHome,
     about: t.navAbout,
+    projects: t.navProjects,
     blog: t.navBlog,
     contact: t.navContact,
   } as const;

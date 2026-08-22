@@ -4,7 +4,17 @@ import { useEffect, useRef } from "react";
 import { useI18n } from "@/components/providers/i18n-provider";
 import { whatsappUrl } from "@/lib/site";
 
-export function TalkButton({ href, className }: { href?: string; className?: string }) {
+export function TalkButton({
+  href,
+  className,
+  label,
+  awake = true,
+}: {
+  href?: string;
+  className?: string;
+  label?: string;
+  awake?: boolean;
+}) {
   const { t } = useI18n();
   const canvas = useRef<HTMLCanvasElement>(null);
   const hot = useRef(false);
@@ -45,12 +55,12 @@ export function TalkButton({ href, className }: { href?: string; className?: str
       ctx.strokeStyle = "rgba(167, 139, 250, 0.55)";
       ctx.lineWidth = 1.6;
       ctx.stroke();
-      if (!reduce) id = requestAnimationFrame(draw);
+      if (awake && !reduce) id = requestAnimationFrame(draw);
     };
 
     draw();
     return () => cancelAnimationFrame(id);
-  }, []);
+  }, [awake]);
 
   return (
     <a
@@ -67,7 +77,7 @@ export function TalkButton({ href, className }: { href?: string; className?: str
     >
       <span className="hud-btn-scan" aria-hidden />
       <canvas ref={canvas} className="hud-scope" width={260} height={56} aria-hidden />
-      <span className="hud-talk-label">{t.talk}</span>
+      <span className="hud-talk-label">{label ?? t.talk}</span>
       <span className="hud-click" aria-hidden>
         👆
       </span>

@@ -22,15 +22,16 @@ export const site = {
     },
   ],
   social: {
-    instagram: "",
-    tiktok: "",
-    facebook: "",
+    instagram: "https://www.instagram.com/beosystems/",
+    tiktok: "https://www.tiktok.com/@beosystems",
+    facebook: "https://www.facebook.com/share/1C7z7hqUTS/?mibextid=wwXIfr",
   },
 } as const;
 
 export const nav = [
   { href: "/", id: "home" },
   { href: "/about", id: "about" },
+  { href: "/projects", id: "projects" },
   { href: "/blog", id: "blog" },
   { href: "/#contact", id: "contact" },
 ] as const;

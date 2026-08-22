@@ -48,6 +48,11 @@ export function ArticleContent({ slug }: { slug: string }) {
               ),
             )}
           </div>
+          <nav className="blog-article-next" aria-label={lang === "he" ? "עמודים נוספים" : "More pages"}>
+            <Link href="/projects">{t.projectsTitle}</Link>
+            <Link href="/about">{t.aboutTitle}</Link>
+            <Link href="/#contact">{t.talk}</Link>
+          </nav>
           <div className="film-talk mt-12">
             <TalkButton href="/#contact" className="hud-talk-film" />
           </div>

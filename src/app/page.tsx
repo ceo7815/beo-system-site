@@ -1,10 +1,9 @@
 import { ScrollFilm } from "@/components/film/scroll-film";
 import { Contact } from "@/components/sections/contact";
 import { pageMetadata, seo } from "@/lib/seo";
-import { site } from "@/lib/site";
 
 export const metadata = pageMetadata({
-  title: site.nameEn,
+  title: seo.title,
   description: seo.description,
   socialDescription: seo.ogDescription,
   path: "/",
@@ -13,6 +12,9 @@ export const metadata = pageMetadata({
 export default function Home() {
   return (
     <main>
+      <h1 className="sr-only">
+        ביו סיסטם — פיתוח אפליקציות, אתרים ובינה מלאכותית
+      </h1>
       <ScrollFilm />
       <Contact />
     </main>

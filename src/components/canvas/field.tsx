@@ -51,7 +51,7 @@ function compile(gl: WebGLRenderingContext, type: number, src: string) {
   return s;
 }
 
-export function Field({ progress }: { progress?: FilmProgress }) {
+export function Field({ progress, lite }: { progress?: FilmProgress; lite?: boolean }) {
   const ref = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -60,7 +60,7 @@ export function Field({ progress }: { progress?: FilmProgress }) {
     const gl = canvas.getContext("webgl", {
       antialias: false,
       alpha: false,
-      powerPreference: "high-performance",
+      powerPreference: lite ? "low-power" : "high-performance",
     });
     if (!gl) return;
 
@@ -106,7 +106,7 @@ export function Field({ progress }: { progress?: FilmProgress }) {
     let lastT = 0;
 
     const resize = () => {
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const dpr = Math.min(window.devicePixelRatio || 1, lite ? 1.25 : 2);
       const w = canvas.clientWidth;
       const h = canvas.clientHeight;
       canvas.width = Math.max(1, Math.floor(w * dpr));
@@ -119,7 +119,12 @@ export function Field({ progress }: { progress?: FilmProgress }) {
     });
     io.observe(canvas);
 
+    let lastDraw = 0;
+    const gap = lite ? 33 : 0;
     const draw = (now: number) => {
+      raf = requestAnimationFrame(draw);
+      if (gap && now - lastDraw < gap) return;
+      lastDraw = now;
       const freeze =
         reduce || document.documentElement.dataset.a11yMotion === "off";
       if (!freeze) lastT = (now - start) / 1000;
@@ -130,7 +135,6 @@ export function Field({ progress }: { progress?: FilmProgress }) {
         gl.uniform1f(uP, progress?.current ?? 0);
         gl.drawArrays(gl.TRIANGLES, 0, 6);
       }
-      raf = requestAnimationFrame(draw);
     };
 
     resize();
@@ -147,7 +151,7 @@ export function Field({ progress }: { progress?: FilmProgress }) {
       gl.deleteShader(fs);
       gl.deleteBuffer(buf);
     };
-  }, [progress]);
+  }, [progress, lite]);
 
   return <canvas ref={ref} aria-hidden className="absolute inset-0 h-full w-full" />;
 }

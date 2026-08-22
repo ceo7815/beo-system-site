@@ -31,8 +31,8 @@ export const shots: Shot[] = [
     kicker: { he: "01", en: "01" },
     title: { he: "אפליקציות\nואתרים", en: "Apps\nand websites" },
     line: {
-      he: "מוצרים דיגיטליים חכמים,\nמהרעיון ועד למסך.",
-      en: "Smart digital products,\nfrom the idea to the screen.",
+      he: "מוצרים דיגיטליים\nחכמים,\nמהרעיון ועד למסך.",
+      en: "Smart digital\nproducts,\nfrom the idea to the screen.",
     },
   },
   {

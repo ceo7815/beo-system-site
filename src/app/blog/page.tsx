@@ -5,8 +5,9 @@ import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
-  title: "בלוג",
-  description: "מאמרים על פיתוח, מערכות ובינה מלאכותית — כל מה שצריך לדעת.",
+  title: "בלוג — פיתוח אפליקציות, אתרים ו-AI",
+  description:
+    "בלוג ביו סיסטם (ביוסיסטם): פיתוח אפליקציות, אתרים, סוכני AI ומערכות — לחברות שרוצות תוכנה שעובדת.",
   path: "/blog",
 });
 

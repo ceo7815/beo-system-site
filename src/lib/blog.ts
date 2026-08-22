@@ -150,6 +150,53 @@ export const posts: BlogPost[] = [
       ],
     },
   },
+  {
+    slug: "apps-websites-ai",
+    n: "04",
+    date: "2026-08-22",
+    minutes: 7,
+    image: "/blog/apps-ai.webp",
+    imageAlt: {
+      he: "פיתוח אפליקציות, אתרים ובינה מלאכותית בחברת ביו סיסטם",
+      en: "App, website, and AI development at Beo System",
+    },
+    title: {
+      he: "פיתוח אפליקציות ואתרים עם AI — מתי זה חברה, ומתי זה דמו",
+      en: "Apps and websites with AI — when it is a company, and when it is a demo",
+    },
+    excerpt: {
+      he: "חברות מחפשות פיתוח אפליקציות, אתרים ובינה מלאכותית באותו מקום. ביו סיסטם (ביוסיסטם) בונה את שלושתם כמערכת אחת — לא שלושה ספקים.",
+      en: "Companies want apps, websites, and AI from one place. Beo System builds all three as one system — not three vendors.",
+    },
+    body: {
+      he: [
+        { type: "p", text: "רוב החברות לא מחפשות «כלי AI». הן מחפשות מישהו שיבנה אפליקציה שעובדת בשטח, אתר שממיר פנייה, ומערכת שמחברת את שניהם ללידים, למשימות ולכסף. כשזה מתפצל לשלושה ספקים, מתחילים החורים: האתר לא מדבר עם ה-CRM, האפליקציה לא מעדכנת מלאי, והבוט עונה יפה בלי לפתוח משימה." },
+        { type: "p", text: "ביו סיסטם (ביוסיסטם, Beo System) היא חברת פיתוח אפליקציות, אתרים ומערכות AI. העבודה נמדדת לפי תהליך שנסגר — לא לפי מצגת." },
+        { type: "h2", text: "מה חברות באמת קונות" },
+        { type: "p", text: "פיתוח אתרים טוב נותן אמון ודרך לפעולה: שירותים ברורים, טופס שעובד במובייל, וואטסאפ, ומדידה. פיתוח אפליקציות נכנס כשהעבודה חוזרת — הזמנות, שטח, התראות, מצב לא מחובר. בינה מלאכותית נכנסת רק אחרי שיש מערכת לכתוב אליה: לסווג פנייה, לפתוח ליד, לסכם שיחה, לא לספר סיפור." },
+        { type: "p", text: "אם אין מקור אמת (CRM, הזמנות, לקוחות) — AI יישאר צ׳אט. אם אין אתר ברור — לא מגיעים לידים. אם אין אפליקציה במקום שצריך שטח — הצוות ימציא וואטסאפ." },
+        { type: "h2", text: "איך בונים בלי פרויקט נצחי" },
+        { type: "p", text: "מתחילים מתהליך אחד: לידים באתר, הזמנה באפליקציה, או סוכן שסוגר פנייה בשירות. ספרינט ראשון עם מסך חי. הרשאות. ואז מרחיבים. ככה עולים לאוויר, במקום לחכות שנה ל«המערכת המושלמת»." },
+        { type: "p", text: "זה אותו סטנדרט בפרויקטים שכבר רצים: פורטל עסקים, אפליקציית חנות, אתר תדמית עם אוטומציית CRM, ומערכת ניהול עם סוכני AI בפנים." },
+        { type: "h2", text: "מתי לפנות לביו סיסטם" },
+        { type: "p", text: "כשיש עסק שצריך נוכחות דיגיטלית ומערכת מאחוריה — לא עוד דף נחיתה בלי תור. כשרוצים פיתוח אפליקציות ואתרים באותה שפה, עם AI שמחובר לנתונים. פעילות בישראל (קריית ביאליק) ובדובאי." },
+        { type: "p", text: "אם יש תהליך שחוזר כל יום, כמה כלים שלא מדברים, וצוות שממציא סידורים — זה המקום להתחיל. משאירים פנייה באתר, ועוברים למסך שעובד." },
+      ],
+      en: [
+        { type: "p", text: "Most companies are not shopping for “an AI tool”. They need an app that works in the field, a site that turns a visit into a request, and a system that ties both to leads, tasks, and money. Split that across three vendors and the holes start: the site does not talk to the CRM, the app does not update stock, the bot answers nicely without opening a task." },
+        { type: "p", text: "Beo System (ביו סיסטם) builds apps, websites, and AI as one stack. The work is measured by a closed process — not a slide." },
+        { type: "h2", text: "What companies actually buy" },
+        { type: "p", text: "A good website is trust and a path to act: clear services, a form that works on mobile, WhatsApp, measurement. An app belongs when work repeats — orders, field, alerts, offline. AI belongs only after there is a system to write into: classify a request, open a lead, summarize a call — not tell a story." },
+        { type: "p", text: "No source of truth (CRM, orders, customers) — AI stays chat. No clear site — leads do not arrive. No app where the field needs one — the team invents WhatsApp." },
+        { type: "h2", text: "How to build without an endless project" },
+        { type: "p", text: "Start with one process: leads on the site, an order in the app, or an agent that closes a service request. First sprint with a live screen. Permissions. Then expand. Ship, instead of waiting a year for the perfect system." },
+        { type: "p", text: "Same bar on work already live: a business portal, a store app, a brand site with CRM automation, and an operating system with AI agents inside." },
+        { type: "h2", text: "When to talk to Beo System" },
+        { type: "p", text: "When the business needs a digital presence and a system behind it — not another landing page with no queue. When apps and websites should share one language, with AI wired to data. Israel (Kiryat Bialik) and Dubai." },
+        { type: "p", text: "If a process repeats every day, several tools do not talk, and the team invents patches — start there. Leave a request on the site, and move to a screen that works." },
+      ],
+    },
+  },
 ];
 
 export function getPost(slug: string) {

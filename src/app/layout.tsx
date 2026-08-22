@@ -28,7 +28,7 @@ const varela = Varela_Round({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: site.nameEn,
+    default: seo.title,
     template: `%s | ${site.nameEn}`,
   },
   description: seo.description,
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     telephone: true,
   },
   openGraph: {
-    title: seo.titleEn,
+    title: seo.title,
     description: seo.ogDescription,
     url: site.url,
     siteName: site.nameEn,
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: seo.titleEn,
+    title: seo.title,
     description: seo.ogDescription,
     images: [ogImage.url],
   },
