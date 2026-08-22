@@ -1,5 +1,6 @@
 "use client";
 
+import type { JSX } from "react";
 import { site } from "@/lib/site";
 import { AccessMark } from "@/components/layout/a11y-widget";
 import { useA11y } from "@/components/providers/a11y-provider";
@@ -64,11 +65,16 @@ function FacebookMark() {
   );
 }
 
-const links = [
+const links: {
+  href: string;
+  label: string;
+  Icon: () => JSX.Element;
+  kind: "ig" | "tt" | "fb";
+}[] = [
   { href: site.social.instagram, label: "Instagram", Icon: InstagramMark, kind: "ig" },
   { href: site.social.tiktok, label: "TikTok", Icon: TikTokMark, kind: "tt" },
   { href: site.social.facebook, label: "Facebook", Icon: FacebookMark, kind: "fb" },
-] as const;
+];
 
 export function SocialRail() {
   const { lang } = useI18n();
@@ -88,30 +94,19 @@ export function SocialRail() {
         <span className="hud-btn-scan" aria-hidden />
         <AccessMark />
       </button>
-      {links.map(({ href, label, Icon, kind }) =>
-        href ? (
-          <a
-            key={label}
-            href={href}
-            target="_blank"
-            rel="noreferrer"
-            className={`social-node social-node--${kind}`}
-            aria-label={label}
-          >
-            <span className="hud-btn-scan" aria-hidden />
-            <Icon />
-          </a>
-        ) : (
-          <span
-            key={label}
-            className={`social-node social-node--${kind}`}
-            aria-hidden
-          >
-            <span className="hud-btn-scan" aria-hidden />
-            <Icon />
-          </span>
-        ),
-      )}
+      {links.map(({ href, label, Icon, kind }) => (
+        <a
+          key={label}
+          href={href}
+          target="_blank"
+          rel="noreferrer"
+          className={`social-node social-node--${kind}`}
+          aria-label={label}
+        >
+          <span className="hud-btn-scan" aria-hidden />
+          <Icon />
+        </a>
+      ))}
     </nav>
   );
 }
