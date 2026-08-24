@@ -787,6 +787,15 @@ body[data-menu-open="1"] .social-rail {
   text-shadow: 0 0 32px rgba(88, 40, 160, 0.45);
 }
 
+.about-type-kicker {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--brand-hot);
+}
+
 .about-type-p {
   margin: 0;
   max-width: 44rem;
@@ -824,8 +833,28 @@ body[data-menu-open="1"] .social-rail {
 
 .about-type-action {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   margin-top: 1.7rem;
+  gap: 1.1rem;
+}
+
+.about-type-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1.35rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.about-type-links a {
+  color: var(--brand-hot);
+}
+
+.about-type-links a:hover {
+  color: #fff;
 }
 
 .film-talk {
