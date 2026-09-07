@@ -2,7 +2,7 @@ export type LegalBlock = { type: "h2" | "p"; text: string };
 
 export const legal = {
   privacy: {
-    updated: "2026-08-18",
+    updated: "2026-09-07",
     he: {
       kicker: "משפטי",
       title: "מדיניות פרטיות",
@@ -38,7 +38,7 @@ export const legal = {
         },
         {
           type: "p",
-          text: "האתר שומר את בחירת השפה במכשיר (beo-lang) כדי לא לבקש אותה מחדש. אין כאן כלי מעקב פרסומיים. שרת האחסון והדפדפן עשויים לשמור נתונים טכניים שגרתיים כמו כתובת IP בלוגים לצורך אבטחה ותפעול.",
+          text: "האתר שומר את בחירת העוגיות במכשיר, ואת השפה (beo-lang) אם אושרו עוגיות העדפות. אם אישרתם עוגיות אנליטיקס, נטען Google Analytics 4 כדי להבין איך משתמשים באתר. אין כאן כלי מעקב פרסומיים. שרת האחסון והדפדפן עשויים לשמור נתונים טכניים שגרתיים כמו כתובת IP בלוגים לצורך אבטחה ותפעול.",
         },
         {
           type: "h2",
@@ -93,7 +93,7 @@ export const legal = {
         },
         {
           type: "p",
-          text: "The site stores the language choice on the device (beo-lang) so it does not have to be asked again. There are no advertising trackers here. Hosting and the browser may keep routine technical logs such as IP address for security and operations.",
+          text: "The site stores cookie choices on the device, and the language choice (beo-lang) when preference cookies are allowed. If you consent to analytics cookies, Google Analytics 4 loads so we can understand how the site is used. There are no advertising trackers here. Hosting and the browser may keep routine technical logs such as IP address for security and operations.",
         },
         {
           type: "h2",

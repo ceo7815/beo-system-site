@@ -5,6 +5,7 @@ import { I18nProvider } from "@/components/providers/i18n-provider";
 import { A11yProvider } from "@/components/providers/a11y-provider";
 import { A11ySkip, A11yWidget } from "@/components/layout/a11y-widget";
 import { CookieBar } from "@/components/layout/cookie-bar";
+import { Ga } from "@/components/analytics/ga";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -121,6 +122,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             </div>
             <A11yWidget />
             <CookieBar />
+            <Ga />
           </A11yProvider>
         </I18nProvider>
       </body>
