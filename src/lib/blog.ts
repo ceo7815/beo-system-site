@@ -236,23 +236,59 @@ export const posts: BlogPost[] = [
         { type: "p", text: "אם יש תהליך לידים שחוזר כל יום, כמה כלים שלא מדברים, וצוות שמעתיק בין מסכים — זה המקום להתחיל. משאירים פנייה באתר או בוואטסאפ, ועוברים למשפך שעובד." },
       ],
       en: [
-        { type: "p", text: "Most leads do not die from lack of interest. They die between the form and WhatsApp, between WhatsApp and Excel, and between Excel and the person who will “get back later”. Beo System (ביו סיסטם) builds AI agents that enter this funnel — not another bot that answers nicely and disappears." },
-        { type: "p", text: "A lead agent is measured by a closed process: did the request arrive in the right place, with context, on time, without the team inventing patches." },
+        {
+          type: "p",
+          text: "Most leads do not die from lack of interest. They die between the form and WhatsApp, between WhatsApp and a spreadsheet, and between the sheet and the person who will “get back later”. Beo System (ביו סיסטם) builds AI agents that enter that funnel — not another bot that answers nicely and disappears.",
+        },
+        {
+          type: "p",
+          text: "A lead agent is measured by a closed process: did the request reach the right place, with context, on time, without the team inventing workarounds.",
+        },
         { type: "h2", text: "What breaks in the lead funnel today" },
-        { type: "p", text: "The site has a form. WhatsApp has a queue. The CRM has fields. In the middle — manual copy, lost messages, and a lead that waited two hours with no reply. A page chatbot can ask three questions. Without a system connection it does not open a task, does not update status, and does not know who on the team is free." },
-        { type: "p", text: "The signal is clear: there are requests on the site, there are WhatsApp chats, and there is no single picture of “what happened with this lead”." },
+        {
+          type: "p",
+          text: "The site has a form. WhatsApp has a queue. The CRM has fields. In the middle — manual copy-paste, lost messages, and a lead that waited two hours with no reply. A landing-page chatbot can ask three questions. Without a system connection it does not open a task, update status, or know who on the team is free.",
+        },
+        {
+          type: "p",
+          text: "The signal is clear: there are site requests, there are WhatsApp chats, and there is no single picture of “what happened to this lead”.",
+        },
         { type: "h2", text: "Lead agent vs page chatbot" },
-        { type: "p", text: "Chat answers. An agent acts. It reads the request, classifies intent (sale, service, just a question), checks if there is an existing customer, writes to the CRM or a sheet, sends a WhatsApp message from a template, and hands off to a person when the rule requires approval." },
-        { type: "p", text: "Without a source of truth — CRM, a customer list, or at least an ordered queue — this stays a reply bot. With a connection, it is a digital worker sitting between the site and the team." },
+        {
+          type: "p",
+          text: "Chat answers. An agent acts. It reads the request, classifies intent (sales, service, just a question), checks for an existing customer, writes to the CRM or sheet, sends a WhatsApp message from a template, and hands off to a person when the rule requires approval.",
+        },
+        {
+          type: "p",
+          text: "Without a source of truth — CRM, customer list, or at least an ordered queue — it stays a reply bot. With a connection, it is a digital worker sitting between the site and the team.",
+        },
         { type: "h2", text: "How to connect without breaking the business" },
-        { type: "p", text: "Start with one narrow process: a request from the site (or from /#contact), then classification, a record in the system, a WhatsApp message, and a person only for exceptions. Define what the agent may do, what it may not, and where human approval is required." },
-        { type: "p", text: "A first sprint with a live screen is better than a slide of an “AI department”. After you see leads arriving clean — expand: reminders, richer classification, a calendar or a quote connection." },
+        {
+          type: "p",
+          text: "Start with one narrow process: a request from the site (or /#contact), then classify, record in the system, WhatsApp message, and a person only for exceptions. Define what the agent may do, what it may not, and where human approval is mandatory.",
+        },
+        {
+          type: "p",
+          text: "A first sprint with a live screen beats an “AI department” deck. After clean leads start arriving — expand: reminders, richer classification, calendar or quote hooks.",
+        },
         { type: "h2", text: "What must be ready before you start" },
-        { type: "p", text: "Where leads enter today. Which system is the source of truth. Who approves a quote or a call. And what happens when the agent classifies wrong. If the last three have no answer — start there, not with the model." },
-        { type: "p", text: "A clear site matters too: readable services, a path to act on mobile, WhatsApp available. A good agent on a confused site only speeds up the confusion." },
+        {
+          type: "p",
+          text: "Where leads enter today. Which system is the source of truth. Who approves a quote or a call. And what happens when the agent mis-classifies. If the last three have no answer — start there, not with the model.",
+        },
+        {
+          type: "p",
+          text: "A clear site matters too: readable services, a mobile path to act, WhatsApp available. A good agent on a confused site only speeds up confusion.",
+        },
         { type: "h2", text: "When Beo System fits" },
-        { type: "p", text: "When you need a site, a system, and an agent in the same language — not three vendors that leave holes. Beo System works with businesses in Israel (Kiryat Bialik) and Dubai: apps and websites, fitted CRM, and AI agents wired to data." },
-        { type: "p", text: "If a lead process repeats every day, several tools do not talk, and the team copies between screens — start there. Leave a request on the site or WhatsApp, and move to a funnel that works." },
+        {
+          type: "p",
+          text: "When you need a site, a system, and an agent in one language — not three vendors leaving holes. Beo System works with businesses in Israel (Kiryat Bialik) and Dubai: apps and websites, fitted CRM, and AI agents wired to data.",
+        },
+        {
+          type: "p",
+          text: "If a lead process repeats every day, several tools do not talk, and the team copies between screens — start there. Leave a request on the site or WhatsApp, and move to a funnel that works.",
+        },
       ],
     },
   },
