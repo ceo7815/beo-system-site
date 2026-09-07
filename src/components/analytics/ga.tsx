@@ -3,7 +3,8 @@
 import { useEffect } from "react";
 import { cookieAllowed } from "@/lib/cookies";
 
-const MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const MEASUREMENT_ID =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-FNQR0XYR54";
 
 declare global {
   interface Window {
