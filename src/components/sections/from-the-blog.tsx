@@ -10,8 +10,8 @@ const links = [
   },
   {
     href: "/blog/inquiry-management",
-    he: "מערכת לניהול פניות — בעלים, סטטוס ומעקב לכל ליד",
-    en: "Inquiry management system — an owner, a status, and follow-up for every lead",
+    he: "מערכת ניהול לידים",
+    en: "Lead management system",
   },
   {
     href: "/blog/voice-ai-phone-agent",
@@ -20,8 +20,8 @@ const links = [
   },
   {
     href: "/blog/whatsapp-ai-agent",
-    he: "סוכן AI שמתחבר ל־ WhatsApp Business — מענה ראשון בלי להחליף את הצוות",
-    en: "An AI agent that connects to WhatsApp Business — a first reply without replacing the team",
+    he: "בוט לוואטסאפ לעסק",
+    en: "WhatsApp bot for business",
   },
   {
     href: "/blog/chatbot-vs-agent",
@@ -32,6 +32,11 @@ const links = [
     href: "/blog/ai-agent-custom-system-cost",
     he: "כמה עולה סוכן AI או מערכת בהתאמה לעסק? מה קובע את העלות",
     en: "How much does an AI agent or custom system cost? What drives the price",
+  },
+  {
+    href: "/blog/ai-automation-start",
+    he: "אוטומציה לעסק",
+    en: "Business automation",
   },
 ] as const;
 

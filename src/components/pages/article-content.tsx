@@ -1,11 +1,41 @@
 "use client";
 
+import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Field } from "@/components/canvas/field";
 import { TalkButton } from "@/components/layout/talk-button";
 import { useI18n } from "@/components/providers/i18n-provider";
 import { getPost, getRelated, type BlogBlock, type BlogLang } from "@/lib/blog";
+
+function inlineNodes(text: string) {
+  const MD_LINK = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g;
+  const nodes: ReactNode[] = [];
+  let last = 0;
+  for (const match of text.matchAll(MD_LINK)) {
+    const index = match.index ?? 0;
+    if (index > last) nodes.push(text.slice(last, index));
+    const label = match[1];
+    const href = match[2];
+    const internal = href.startsWith("https://beosystem.com");
+    const path = internal ? href.replace("https://beosystem.com", "") || "/" : href;
+    nodes.push(
+      internal ? (
+        <Link key={index} href={path}>
+          {label}
+        </Link>
+      ) : (
+        <a key={index} href={href} target="_blank" rel="noopener">
+          {label}
+        </a>
+      ),
+    );
+    last = index + match[0].length;
+  }
+  if (last === 0) return text;
+  if (last < text.length) nodes.push(text.slice(last));
+  return nodes;
+}
 
 function proseBlock(block: BlogBlock, i: number, lang: BlogLang) {
   if (block.type === "h2") return <h2 key={i}>{block.text}</h2>;
@@ -37,7 +67,7 @@ function proseBlock(block: BlogBlock, i: number, lang: BlogLang) {
       </p>
     );
   }
-  return <p key={i}>{block.text}</p>;
+  return <p key={i}>{inlineNodes(block.text)}</p>;
 }
 
 export function ArticleContent({ slug }: { slug: string }) {
