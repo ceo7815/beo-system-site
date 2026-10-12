@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPost(slug);
   if (!post) return { title: "בלוג" };
   return pageMetadata({
-    title: post.title.he,
+    title: post.seoTitle?.he ?? post.title.he,
     description: post.excerpt.he,
     path: `/blog/${post.slug}`,
     type: "article",
