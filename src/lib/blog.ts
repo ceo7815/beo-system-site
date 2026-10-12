@@ -20,7 +20,7 @@ export const posts: BlogPost[] = [
   {
     slug: "ai-agents",
     n: "01",
-    date: "2026-09-29",
+    date: "2026-10-12",
     minutes: 6,
     image: "/blog/agents.webp",
     imageAlt: {
@@ -28,12 +28,12 @@ export const posts: BlogPost[] = [
       en: "An AI agent working against organization systems",
     },
     title: {
-      he: "סוכן AI לעסק — קורא, מחליט, כותב למערכת (לא רק צ׳אט יפה)",
-      en: "AI agents for business — read, decide, write to systems (not just a pretty chat)",
+      he: "סוכן AI לעסק — מה הוא עושה בפועל, ומתי כדאי להתחיל",
+      en: "An AI agent for a business — what it actually does, and when to start",
     },
     excerpt: {
-      he: "סוכן טוב לא עונה יפה בצ׳אט. הוא נכנס לתהליך: קורא נתונים, מחליט, כותב ל־CRM, ומעביר לאדם רק כשצריך.",
-      en: "A good agent doesn’t just chat well. It joins the process: reads data, decides, writes to CRM, and escalates to a human only when needed.",
+      he: "סוכן AI לעסק קורא פנייה, מחליט וכותב למערכת — לא רק עונה יפה בצ׳אט. מתי זה מתאים, איך מתחילים מתהליך אחד, ומה לבדוק לפני שפונים.",
+      en: "An AI agent for a business reads a request, decides, and writes to a system — not only a pretty chat. When it fits, how to start with one process, and what to check first.",
     },
     body: {
       he: [
@@ -48,6 +48,8 @@ export const posts: BlogPost[] = [
         { type: "h2", text: "מה לבדוק לפני שמתחילים" },
         { type: "p", text: "איפה הזמן נשרף היום. איזו מערכת היא מקור האמת. מי מאשר. ומה קורה כשהסוכן טועה. אם אין תשובה לשלושת האחרונים — עדיין לא מוכנים לסוכן, וזה בסדר. אפשר להתחיל משם." },
         { type: "h2", text: "שאלות נפוצות לפני שמתחילים" },
+        { type: "p", text: "מה זה סוכן AI לעסק? סוכן AI לעסק מקבל פנייה, קורא נתונים, מחליט לפי כלל, וכותב ל־CRM או למשימה. הוא מעביר לאדם כשצריך אישור. בלי חיבור למערכת זה עדיין צ׳אט." },
+        { type: "p", text: "סוכן AI לעסק מחליף עובדים? לא. הוא סוגר תהליך אחד צר. מחיר, התחייבות ושיחה רגישה נשארים אצל אדם." },
         { type: "p", text: "מתי שווה סוכן AI ולא רק צ׳אטבוט? כשצריך פעולה במערכת — סטטוס, משימה, עדכון CRM — ולא רק תשובה בחלון באתר." },
         { type: "p", text: "מאיפה מתחילים בלי «מחלקת AI» על מצגת? מתהליך אחד צר: לידים, סיווג פניות, או מעבר ראשוני לוואטסאפ — עם גבולות ברורים מה מותר ומה דורש אדם." },
         { type: "p", text: "מה חייב להיות ברור לפני שפונים? איפה הזמן נשרף, איזו מערכת היא מקור האמת, מי מאשר, ומה קורה כשהסוכן טועה." },
@@ -73,6 +75,8 @@ export const posts: BlogPost[] = [
         { type: "h2", text: "What to check first" },
         { type: "p", text: "Where time burns today. Which system is the source of truth. Who approves. And what happens when the agent is wrong. If the last three have no answer, you are not ready yet — and that is fine. Start there." },
         { type: "h2", text: "FAQ before you start" },
+        { type: "p", text: "What is an AI agent for a business? It takes a request, reads data, decides by a rule, and writes to a CRM or a task. It hands off to a person when approval is needed. Without a system connection it is still chat." },
+        { type: "p", text: "Does an AI agent for a business replace staff? No. It closes one narrow process. Price, commitment, and a sensitive conversation stay with a person." },
         { type: "p", text: "When is an AI agent worth it vs a chatbot? When you need action in a system — status, task, CRM update — not only an answer in a site widget." },
         { type: "p", text: "Where to start without an «AI department» on a slide deck? One narrow process: leads, request routing, or a first handoff to WhatsApp — with clear limits on what the agent may do and what needs a human." },
         { type: "p", text: "What must be clear before you reach out? Where time burns, which system is the source of truth, who approves, and what happens when the agent is wrong." },
@@ -559,7 +563,7 @@ export const posts: BlogPost[] = [
   {
     slug: "chatbot-vs-agent",
     n: "08",
-    date: "2026-09-14",
+    date: "2026-10-12",
     minutes: 6,
     image: "/blog/chatbot-vs-agent.webp",
     imageAlt: {
@@ -567,17 +571,19 @@ export const posts: BlogPost[] = [
       en: "Chatbot on a page versus an AI agent connected to systems",
     },
     title: {
-      he: "צ׳אטבוט לעסק מול סוכן AI — מתי מספיק מענה, ומתי צריך פעולה",
-      en: "Business chatbot vs AI agent — when answers are enough, and when you need action",
+      he: "צ׳אטבוט מול סוכן AI — מתי מספיק מענה, ומתי צריך פעולה",
+      en: "Chatbot vs AI agent — when answers are enough, and when you need action",
     },
     excerpt: {
-      he: "צ׳אט עונה. סוכן פועל. ההבדל קובע אם הליד מגיע ל־CRM ולצוות — או נשאר בחלון יפה באתר.",
-      en: "Chat answers. An agent acts. That difference decides whether a lead reaches CRM and the team — or stays in a pretty site widget.",
+      he: "צ׳אטבוט מול סוכן AI: צ׳אט עונה על שאלות, סוכן כותב למערכת ומעביר לצוות. איך בוחרים בלי לקנות את שניהם, ומאיפה מתחילים.",
+      en: "Chatbot vs AI agent: chat answers questions, an agent writes to a system and hands off to the team. How to choose without buying both, and where to start.",
     },
     body: {
       he: [
         { type: "p", text: "הרבה עסקים מחפשים «צ׳אטבוט לעסק» ומצפים שיסגור לידים. אחר כך מגלים: יש שיחות באתר, אבל אין רשומה ב־CRM, אין וואטסאפ בזמן, ואין אדם שממשיך כשצריך." },
         { type: "p", text: "ביו סיסטם (ביוסיסטם, Beo System) בונה גם צ׳אט וגם סוכני AI — אבל מתחילים מהשאלה הנכונה: האם צריך מענה, או תהליך שנסגר." },
+        { type: "h2", text: "צ׳אטבוט מול סוכן AI" },
+        { type: "p", text: "צ׳אטבוט עונה. סוכן AI פועל על תהליך: מסווג, כותב רשומה, ומעביר לאדם. הבחירה תלויה אם חסר מענה לשאלות חוזרות, או שחסר תהליך שמגיע לצוות." },
         { type: "h2", text: "מה צ׳אטבוט עושה טוב" },
         { type: "p", text: "שעות מענה, שאלות נפוצות, סינון ראשוני, והפניה לעמוד או לטופס. כשהמטרה היא להוריד עומס משאלות חוזרות — צ׳אט מדף מספיק." },
         { type: "p", text: "בלי חיבור למערכת הוא נשאר שכבת שיחה. הוא לא פותח משימה, לא מעדכן סטטוס, ולא יודע מי בצוות פנוי." },
@@ -591,6 +597,8 @@ export const posts: BlogPost[] = [
         { type: "p", text: "איפה נכנסות פניות היום. איזו מערכת היא מקור האמת. מי מאשר הצעה או שיחה. ומה קורה כשהסיווג טועה." },
         { type: "p", text: "עובדים עם עסקים בישראל (קריית ביאליק) ובדובאי: אתר, CRM, וסוכנים שמחוברים לנתונים — לא שלושה ספקים עם חורים באמצע." },
         { type: "h2", text: "שאלות נפוצות לפני שפונים" },
+        { type: "p", text: "מה ההבדל בין צ׳אטבוט לסוכן AI? צ׳אטבוט עונה על שאלות חוזרות בחלון. סוכן AI קורא את הפנייה, כותב ל־CRM או לתור, ויכול לשלוח לוואטסאפ. בלי חיבור למערכת זה נשאר צ׳אט." },
+        { type: "p", text: "צ׳אטבוט מול סוכן AI — מה לבחור קודם? אם רוב הפניות הן שאלות חוזרות, מתחילים מצ׳אט. אם לידים נעלמים בין האתר לוואטסאפ, מתחילים מסוכן על תהליך אחד." },
         { type: "p", text: "מתי צ׳אטבוט מספיק? כשמטרת העל היא מענה ושאלות נפוצות, והלידים כבר מטופלים במקום אחר בצורה יציבה." },
         { type: "p", text: "מתי עוברים לסוכן? כשיש פניות שנכנסות, אבל אין תהליך אחד שמגיע ל־CRM ולצוות בזמן." },
         { type: "p", text: "אפשר להתחיל קטן? כן — ספרינט על תהליך אחד (אתר או `/#contact` עד וואטסאפ), בלי «מחלקת AI» שלמה." },
@@ -603,6 +611,8 @@ export const posts: BlogPost[] = [
       en: [
         { type: "p", text: "Many businesses look for a «business chatbot» and expect it to close leads. Then they find chats on the site — but no CRM row, no timely WhatsApp, and no person continuing when needed." },
         { type: "p", text: "Beo System (ביו סיסטם) builds both chat and AI agents — but starts with the right question: do you need answers, or a process that closes." },
+        { type: "h2", text: "Chatbot vs AI agent" },
+        { type: "p", text: "A chatbot answers. An AI agent acts on a process: it classifies, writes a record, and hands off to a person. The choice depends on whether you are missing answers to repeated questions, or a process that reaches the team." },
         { type: "h2", text: "What a chatbot does well" },
         { type: "p", text: "After-hours replies, FAQs, light qualification, and a push to a page or form. When the goal is cutting repeated questions — an on-page chat is enough." },
         { type: "p", text: "Without a system connection it stays a conversation layer. It does not open a task, update status, or know who on the team is free." },
@@ -616,6 +626,8 @@ export const posts: BlogPost[] = [
         { type: "p", text: "Where requests enter today. Which system is the source of truth. Who approves a quote or call. And what happens when classification is wrong." },
         { type: "p", text: "We work with businesses in Israel (Kiryat Bialik) and Dubai: site, CRM, and agents tied to data — not three vendors with gaps in the middle." },
         { type: "h2", text: "FAQ before you reach out" },
+        { type: "p", text: "What is the difference between a chatbot and an AI agent? A chatbot answers repeated questions in a widget. An AI agent reads the request, writes to a CRM or a queue, and can send WhatsApp. Without a system connection it stays chat." },
+        { type: "p", text: "Chatbot vs AI agent — what to choose first? If most inquiries are repeated questions, start with chat. If leads vanish between the site and WhatsApp, start with an agent on one process." },
         { type: "p", text: "When is a chatbot enough? When the main goal is answers and FAQs, and leads are already handled reliably elsewhere." },
         { type: "p", text: "When move to an agent? When requests arrive, but nothing reliably reaches CRM and the team on time." },
         { type: "p", text: "Can you start small? Yes — one sprint on one process (site or `/#contact` to WhatsApp), not a full «AI department»." },
@@ -638,12 +650,12 @@ export const posts: BlogPost[] = [
       en: "Inquiry management system organizing leads from site and WhatsApp to the team",
     },
     title: {
-      he: "מערכת לניהול פניות — איך לא לאבד ליד בין אתר לוואטסאפ",
-      en: "Inquiry management system — how not to lose a lead between site and WhatsApp",
+      he: "מערכת לניהול פניות — בעלים, סטטוס ומעקב לכל ליד",
+      en: "Inquiry management system — an owner, a status, and follow-up for every lead",
     },
     excerpt: {
-      he: "פנייה בלי בעלים, בלי סטטוס ובלי מעקב — זה לא «עמוס». זו מערכת חסרה. ביו סיסטם בונה ניהול פניות לפני שקונים CRM ענק.",
-      en: "An inquiry with no owner, no status, and no follow-up is not «busy». It is a missing system. Beo System builds inquiry management before a giant CRM.",
+      he: "מערכת לניהול פניות אוספת ליד מהאתר, מוואטסאפ ומהטלפון למקום אחד: מי הפונה, מי אחראי, ומה הסטטוס. לפני CRM מלא, ובלי לאבד פנייה בין מסכים.",
+      en: "An inquiry management system gathers a lead from the site, WhatsApp, and phone into one place: who reached out, who owns it, and the status. Before a full CRM, and without losing an inquiry between screens.",
     },
     body: {
       he: [
@@ -719,7 +731,7 @@ export const posts: BlogPost[] = [
   {
     slug: "whatsapp-ai-agent",
     n: "10",
-    date: "2026-09-21",
+    date: "2026-10-12",
     minutes: 6,
     image: "/blog/whatsapp-ai-agent.webp",
     imageAlt: {
@@ -727,17 +739,19 @@ export const posts: BlogPost[] = [
       en: "AI agent on business WhatsApp sending a first reply and handing off to the team",
     },
     title: {
-      he: "סוכן AI לוואטסאפ עסקי — מענה ראשוני ומעקב בלי להחליף את הצוות",
-      en: "WhatsApp business AI agent — first reply and follow-up without replacing the team",
+      he: "סוכן AI שמתחבר ל־ WhatsApp Business — מענה ראשון בלי להחליף את הצוות",
+      en: "An AI agent that connects to WhatsApp Business — a first reply without replacing the team",
     },
     excerpt: {
-      he: "רוב הפניות נוחתות בוואטסאפ. סוכן טוב עונה מהר, מסדר את הפנייה, ומעביר לאדם כשצריך — בלי להפוך את הצ׳אט לבוט שמרגיש זר.",
-      en: "Most inquiries land on WhatsApp. A good agent replies fast, structures the lead, and hands off to a human when needed — without turning the chat into a cold bot.",
+      he: "סוכן AI שמתחבר ל־ WhatsApp Business מזהה פנייה, שולח מענה ראשון מאושר, ופותח רשומה. מתי זה נכון, מה הוא לא עושה, ואיך מתחילים מתרחיש אחד.",
+      en: "An AI agent that connects to WhatsApp Business spots an inquiry, sends an approved first reply, and opens a record. When it fits, what it does not do, and how to start with one scenario.",
     },
     body: {
       he: [
         { type: "p", text: "בעסקים רבים וואטסאפ הוא הדלפק. לקוח כותב בערב, שואל מחיר, שולח צילום, ומחכה. אם אף אחד לא עונה בזמן — הליד מתקרר. אם כולם עונים מאותו מספר בלי סדר — מתחיל בלגן." },
         { type: "p", text: "ביו סיסטם (ביוסיסטם, Beo System) בונה סוכני AI, מערכות לניהול פניות ואתרים. המאמר הזה על שכבה אחת: סוכן על וואטסאפ עסקי שעושה מענה ראשוני ומעקב — בלי להחליף את הצוות." },
+        { type: "h2", text: "סוכן AI שמתחבר ל־ WhatsApp Business" },
+        { type: "p", text: "החיבור הוא למספר וואטסאפ עסקי אחד. הסוכן קורא את הפנייה, שולח מענה ראשון שאושר מראש, ורושם אותה. הוא לא מנהל את כל השיחות של העסק, ולא מחליף אדם כשהלקוח מבקש." },
         { type: "h2", text: "מה סוכן וואטסאפ עושה (ומה לא)" },
         { type: "p", text: "הוא מזהה פנייה חדשה, שואל שאלות קצרות לפי כלל, מסכם הקשר, ופותח רשומה עם סטטוס ובעלים. הוא יכול לשלוח תשובה ראשונה מאושרת מראש — שעות, קישור, «קיבלנו, חוזרים»." },
         { type: "p", text: "הוא לא סוגר הצעת מחיר רגישה, לא מתחייב בשם המשרד על תנאים, ולא מחליף שיחה אנושית כשהלקוח מבקש אדם. הגבול נכתב מראש." },
@@ -754,6 +768,8 @@ export const posts: BlogPost[] = [
         { type: "p", text: "כמה הודעות ביום באמת. מי חייב לאשר לפני תשובה אוטומטית. האם יש כבר ניהול פניות או רק צ׳אטים. ומה אסור שיישלח בלי אדם." },
         { type: "p", text: "עובדים עם עסקים בישראל (קריית ביאליק) ובדובאי: אותו עיקרון — מענה מהיר, מעקב ברור, אדם במקום הנכון." },
         { type: "h2", text: "שאלות נפוצות לפני שפונים" },
+        { type: "p", text: "מה עושה סוכן AI שמתחבר ל־ WhatsApp Business? הוא יושב על הוואטסאפ העסקי: מזהה פנייה חדשה, שולח תשובה ראשונה שאושרה מראש, פותח רשומה עם סטטוס, ומעביר לצוות כשצריך אדם." },
+        { type: "p", text: "אפשר להתחיל בלי לחבר את כל הוואטסאפ? כן. ספרינט ראשון הוא תרחיש אחד, למשל מענה אחרי שעות, על מספר עסקי אחד." },
         { type: "p", text: "האם הסוכן מחליף את המוכרים? לא. הוא מקצר זמן תגובה ומסדר את התור. השיחה הרגישה נשארת אצל אדם." },
         { type: "p", text: "צריך מערכת פניות קודם? עדיף לפחות רשומה מינימלית (בעלים, סטטוס, תזכורת). בלי זה הסוכן רק מאיץ העתקות." },
         { type: "p", text: "איך זה קשור לאתר? טופס באתר יכול לפתוח אותה רשומה שהוואטסאפ ממשיך. ערוץ אחד לא מחליף את השני — הם נפגשים במקור אמת." },
@@ -771,6 +787,8 @@ export const posts: BlogPost[] = [
       en: [
         { type: "p", text: "In many businesses WhatsApp is the front desk. A customer writes at night, asks for a price, sends a photo, and waits. If nobody replies in time — the lead cools. If everyone replies from the same number with no order — mess starts." },
         { type: "p", text: "Beo System (ביו סיסטם) builds AI agents, inquiry systems, and websites. This piece is one layer: an agent on business WhatsApp for first reply and follow-up — without replacing the team." },
+        { type: "h2", text: "An AI agent that connects to WhatsApp Business" },
+        { type: "p", text: "The connection is one business WhatsApp number. The agent reads the inquiry, sends a pre-approved first reply, and logs it. It does not run every chat in the business, and it does not replace a person when the customer asks." },
         { type: "h2", text: "What a WhatsApp agent does (and does not)" },
         { type: "p", text: "It spots a new inquiry, asks short questions by rule, summarizes context, and opens a record with status and owner. It can send a pre-approved first reply — hours, a link, «we got it, we will get back»." },
         { type: "p", text: "It does not close a sensitive quote, commit the firm on terms, or replace a human when the customer asks for a person. That boundary is written up front." },
@@ -787,6 +805,8 @@ export const posts: BlogPost[] = [
         { type: "p", text: "How many messages per day for real. Who must approve before an automatic reply. Whether inquiry management already exists or only chats. And what must never send without a human." },
         { type: "p", text: "We work with businesses in Israel (Kiryat Bialik) and Dubai: same principle — fast reply, clear follow-up, a human in the right place." },
         { type: "h2", text: "FAQ before you reach out" },
+        { type: "p", text: "What does an AI agent that connects to WhatsApp Business do? It sits on the business WhatsApp: it spots a new inquiry, sends a pre-approved first reply, opens a record with a status, and hands off to the team when a person is needed." },
+        { type: "p", text: "Can you start without connecting all of WhatsApp? Yes. A first sprint is one scenario, for example an after-hours reply, on one business number." },
         { type: "p", text: "Does the agent replace salespeople? No. It shortens response time and orders the queue. Sensitive talks stay with a human." },
         { type: "p", text: "Do you need an inquiry system first? Prefer at least a minimal record (owner, status, reminder). Without it the agent only speeds up copy-paste." },
         { type: "p", text: "How does this relate to the website? A site form can open the same record WhatsApp continues. One channel does not replace the other — they meet in a source of truth." },
@@ -899,7 +919,7 @@ export const posts: BlogPost[] = [
   {
     slug: "voice-ai-phone-agent",
     n: "12",
-    date: "2026-09-28",
+    date: "2026-10-12",
     minutes: 6,
     image: "/blog/voice-ai-phone-agent.webp",
     imageAlt: {
@@ -907,18 +927,18 @@ export const posts: BlogPost[] = [
       en: "Voice AI phone agent for a small business answering a call and booking an appointment",
     },
     title: {
-      he: "סוכן AI טלפוני לעסקים קטנים — מענה לשיחות ותיאום תורים בלי להחליף את הצוות",
-      en: "Voice AI phone agent for SMBs — answer calls and book appointments without replacing the team",
+      he: "סוכן AI טלפוני — מענה לשיחה ותיאום תור, בלי להחליף את הצוות",
+      en: "Voice AI phone agent — answer the call and book a slot, without replacing the team",
     },
     excerpt: {
-      he: "הטלפון עדיין מביא לידים — ואף אחד לא תמיד פנוי. סוכן קולי טוב עונה, שואל שאלות קצרות, מתאם תור, ומעביר לאדם כשצריך.",
-      en: "The phone still brings leads — and nobody is always free. A good voice agent answers, asks short questions, books a slot, and hands off to a human when needed.",
+      he: "סוכן AI טלפוני עונה כשאין מי פנוי, שואל שאלות קצרות לפי תסריט, ומתאם תור. מה הוא עושה, מה לא, ואיך מתחילים משיחה אחת.",
+      en: "A voice AI phone agent answers when nobody is free, asks short scripted questions, and books a slot. What it does, what it does not, and how to start with one call flow.",
     },
     body: {
       he: [
         { type: "p", text: "בעסק קטן הטלפון לא נח. לקוח מתקשר בזמן טיפול, בשעת עומס, או אחרי שעות. אם אף אחד לא עונה — הוא עובר לספק הבא. אם כולם עונים בלי סדר — אין רשומה, אין תור, ואין מעקב." },
         { type: "p", text: "ביו סיסטם (ביוסיסטם, Beo System) בונה סוכני AI, אוטומציות, מערכות פניות ואתרים לעסקים בישראל ובדובאי. המאמר הזה על ערוץ אחד: סוכן AI טלפוני (קולי) למענה ראשוני ותיאום תורים — בלי להחליף את הצוות." },
-        { type: "h2", text: "מה סוכן טלפוני עושה (ומה לא)" },
+        { type: "h2", text: "מה סוכן AI טלפוני עושה (ומה לא)" },
         { type: "p", text: "הוא עונה לשיחה, מזהה כוונה בסיסית (מידע / תור / דחוף), שואל שאלות קצרות לפי תסריט מאושר, מציע חלונות זמן, ופותח רשומה עם סטטוס ובעלים." },
         { type: "p", text: "הוא לא סוגר מחיר רגיש, לא מתחייב בשם העסק על תנאים מורכבים, ולא ממשיך שיחה רגשית או תלונה כבדה. הגבול נכתב מראש — כמו בכל סוכן AI אצלנו." },
         { type: "h2", text: "למה זה לא «מענה אוטומטי ישן»" },
@@ -934,6 +954,8 @@ export const posts: BlogPost[] = [
         { type: "p", text: "מתחילים ממפת שיחה קצרה: מה נשאל, מתי מעבירים לאדם, ואיפה נשמרת הרשומה. מחברים ליומן קיים או למערכת פניות. מגדירים טקסטים/תסריטים מאושרים ושעות פעילות." },
         { type: "p", text: "עובדים עם עסקים בישראל (קריית ביאליק) ובדובאי: אותו עיקרון — תהליך אחד, מקור אמת אחד, אדם במקום הנכון. לא קשור ל־BEO Software בגרמניה (מכס/לוגיסטיקה)." },
         { type: "h2", text: "שאלות נפוצות לפני שפונים" },
+        { type: "p", text: "מה זה סוכן AI טלפוני? סוכן AI טלפוני עונה לשיחה נכנסת, מזהה אם מבקשים מידע, תור או אדם, ושואל שאלות קצרות. הוא יכול להציע מועד ולפתוח רשומה. שיחה רגישה נשארת אצל אדם." },
+        { type: "p", text: "סוכן AI טלפוני מתאים אם מפספסים שיחות? הוא מתאים כשיש שיחות שנכנסות בלי מי שעונה, או תורים בלי יומן. מתחילים מתהליך אחד, לא מהחלפת המרכזייה." },
         { type: "p", text: "צריך להחליף את המרכזייה? לא בהכרח. לפעמים מספיק ספרינט על שיחות נכנסות ותיאום תורים — ואחר כך מרחיבים." },
         { type: "p", text: "האם הסוכן מחליף מענה אנושי? לא. הוא מקצר זמן תגובה ומסדר פנייה. שיחה רגישה או מכירה מורכבת נשארת אצל אדם." },
         { type: "p", text: "מה ההבדל מסוכן וואטסאפ? הוואטסאפ על הודעות. כאן הערוץ קולי — שיחה, תורים, והעברה בקול. אפשר לחבר את שניהם אחר כך." },
@@ -955,7 +977,7 @@ export const posts: BlogPost[] = [
       en: [
         { type: "p", text: "In a small business the phone never rests. A customer calls during a treatment, at peak hour, or after hours. If nobody answers — they move to the next provider. If everyone answers with no order — there is no record, no appointment, no follow-up." },
         { type: "p", text: "Beo System (ביו סיסטם) builds AI agents, automations, inquiry systems, and websites for businesses in Israel and Dubai. This piece is one channel: a voice AI phone agent for first reply and appointment booking — without replacing the team." },
-        { type: "h2", text: "What a phone agent does (and does not)" },
+        { type: "h2", text: "What a voice AI phone agent does (and does not)" },
         { type: "p", text: "It answers the call, spots basic intent (info / booking / urgent), asks short questions from an approved script, offers time slots, and opens a record with owner and status." },
         { type: "p", text: "It does not close sensitive pricing, commit the business to complex terms, or continue a heavy complaint. The boundary is written up front — same as with any AI agent we build." },
         { type: "h2", text: "Why this is not «old auto-attendant»" },
@@ -971,6 +993,8 @@ export const posts: BlogPost[] = [
         { type: "p", text: "We start with a short call map: what we ask, when we hand off to a human, and where the record is saved. We connect to an existing calendar or inquiry system. We set approved scripts and business hours." },
         { type: "p", text: "We work with businesses in Israel (Kiryat Bialik) and Dubai: same principle — one process, one source of truth, a human in the right place. Not affiliated with BEO Software in Germany (customs/logistics)." },
         { type: "h2", text: "FAQ before you reach out" },
+        { type: "p", text: "What is a voice AI phone agent? It answers an inbound call, sees whether the caller wants information, a booking, or a person, and asks short questions. It can offer a slot and open a record. A sensitive call stays with a human." },
+        { type: "p", text: "Does a voice AI phone agent fit if calls are missed? It fits when calls arrive with nobody free to answer, or bookings have no calendar. Start with one process, not a PBX replacement." },
         { type: "p", text: "Do you need to replace the PBX? Not necessarily. Sometimes a sprint on inbound calls and booking is enough — then you expand." },
         { type: "p", text: "Does the agent replace human answering? No. It shortens response time and structures the lead. Sensitive or complex sales talks stay with a human." },
         { type: "p", text: "How is this different from a WhatsApp agent? WhatsApp is messages. Here the channel is voice — call, booking, spoken handoff. You can connect both later." },
