@@ -5,7 +5,40 @@ import Link from "next/link";
 import { Field } from "@/components/canvas/field";
 import { TalkButton } from "@/components/layout/talk-button";
 import { useI18n } from "@/components/providers/i18n-provider";
-import { getPost, getRelated } from "@/lib/blog";
+import { getPost, getRelated, type BlogBlock, type BlogLang } from "@/lib/blog";
+
+function proseBlock(block: BlogBlock, i: number, lang: BlogLang) {
+  if (block.type === "h2") return <h2 key={i}>{block.text}</h2>;
+  const url = block.text.trim();
+  if (/^https?:\/\/\S+$/.test(url)) {
+    const internal = url.startsWith("https://beosystem.com");
+    const path = internal ? url.replace("https://beosystem.com", "") || "/" : url;
+    const slug = path.startsWith("/blog/") ? path.slice("/blog/".length) : null;
+    const label = slug
+      ? (getPost(slug)?.title[lang] ?? path)
+      : url.includes("wa.me/")
+        ? lang === "he"
+          ? "כתבו לנו בוואטסאפ"
+          : "Message us on WhatsApp"
+        : path === "/#contact"
+          ? lang === "he"
+            ? "טופס יצירת קשר"
+            : "Contact form"
+          : url;
+    return (
+      <p key={i}>
+        {internal ? (
+          <Link href={path}>{label}</Link>
+        ) : (
+          <a href={url} target="_blank" rel="noopener">
+            {label}
+          </a>
+        )}
+      </p>
+    );
+  }
+  return <p key={i}>{block.text}</p>;
+}
 
 export function ArticleContent({ slug }: { slug: string }) {
   const { lang, t } = useI18n();
@@ -40,13 +73,7 @@ export function ArticleContent({ slug }: { slug: string }) {
             />
           </figure>
           <div className="blog-prose">
-            {post.body[lang].map((block, i) =>
-              block.type === "h2" ? (
-                <h2 key={i}>{block.text}</h2>
-              ) : (
-                <p key={i}>{block.text}</p>
-              ),
-            )}
+            {post.body[lang].map((block, i) => proseBlock(block, i, lang))}
           </div>
           <nav className="blog-article-next" aria-label={lang === "he" ? "עמודים נוספים" : "More pages"}>
             <Link href="/projects">{t.projectsTitle}</Link>

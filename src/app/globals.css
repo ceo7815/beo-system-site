@@ -1014,6 +1014,17 @@ body[data-menu-open="1"] .social-rail {
   max-width: 65ch;
 }
 
+.blog-prose a {
+  color: #c4b5fd;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.blog-prose a:hover {
+  color: #fff;
+}
+
 .blog-prose h2 {
   margin: 2.1rem 0 0.8rem;
   font-size: 1.45rem;

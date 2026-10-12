@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { ArticleContent } from "@/components/pages/article-content";
 import { JsonLd } from "@/components/seo/json-ld";
 import { getPost, posts } from "@/lib/blog";
-import { articleJsonLd, breadcrumbJsonLd, ogImage, pageMetadata } from "@/lib/seo";
+import { articleJsonLd, breadcrumbJsonLd, ogImage, pageMetadata, postFaqJsonLd } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -32,9 +32,11 @@ export default async function ArticlePage({ params }: Props) {
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) notFound();
+  const faq = postFaqJsonLd(post, "he");
   return (
     <>
       <JsonLd data={articleJsonLd(post, "he")} />
+      {faq ? <JsonLd data={faq} /> : null}
       <JsonLd
         data={breadcrumbJsonLd([
           { name: "בלוג", path: "/blog" },
