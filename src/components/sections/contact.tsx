@@ -2,6 +2,7 @@
 
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { site, whatsappUrl } from "@/lib/site";
+import { currentPagePath, trackEvent } from "@/lib/analytics";
 import { useI18n } from "@/components/providers/i18n-provider";
 
 export function Contact() {
@@ -41,6 +42,7 @@ export function Contact() {
     const text = [t.waPrefill, name, phone, company, need].filter(Boolean).join("\n");
     window.open(whatsappUrl(text), "_blank", "noopener,noreferrer");
     setSent(true);
+    trackEvent("generate_lead", { page_path: currentPagePath() });
   }
 
   return (

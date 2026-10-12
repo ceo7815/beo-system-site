@@ -1,48 +1,79 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Script from "next/script";
 import { cookieAllowed } from "@/lib/cookies";
-
-const MEASUREMENT_ID =
-  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-FNQR0XYR54";
-
-declare global {
-  interface Window {
-    dataLayer?: unknown[];
-    gtag?: (...args: unknown[]) => void;
-  }
-}
-
-function loadGtag(id: string) {
-  if (typeof window === "undefined") return;
-  if (document.getElementById("beo-ga4")) return;
-
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function gtag(...args: unknown[]) {
-    window.dataLayer!.push(args);
-  };
-  window.gtag("js", new Date());
-  window.gtag("config", id);
-
-  const script = document.createElement("script");
-  script.id = "beo-ga4";
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
-  document.head.appendChild(script);
-}
+import {
+  GA_MEASUREMENT_ID,
+  analyticsEventForHref,
+  currentPagePath,
+  ensureGtag,
+  trackEvent,
+} from "@/lib/analytics";
 
 export function GaAnalytics() {
+  const [enabled, setEnabled] = useState(false);
+
   useEffect(() => {
     function sync() {
-      if (!MEASUREMENT_ID) return;
-      if (!cookieAllowed("analytics")) return;
-      loadGtag(MEASUREMENT_ID);
+      setEnabled(Boolean(GA_MEASUREMENT_ID) && cookieAllowed("analytics"));
     }
-
     sync();
     window.addEventListener("beo-cookies", sync);
     return () => window.removeEventListener("beo-cookies", sync);
   }, []);
 
-  return null;
+  useEffect(() => {
+    if (!enabled) return;
+    ensureGtag();
+  }, [enabled]);
+
+  useEffect(() => {
+    function onClick(event: MouseEvent) {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      const anchor = target.closest("a");
+      if (!anchor) return;
+      const href = anchor.getAttribute("href");
+      if (!href) return;
+      const kind = analyticsEventForHref(href, window.location.href);
+      if (!kind) return;
+      let link_url = href;
+      try {
+        link_url = new URL(href, window.location.href).href;
+      } catch {
+        /* keep the raw href */
+      }
+      trackEvent(kind, { page_path: currentPagePath(), link_url });
+    }
+
+    document.addEventListener("click", onClick, true);
+    return () => document.removeEventListener("click", onClick, true);
+  }, []);
+
+  if (!enabled) return null;
+
+  const config = `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = window.gtag || gtag;
+    if (!window.__beoGa) {
+      window.__beoGa = true;
+      window.gtag('js', new Date());
+      window.gtag('config', '${GA_MEASUREMENT_ID}');
+    }
+  `;
+
+  return (
+    <>
+      <Script
+        id="beo-ga4-src"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="beo-ga4" strategy="afterInteractive">
+        {config}
+      </Script>
+    </>
+  );
 }
