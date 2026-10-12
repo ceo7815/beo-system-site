@@ -1,0 +1,67 @@
+# Cloudflare Pages / Workers static assets.
+# Next.js `output: "export"` copies public/ into the publish directory (out/).
+# Patterns are extension-only so HTML routes under /blog are not cached for a year.
+# `*` matches across slashes, including /film/m/* and /_next/static/chunks/*.
+
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/blog/*.avif
+  Cache-Control: public, max-age=31536000, immutable
+/blog/*.gif
+  Cache-Control: public, max-age=31536000, immutable
+/blog/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+/blog/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+/blog/*.png
+  Cache-Control: public, max-age=31536000, immutable
+/blog/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+/blog/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/projects/*.avif
+  Cache-Control: public, max-age=31536000, immutable
+/projects/*.gif
+  Cache-Control: public, max-age=31536000, immutable
+/projects/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+/projects/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+/projects/*.png
+  Cache-Control: public, max-age=31536000, immutable
+/projects/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+/projects/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/brand/*.avif
+  Cache-Control: public, max-age=31536000, immutable
+/brand/*.gif
+  Cache-Control: public, max-age=31536000, immutable
+/brand/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+/brand/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+/brand/*.png
+  Cache-Control: public, max-age=31536000, immutable
+/brand/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+/brand/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/film/*.avif
+  Cache-Control: public, max-age=31536000, immutable
+/film/*.gif
+  Cache-Control: public, max-age=31536000, immutable
+/film/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+/film/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+/film/*.png
+  Cache-Control: public, max-age=31536000, immutable
+/film/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+/film/*.webp
+  Cache-Control: public, max-age=31536000, immutable

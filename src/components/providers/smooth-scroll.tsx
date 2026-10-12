@@ -1,17 +1,21 @@
 "use client";
 
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useLayoutEffect, type ReactNode } from "react";
 import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { setLenis, scrollToId, emitLenisScroll } from "@/lib/lenis";
-import { isMotionOff } from "@/lib/a11y";
+import { isMotionOff, loadA11y } from "@/lib/a11y";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export function SmoothScroll({ children }: { children: ReactNode }) {
   const pathname = usePathname();
+
+  useLayoutEffect(() => {
+    if (loadA11y().motion) gsap.globalTimeline.pause();
+  }, []);
 
   useEffect(() => {
     let stop: (() => void) | undefined;

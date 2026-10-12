@@ -1,13 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Field } from "@/components/canvas/field";
+import { ContentImage } from "@/components/media/content-image";
 import { useI18n } from "@/components/providers/i18n-provider";
-import { posts } from "@/lib/blog";
+import type { BlogCard } from "@/lib/blog";
 
-export function BlogContent() {
+const CARD_SIZES = "(min-width: 768px) 360px, calc(100vw - 2.5rem)";
+
+export function BlogContent({ posts }: { posts: BlogCard[] }) {
   const { lang, t } = useI18n();
   const [chars, setChars] = useState(0);
   const [done, setDone] = useState(false);
@@ -55,11 +57,11 @@ export function BlogContent() {
               <li key={post.slug}>
                 <Link href={`/blog/${post.slug}`} className="blog-card" onClick={(e) => e.stopPropagation()}>
                   <span className="blog-card-media">
-                    <Image
+                    <ContentImage
                       src={post.image}
                       alt={post.imageAlt[lang]}
                       fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      sizes={CARD_SIZES}
                       className="object-cover"
                     />
                   </span>

@@ -1614,3 +1614,18 @@ export function getPost(slug: string) {
 export function getRelated(slug: string) {
   return posts.filter((post) => post.slug !== slug);
 }
+
+export type BlogCard = Omit<BlogPost, "body">;
+
+export function toBlogCard(post: BlogPost): BlogCard {
+  return {
+    slug: post.slug,
+    n: post.n,
+    date: post.date,
+    minutes: post.minutes,
+    image: post.image,
+    imageAlt: post.imageAlt,
+    title: post.title,
+    excerpt: post.excerpt,
+  };
+}

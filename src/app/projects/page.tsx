@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ProjectsContent } from "@/components/pages/projects-content";
+import { SmoothScroll } from "@/components/providers/smooth-scroll";
 import { Contact } from "@/components/sections/contact";
 import { FromTheBlog } from "@/components/sections/from-the-blog";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -14,11 +15,13 @@ export const metadata: Metadata = pageMetadata({
 
 export default function ProjectsPage() {
   return (
-    <main>
-      <JsonLd data={breadcrumbJsonLd([{ name: "פרוייקטים", path: "/projects" }])} />
-      <ProjectsContent />
-      <FromTheBlog />
-      <Contact />
-    </main>
+    <SmoothScroll>
+      <main>
+        <JsonLd data={breadcrumbJsonLd([{ name: "פרוייקטים", path: "/projects" }])} />
+        <ProjectsContent />
+        <FromTheBlog />
+        <Contact />
+      </main>
+    </SmoothScroll>
   );
 }

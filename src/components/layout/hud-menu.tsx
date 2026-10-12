@@ -88,7 +88,14 @@ export function HudMenu() {
           }
 
           return (
-            <Link key={item.id} href={item.href} className={className} style={style} onClick={() => setOpen(false)}>
+            <Link
+              key={item.id}
+              href={item.href}
+              prefetch={item.href === "/" || item.href === "/projects" ? false : undefined}
+              className={className}
+              style={style}
+              onClick={() => setOpen(false)}
+            >
               <span className="hud-menu-n">{index}</span>
               <span className="hud-menu-txt">{label}</span>
             </Link>

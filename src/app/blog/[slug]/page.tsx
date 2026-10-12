@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ArticleContent } from "@/components/pages/article-content";
+import { SmoothScrollLite } from "@/components/providers/smooth-scroll-lite";
 import { JsonLd } from "@/components/seo/json-ld";
-import { getPost, posts } from "@/lib/blog";
+import { getPost, posts, toBlogCard } from "@/lib/blog";
 import { articleJsonLd, breadcrumbJsonLd, ogImage, pageMetadata, postFaqJsonLd } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -33,8 +34,10 @@ export default async function ArticlePage({ params }: Props) {
   const post = getPost(slug);
   if (!post) notFound();
   const faq = postFaqJsonLd(post, "he");
+  const related = posts.filter((item) => item.slug !== post.slug).map(toBlogCard);
+  const titles = Object.fromEntries(posts.map((item) => [item.slug, item.title]));
   return (
-    <>
+    <SmoothScrollLite>
       <JsonLd data={articleJsonLd(post, "he")} />
       {faq ? <JsonLd data={faq} /> : null}
       <JsonLd
@@ -43,7 +46,7 @@ export default async function ArticlePage({ params }: Props) {
           { name: post.title.he, path: `/blog/${post.slug}` },
         ])}
       />
-      <ArticleContent slug={slug} />
-    </>
+      <ArticleContent post={post} related={related} titles={titles} />
+    </SmoothScrollLite>
   );
 }

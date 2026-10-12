@@ -109,7 +109,7 @@ function Screen({
           muted
           loop
           playsInline
-          preload="auto"
+          preload="none"
           disablePictureInPicture
           aria-label={title}
         >

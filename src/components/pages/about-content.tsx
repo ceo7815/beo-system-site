@@ -33,7 +33,7 @@ export function AboutContent() {
         <div className="about-type-action">
           <TalkButton href="/#contact" className="hud-talk-film" />
           <nav className="about-type-links">
-            <Link href="/projects">{t.projectsTitle}</Link>
+            <Link href="/projects" prefetch={false}>{t.projectsTitle}</Link>
             <Link href="/blog">{t.blogTitle}</Link>
           </nav>
         </div>
