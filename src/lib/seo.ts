@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { absUrl, services, site } from "@/lib/site";
-import { posts, type BlogPost } from "@/lib/blog";
+import { posts, type BlogBlock, type BlogPost } from "@/lib/blog";
 
 export const ogSize = { width: 1200, height: 630 } as const;
 
@@ -228,47 +228,77 @@ export function organizationGraph() {
         about: { "@id": orgId },
         primaryImageOfPage: absUrl("/og.png"),
       },
-      {
-        "@type": "FAQPage",
-        "@id": `${site.url}/#faq`,
-        inLanguage: "he-IL",
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "מה זה ביו סיסטם / ביוסיסטם?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "ביו סיסטם (ביוסיסטם, Beo System) היא חברת פיתוח אפליקציות, אתרים ומערכות AI. סוכני בינה מלאכותית, צ׳אטבוטים, אוטומציות ו-CRM — לישראל ולדובאי.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "האם ביו סיסטם מפתחת אפליקציות ואתרים?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "כן. פיתוח אפליקציות מובייל, אתרי תדמית ומערכות ווב בהתאמה, עם חיבור לתהליך העסקי — לא דף שנשאר מצגת.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "מה ההבדל בין צ׳אטבוט לסוכן AI?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "צ׳אט עונה. סוכן פועל: קורא נתונים, כותב למערכת, פותח משימה, ומעביר לאדם כשצריך. בלי חיבור ל-CRM ולמערכות — זה עדיין בוט תשובות.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "איפה ביו סיסטם יושבת?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "ישראל: החרושת 10, קריית ביאליק. דובאי: Business Bay.",
-            },
-          },
-        ],
-      },
     ],
   };
+}
+
+const brandFaq = [
+  {
+    q: "מה זה ביו סיסטם / ביוסיסטם?",
+    a: "ביו סיסטם (ביוסיסטם, Beo System) היא חברת פיתוח אפליקציות, אתרים ומערכות AI. סוכני בינה מלאכותית, צ׳אטבוטים, אוטומציות ו-CRM — לישראל ולדובאי.",
+  },
+  {
+    q: "האם ביו סיסטם מפתחת אפליקציות ואתרים?",
+    a: "כן. פיתוח אפליקציות מובייל, אתרי תדמית ומערכות ווב בהתאמה, עם חיבור לתהליך העסקי — לא דף שנשאר מצגת.",
+  },
+  {
+    q: "מה ההבדל בין צ׳אטבוט לסוכן AI?",
+    a: "צ׳אט עונה. סוכן פועל: קורא נתונים, כותב למערכת, פותח משימה, ומעביר לאדם כשצריך. בלי חיבור ל-CRM ולמערכות — זה עדיין בוט תשובות.",
+  },
+  {
+    q: "איפה ביו סיסטם יושבת?",
+    a: "ישראל: החרושת 10, קריית ביאליק. דובאי: Business Bay.",
+  },
+] as const;
+
+function faqPageJsonLd(
+  id: string,
+  lang: "he" | "en",
+  items: { q: string; a: string }[],
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": id,
+    inLanguage: lang === "he" ? "he-IL" : "en",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+}
+
+export function brandFaqJsonLd() {
+  return faqPageJsonLd(`${site.url}/#faq`, "he", [...brandFaq]);
+}
+
+function isFaqHeading(text: string) {
+  return text.startsWith("שאלות נפוצות") || text === "FAQ" || text.startsWith("FAQ ");
+}
+
+export function postFaqItems(blocks: BlogBlock[]) {
+  const items: { q: string; a: string }[] = [];
+  let inFaq = false;
+  for (const block of blocks) {
+    if (block.type === "h2") {
+      inFaq = isFaqHeading(block.text);
+      continue;
+    }
+    if (!inFaq) continue;
+    const mark = block.text.indexOf("?");
+    if (mark < 0) continue;
+    const q = block.text.slice(0, mark + 1).trim();
+    const a = block.text.slice(mark + 1).trim();
+    if (q && a) items.push({ q, a });
+  }
+  return items;
+}
+
+export function postFaqJsonLd(post: BlogPost, lang: "he" | "en" = "he") {
+  const items = postFaqItems(post.body[lang]);
+  if (!items.length) return null;
+  return faqPageJsonLd(absUrl(`/blog/${post.slug}#faq`), lang, items);
 }
 
 export function articleJsonLd(post: BlogPost, lang: "he" | "en" = "he") {

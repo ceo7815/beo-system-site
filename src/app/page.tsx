@@ -1,6 +1,7 @@
 import { ScrollFilm } from "@/components/film/scroll-film";
 import { Contact } from "@/components/sections/contact";
-import { pageMetadata, seo } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/json-ld";
+import { brandFaqJsonLd, pageMetadata, seo } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: seo.title,
@@ -12,6 +13,7 @@ export const metadata = pageMetadata({
 export default function Home() {
   return (
     <main>
+      <JsonLd data={brandFaqJsonLd()} />
       <h1 className="sr-only">
         ביו סיסטם — פיתוח אפליקציות, אתרים ובינה מלאכותית
       </h1>
