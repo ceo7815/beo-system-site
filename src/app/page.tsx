@@ -1,5 +1,6 @@
 import { ScrollFilm } from "@/components/film/scroll-film";
 import { Contact } from "@/components/sections/contact";
+import { FromTheBlog } from "@/components/sections/from-the-blog";
 import { JsonLd } from "@/components/seo/json-ld";
 import { brandFaqJsonLd, pageMetadata, seo } from "@/lib/seo";
 
@@ -18,6 +19,7 @@ export default function Home() {
         ביו סיסטם — פיתוח אפליקציות, אתרים ובינה מלאכותית
       </h1>
       <ScrollFilm />
+      <FromTheBlog />
       <Contact />
     </main>
   );
