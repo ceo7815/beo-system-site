@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { Rubik, Varela_Round } from "next/font/google";
-import { SmoothScroll } from "@/components/providers/smooth-scroll";
 import { I18nProvider } from "@/components/providers/i18n-provider";
 import { A11yProvider } from "@/components/providers/a11y-provider";
 import { A11ySkip, A11yWidget } from "@/components/layout/a11y-widget";
@@ -11,6 +10,7 @@ import { Footer } from "@/components/layout/footer";
 import { JsonLd } from "@/components/seo/json-ld";
 import { ogImage, organizationGraph, seo } from "@/lib/seo";
 import { absUrl, site } from "@/lib/site";
+import { LOGO_HEADER_SIZES, logoSrcSet } from "@/lib/logo-mark";
 import "./globals.css";
 
 const rubik = Rubik({
@@ -106,6 +106,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <link rel="preload" as="image" href="/film/01.webp" type="image/webp" media="(min-width: 768px)" />
         <link rel="preload" as="image" href="/film/m/01.webp" type="image/webp" media="(max-width: 767.98px)" />
+        <link
+          rel="preload"
+          as="image"
+          type="image/webp"
+          href="/brand/logo-mark-240.webp"
+          imageSrcSet={logoSrcSet()}
+          imageSizes={LOGO_HEADER_SIZES}
+          fetchPriority="high"
+        />
       </head>
       <body className="min-h-full bg-bg font-sans text-fg">
         <JsonLd data={organizationGraph()} />
@@ -115,9 +124,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <div className="site-root">
               <div className="grain" />
               <Header />
-              <div id="main-content">
-                <SmoothScroll>{children}</SmoothScroll>
-              </div>
+              <div id="main-content">{children}</div>
               <Footer />
             </div>
             <A11yWidget />

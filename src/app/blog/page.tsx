@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { BlogContent } from "@/components/pages/blog-content";
+import { SmoothScrollLite } from "@/components/providers/smooth-scroll-lite";
 import { JsonLd } from "@/components/seo/json-ld";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
+import { posts, toBlogCard } from "@/lib/blog";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = pageMetadata({
@@ -13,7 +15,7 @@ export const metadata: Metadata = pageMetadata({
 
 export default function BlogPage() {
   return (
-    <>
+    <SmoothScrollLite>
       <JsonLd
         data={{
           "@context": "https://schema.org",
@@ -26,7 +28,7 @@ export default function BlogPage() {
         }}
       />
       <JsonLd data={breadcrumbJsonLd([{ name: "בלוג", path: "/blog" }])} />
-      <BlogContent />
-    </>
+      <BlogContent posts={posts.map(toBlogCard)} />
+    </SmoothScrollLite>
   );
 }

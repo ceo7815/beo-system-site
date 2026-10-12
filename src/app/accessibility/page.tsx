@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LegalContent } from "@/components/pages/legal-content";
+import { SmoothScrollLite } from "@/components/providers/smooth-scroll-lite";
 import { JsonLd } from "@/components/seo/json-ld";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 
@@ -11,11 +12,11 @@ export const metadata: Metadata = pageMetadata({
 
 export default function AccessibilityPage() {
   return (
-    <>
+    <SmoothScrollLite>
       <JsonLd
         data={breadcrumbJsonLd([{ name: "הצהרת נגישות", path: "/accessibility" }])}
       />
       <LegalContent kind="accessibility" />
-    </>
+    </SmoothScrollLite>
   );
 }

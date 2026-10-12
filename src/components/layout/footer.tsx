@@ -1,7 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import { LogoMark } from "@/components/brand/logo-mark";
+import { LOGO_FOOTER_SIZES } from "@/lib/logo-mark";
 import { site } from "@/lib/site";
 import { useI18n } from "@/components/providers/i18n-provider";
 
@@ -17,10 +18,10 @@ export function Footer() {
         <Link href="/privacy">{t.privacy}</Link>
         <Link href="/accessibility">{t.accessibility}</Link>
       </nav>
-      <Link href="/" className="site-footer-logo" aria-label={`${site.nameEn} — ${site.nameHe}`}>
-        <Image
-          src="/brand/logo-mark.png"
+      <Link href="/" prefetch={false} className="site-footer-logo" aria-label={`${site.nameEn} — ${site.nameHe}`}>
+        <LogoMark
           alt={`${site.nameEn} — ${site.nameHe}`}
+          sizes={LOGO_FOOTER_SIZES}
           width={88}
           height={88}
         />

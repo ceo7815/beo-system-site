@@ -1,5 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
+import { LogoMark } from "@/components/brand/logo-mark";
+import { LOGO_HEADER_SIZES } from "@/lib/logo-mark";
 import { site } from "@/lib/site";
 import { LangToggle } from "@/components/layout/lang-toggle";
 import { TalkButton } from "@/components/layout/talk-button";
@@ -15,12 +16,13 @@ export function Header() {
         <div className="hud-chrome relative z-20 flex items-start justify-between px-5 pt-3 md:px-8 md:pt-4 pointer-events-none">
           <Link
             href="/"
+            prefetch={false}
             aria-label={`${site.nameEn} — ${site.nameHe}`}
             className="hud-logo pointer-events-auto shrink-0"
           >
-            <Image
-              src="/brand/logo-mark.png"
+            <LogoMark
               alt={`${site.nameEn} — ${site.nameHe}`}
+              sizes={LOGO_HEADER_SIZES}
               width={320}
               height={320}
               priority

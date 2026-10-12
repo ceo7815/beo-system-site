@@ -9,13 +9,21 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import gsap from "gsap";
 import {
   a11yDefaults,
   applyA11y,
   loadA11y,
   type A11yState,
 } from "@/lib/a11y";
+
+function syncGsapTimeline(motion: boolean) {
+  const path = window.location.pathname.replace(/\/$/, "") || "/";
+  if (path !== "/" && path !== "/projects") return;
+  void import("gsap").then(({ default: gsap }) => {
+    if (motion) gsap.globalTimeline.pause();
+    else gsap.globalTimeline.resume();
+  });
+}
 
 type A11yCtx = {
   state: A11yState;
@@ -35,15 +43,14 @@ export function A11yProvider({ children }: { children: ReactNode }) {
     const loaded = loadA11y();
     setRaw(loaded);
     applyA11y(loaded);
-    if (loaded.motion) gsap.globalTimeline.pause();
+    if (loaded.motion) syncGsapTimeline(true);
   }, []);
 
   const setState = useCallback((next: A11yState | ((prev: A11yState) => A11yState)) => {
     setRaw((prev) => {
       const value = typeof next === "function" ? next(prev) : next;
       applyA11y(value);
-      if (value.motion) gsap.globalTimeline.pause();
-      else gsap.globalTimeline.resume();
+      if (value.motion || prev.motion) syncGsapTimeline(value.motion);
       return value;
     });
   }, []);

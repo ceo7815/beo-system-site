@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LegalContent } from "@/components/pages/legal-content";
+import { SmoothScrollLite } from "@/components/providers/smooth-scroll-lite";
 import { JsonLd } from "@/components/seo/json-ld";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 
@@ -11,9 +12,9 @@ export const metadata: Metadata = pageMetadata({
 
 export default function PrivacyPage() {
   return (
-    <>
+    <SmoothScrollLite>
       <JsonLd data={breadcrumbJsonLd([{ name: "מדיניות פרטיות", path: "/privacy" }])} />
       <LegalContent kind="privacy" />
-    </>
+    </SmoothScrollLite>
   );
 }

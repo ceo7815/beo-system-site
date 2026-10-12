@@ -1,12 +1,15 @@
 "use client";
 
 import type { ReactNode } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Field } from "@/components/canvas/field";
 import { TalkButton } from "@/components/layout/talk-button";
+import { ContentImage } from "@/components/media/content-image";
 import { useI18n } from "@/components/providers/i18n-provider";
-import { getPost, getRelated, type BlogBlock, type BlogLang } from "@/lib/blog";
+import type { BlogBlock, BlogCard, BlogLang, BlogPost } from "@/lib/blog";
+
+const HERO_SIZES = "(min-width: 768px) 672px, calc(100vw - 2.5rem)";
+const RELATED_SIZES = "(min-width: 768px) 380px, calc(100vw - 2.5rem)";
 
 function inlineNodes(text: string) {
   const MD_LINK = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g;
@@ -37,15 +40,20 @@ function inlineNodes(text: string) {
   return nodes;
 }
 
-function proseBlock(block: BlogBlock, i: number, lang: BlogLang) {
+function proseBlock(
+  block: BlogBlock,
+  i: number,
+  lang: BlogLang,
+  titles: Record<string, { he: string; en: string }>,
+) {
   if (block.type === "h2") return <h2 key={i}>{block.text}</h2>;
   const url = block.text.trim();
   if (/^https?:\/\/\S+$/.test(url)) {
     const internal = url.startsWith("https://beosystem.com");
     const path = internal ? url.replace("https://beosystem.com", "") || "/" : url;
     const slug = path.startsWith("/blog/") ? path.slice("/blog/".length) : null;
-    const label = slug
-      ? (getPost(slug)?.title[lang] ?? path)
+      const label = slug
+      ? (titles[slug]?.[lang] ?? path)
       : url.includes("wa.me/")
         ? lang === "he"
           ? "כתבו לנו בוואטסאפ"
@@ -70,11 +78,16 @@ function proseBlock(block: BlogBlock, i: number, lang: BlogLang) {
   return <p key={i}>{inlineNodes(block.text)}</p>;
 }
 
-export function ArticleContent({ slug }: { slug: string }) {
+export function ArticleContent({
+  post,
+  related,
+  titles,
+}: {
+  post: BlogPost;
+  related: BlogCard[];
+  titles: Record<string, { he: string; en: string }>;
+}) {
   const { lang, t } = useI18n();
-  const post = getPost(slug);
-  if (!post) return null;
-  const related = getRelated(slug);
   const date = formatDate(post.date, lang);
 
   return (
@@ -93,22 +106,23 @@ export function ArticleContent({ slug }: { slug: string }) {
           <h1 className="blog-article-title">{post.title[lang]}</h1>
           <p className="blog-article-lead">{post.excerpt[lang]}</p>
           <figure className="blog-article-hero">
-            <Image
+            <ContentImage
               src={post.image}
               alt={post.imageAlt[lang]}
               width={1600}
               height={900}
+              sizes={HERO_SIZES}
               priority
               className="h-full w-full object-cover"
             />
           </figure>
           <div className="blog-prose">
-            {post.body[lang].map((block, i) => proseBlock(block, i, lang))}
+            {post.body[lang].map((block, i) => proseBlock(block, i, lang, titles))}
           </div>
           <nav className="blog-article-next" aria-label={lang === "he" ? "עמודים נוספים" : "More pages"}>
-            <Link href="/projects">{t.projectsTitle}</Link>
+            <Link href="/projects" prefetch={false}>{t.projectsTitle}</Link>
             <Link href="/about">{t.aboutTitle}</Link>
-            <Link href="/#contact">{t.talk}</Link>
+            <Link href="/#contact" prefetch={false}>{t.talk}</Link>
           </nav>
           <div className="film-talk mt-12">
             <TalkButton href="/#contact" className="hud-talk-film" />
@@ -124,11 +138,11 @@ export function ArticleContent({ slug }: { slug: string }) {
                 <li key={item.slug}>
                   <Link href={`/blog/${item.slug}`} className="blog-card">
                     <span className="blog-card-media">
-                      <Image
+                      <ContentImage
                         src={item.image}
                         alt={item.imageAlt[lang]}
                         fill
-                        sizes="(max-width: 768px) 100vw, 33vw"
+                        sizes={RELATED_SIZES}
                         className="object-cover"
                       />
                     </span>

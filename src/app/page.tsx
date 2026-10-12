@@ -1,4 +1,5 @@
 import { ScrollFilm } from "@/components/film/scroll-film";
+import { SmoothScroll } from "@/components/providers/smooth-scroll";
 import { Contact } from "@/components/sections/contact";
 import { FromTheBlog } from "@/components/sections/from-the-blog";
 import { JsonLd } from "@/components/seo/json-ld";
@@ -13,14 +14,16 @@ export const metadata = pageMetadata({
 
 export default function Home() {
   return (
-    <main>
-      <JsonLd data={brandFaqJsonLd()} />
-      <h1 className="sr-only">
-        ביו סיסטם — פיתוח אפליקציות, אתרים ובינה מלאכותית
-      </h1>
-      <ScrollFilm />
-      <FromTheBlog />
-      <Contact />
-    </main>
+    <SmoothScroll>
+      <main>
+        <JsonLd data={brandFaqJsonLd()} />
+        <h1 className="sr-only">
+          ביו סיסטם — פיתוח אפליקציות, אתרים ובינה מלאכותית
+        </h1>
+        <ScrollFilm />
+        <FromTheBlog />
+        <Contact />
+      </main>
+    </SmoothScroll>
   );
 }
