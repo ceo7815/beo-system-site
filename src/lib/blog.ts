@@ -12,6 +12,7 @@ export type BlogPost = {
   image: string;
   imageAlt: { he: string; en: string };
   title: { he: string; en: string };
+  seoTitle?: { he: string };
   excerpt: { he: string; en: string };
   body: { he: BlogBlock[]; en: BlogBlock[] };
 };
@@ -247,6 +248,9 @@ export const posts: BlogPost[] = [
     title: {
       he: "פיתוח אפליקציות ואתרים עם AI — מתי זה חברה, ומתי זה דמו",
       en: "Apps and websites with AI — when it is a company, and when it is a demo",
+    },
+    seoTitle: {
+      he: "פיתוח אפליקציות ואתרים עם AI — חברה או דמו?",
     },
     excerpt: {
       he: "חברות מחפשות פיתוח אפליקציות, אתרים ובינה מלאכותית באותו מקום. ביו סיסטם (ביוסיסטם) בונה את שלושתם כמערכת אחת — לא שלושה ספקים.",
@@ -866,6 +870,9 @@ export const posts: BlogPost[] = [
         he: "בוט לוואטסאפ לעסק — מענה מיידי, סינון לידים ומעבר לאדם",
         en: "WhatsApp bot for business — instant reply, lead screening, human handoff",
       },
+      seoTitle: {
+        he: "בוט לוואטסאפ לעסק — מענה מיידי וסינון לידים",
+      },
       excerpt: {
         he: "בוט לוואטסאפ לעסק שעונה מיד, מסנן לידים, מתמלל הודעות קוליות ורושם כל פנייה. מה הוא עושה, איך בוחרים, ואיך מתחילים. בדקו איתנו בוואטסאפ.",
         en: "A WhatsApp bot for business that replies instantly, screens leads, transcribes voice notes and logs every inquiry. What it does, how to choose, how to start.",
@@ -997,6 +1004,9 @@ export const posts: BlogPost[] = [
       he: "אוטומציה בין אתר, CRM ווואטסאפ — ספרינט צר על תהליך אחד",
       en: "Website–CRM–WhatsApp automation — a narrow sprint on one process",
     },
+    seoTitle: {
+      he: "אוטומציה בין אתר, CRM ווואטסאפ בתהליך אחד",
+    },
     excerpt: {
       he: "טופס באתר, רשומה ב־CRM, ומענה בוואטסאפ לא חייבים להיות שלושה עולמות. ספרינט אחד מחבר תהליך לידים בלי לבנות «מערכת לכל החברה».",
       en: "A site form, a CRM record, and a WhatsApp reply do not have to be three worlds. One sprint connects the lead process — without building «a system for the whole company».",
@@ -1091,6 +1101,9 @@ export const posts: BlogPost[] = [
     title: {
       he: "סוכן AI טלפוני — מענה לשיחה ותיאום תור, בלי להחליף את הצוות",
       en: "Voice AI phone agent — answer the call and book a slot, without replacing the team",
+    },
+    seoTitle: {
+      he: "סוכן AI טלפוני — מענה לשיחות ותיאום תורים",
     },
     excerpt: {
       he: "סוכן AI טלפוני עונה כשאין מי פנוי, שואל שאלות קצרות לפי תסריט, ומתאם תור. מה הוא עושה, מה לא, ואיך מתחילים משיחה אחת.",
@@ -1190,6 +1203,9 @@ export const posts: BlogPost[] = [
     title: {
       he: "אוטומציה של מעקב אחרי ליד שלא נענה — SMS ווואטסאפ אחרי שיחה או טופס",
       en: "No-answer lead follow-up automation — SMS and WhatsApp after a missed call or form",
+    },
+    seoTitle: {
+      he: "מעקב אחרי ליד שלא נענה — SMS ווואטסאפ אוטומטי",
     },
     excerpt: {
       he: "שיחה שלא נענתה או טופס בלי מענה לא חייבים להיעלם. תהליך צר שולח מעקב קצר, פותח רשומה, ומחזיר את הליד לצוות בזמן.",
@@ -1293,6 +1309,9 @@ export const posts: BlogPost[] = [
     title: {
       he: "אתר שמביא לידים — מתי עמוד נחיתה מספיק ומתי צריך מערכת פניות",
       en: "A website that brings leads — when a landing page is enough and when you need an inquiry system",
+    },
+    seoTitle: {
+      he: "אתר שמביא לידים — עמוד נחיתה או מערכת פניות?",
     },
     excerpt: {
       he: "עמוד נחיתה טוב מביא פנייה. השאלה היא מה קורה איתה אחרי הלחיצה. מדריך החלטה קצר: מתי נחיתה לבד עובדת, מתי צריך מערכת פניות, ומה שלב הביניים.",
@@ -1517,6 +1536,9 @@ export const posts: BlogPost[] = [
     title: {
       he: "כמה עולה סוכן AI או מערכת בהתאמה לעסק? מה קובע את העלות",
       en: "How much does an AI agent or custom system cost? What drives the price",
+    },
+    seoTitle: {
+      he: "כמה עולה סוכן AI לעסק? מה קובע את המחיר",
     },
     excerpt: {
       he: "בלי מחירון ובלי הבטחות: הגורמים שקובעים את העלות של סוכן AI או מערכת בהתאמה, איך עובד פרויקט, ואיך מתחילים קטן.",
