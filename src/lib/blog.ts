@@ -650,12 +650,15 @@ export const posts: BlogPost[] = [
       he: "השוואה בין צ׳אטבוט מדף לסוכן AI שמחובר למערכות",
       en: "Chatbot on a page versus an AI agent connected to systems",
     },
+    seoTitle: {
+      he: "צ׳אטבוט או סוכן AI לעסק — מה ההבדל ומה לבחור",
+    },
     title: {
       he: "צ׳אטבוט מול סוכן AI — מתי מספיק מענה, ומתי צריך פעולה",
       en: "Chatbot vs AI agent — when answers are enough, and when you need action",
     },
     excerpt: {
-      he: "צ׳אטבוט מול סוכן AI: צ׳אט עונה על שאלות, סוכן כותב למערכת ומעביר לצוות. איך בוחרים בלי לקנות את שניהם, ומאיפה מתחילים.",
+      he: "צ׳אטבוט מול סוכן AI: צ׳אט עונה על שאלות, סוכן כותב ל־CRM, שולח לוואטסאפ ומעביר לצוות. איך בוחרים בלי לקנות את שניהם, ומאיפה מתחילים.",
       en: "Chatbot vs AI agent: chat answers questions, an agent writes to a system and hands off to the team. How to choose without buying both, and where to start.",
     },
     body: {
@@ -682,6 +685,7 @@ export const posts: BlogPost[] = [
         { type: "p", text: "מתי צ׳אטבוט מספיק? כשמטרת העל היא מענה ושאלות נפוצות, והלידים כבר מטופלים במקום אחר בצורה יציבה." },
         { type: "p", text: "מתי עוברים לסוכן? כשיש פניות שנכנסות, אבל אין תהליך אחד שמגיע ל־CRM ולצוות בזמן." },
         { type: "p", text: "אפשר להתחיל קטן? כן — ספרינט על תהליך אחד (אתר או `/#contact` עד וואטסאפ), בלי «מחלקת AI» שלמה." },
+        { type: "p", text: "כמה זה עולה? תלוי בחיבורים ובהיקף התהליך. פירוט מה קובע את המחיר: [כמה עולה סוכן AI לעסק](https://beosystem.com/blog/ai-agent-custom-system-cost)." },
         { type: "p", text: "איך יוצרים קשר עכשיו? וואטסאפ או טופס באתר. כותבים בקצרה מה העסק ומה נשבר בין הצ׳אט לצוות." },
         { type: "h2", text: "רוצים לבדוק מה מתאים לכם" },
         { type: "p", text: "משאירים פנייה קצרה — נבדוק יחד אם צ׳אט, סוכן, או חיבור בין השניים הוא הצעד הנכון." },
@@ -690,6 +694,8 @@ export const posts: BlogPost[] = [
         { type: "p", text: "כשהמענה הוא בוואטסאפ, ראו [בוט וואטסאפ](https://beosystem.com/blog/whatsapp-ai-agent)." },
         { type: "h2", text: "עוד על אותו כיוון" },
         { type: "p", text: "https://beosystem.com/blog/whatsapp-ai-agent" },
+        { type: "p", text: "https://beosystem.com/blog/ai-agents" },
+        { type: "p", text: "https://beosystem.com/blog/ai-lead-agent" },
       ],
       en: [
         { type: "p", text: "Many businesses look for a «business chatbot» and expect it to close leads. Then they find chats on the site — but no CRM row, no timely WhatsApp, and no person continuing when needed." },
@@ -722,6 +728,8 @@ export const posts: BlogPost[] = [
         { type: "p", text: "When the reply channel is WhatsApp, see a [WhatsApp bot](https://beosystem.com/blog/whatsapp-ai-agent)." },
         { type: "h2", text: "More in the same direction" },
         { type: "p", text: "https://beosystem.com/blog/whatsapp-ai-agent" },
+        { type: "p", text: "https://beosystem.com/blog/ai-agents" },
+        { type: "p", text: "https://beosystem.com/blog/ai-lead-agent" },
       ],
     },
   },

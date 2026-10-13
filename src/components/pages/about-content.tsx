@@ -4,12 +4,20 @@ import Link from "next/link";
 import { Field } from "@/components/canvas/field";
 import { TalkButton } from "@/components/layout/talk-button";
 import { useI18n } from "@/components/providers/i18n-provider";
+import { aboutAffiliationFaq } from "@/lib/site";
 
 export function AboutContent() {
-  const { t } = useI18n();
+  const { lang, t } = useI18n();
+  const affiliation = aboutAffiliationFaq[lang];
 
   return (
     <main className="relative min-h-svh">
+      <section id="faq" className="sr-only">
+        <h2>{lang === "he" ? "שאלות נפוצות" : "FAQ"}</h2>
+        <p>
+          <strong>{affiliation.q}</strong> {affiliation.a}
+        </p>
+      </section>
       <div className="pointer-events-none fixed inset-0 z-0">
         <Field />
       </div>
