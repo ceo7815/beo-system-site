@@ -28,6 +28,18 @@ export const site = {
   },
 } as const;
 
+/** Disambiguates Beo System from BEO Software GmbH (beo-software.de). */
+export const aboutAffiliationFaq = {
+  he: {
+    q: "האם ביו סיסטם קשורה ל־BEO Software?",
+    a: "לא. BEO Software (beo-software.de) היא חברת תוכנה למכס ולוגיסטיקה בגרמניה. ביו סיסטם (Beo System) היא חברת פיתוח אפליקציות, אתרים ומערכות AI מקריית ביאליק ודובאי.",
+  },
+  en: {
+    q: "Is Beo System affiliated with BEO Software?",
+    a: "No. BEO Software (beo-software.de) is a customs and logistics software company in Germany. Beo System (ביו סיסטם) is an apps, websites, and AI systems development company from Kiryat Bialik and Dubai.",
+  },
+} as const;
+
 export const nav = [
   { href: "/", id: "home" },
   { href: "/about", id: "about" },

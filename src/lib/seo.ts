@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { absUrl, services, site } from "@/lib/site";
+import { absUrl, aboutAffiliationFaq, services, site } from "@/lib/site";
 import { posts, type BlogBlock, type BlogPost } from "@/lib/blog";
 
 export const ogSize = { width: 1200, height: 630 } as const;
@@ -191,6 +191,8 @@ export function organizationGraph() {
           "CRM",
         ],
         description: seo.description,
+        disambiguatingDescription:
+          "Israeli software studio (Kiryat Bialik + Dubai) building apps, websites and AI agents. Not affiliated with BEO Software GmbH (beo-software.de).",
         hasOfferCatalog: {
           "@type": "OfferCatalog",
           name: "שירותי ביו סיסטם",
@@ -271,6 +273,13 @@ function faqPageJsonLd(
 
 export function brandFaqJsonLd() {
   return faqPageJsonLd(`${site.url}/#faq`, "he", [...brandFaq]);
+}
+
+export function aboutFaqJsonLd() {
+  return faqPageJsonLd(`${site.url}/about#faq`, "he", [
+    ...brandFaq,
+    aboutAffiliationFaq.he,
+  ]);
 }
 
 function isFaqHeading(text: string) {
