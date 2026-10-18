@@ -32,6 +32,9 @@ export const posts: BlogPost[] = [
       he: "סוכן AI לעסק — מה הוא עושה בפועל, ומתי כדאי להתחיל",
       en: "An AI agent for a business — what it actually does, and when to start",
     },
+    seoTitle: {
+      he: "סוכן AI לעסק — מה הוא עושה ומתי להתחיל",
+    },
     excerpt: {
       he: "סוכן AI לעסק קורא פנייה, מחליט וכותב למערכת — לא רק עונה יפה בצ׳אט. מתי זה מתאים, איך מתחילים מתהליך אחד, ומה לבדוק לפני שפונים.",
       en: "An AI agent for a business reads a request, decides, and writes to a system — not only a pretty chat. When it fits, how to start with one process, and what to check first.",
@@ -177,6 +180,9 @@ export const posts: BlogPost[] = [
     title: {
       he: "אפליקציה או אתר לעסק — מה הופך מוצר דיגיטלי לפרודקשן",
       en: "An app or a website for your business — what makes a digital product production-grade",
+    },
+    seoTitle: {
+      he: "אפליקציה או אתר לעסק — מה הופך מוצר לפרודקשן",
     },
     excerpt: {
       he: "אפליקציה או אתר לעסק צריכים להיטען מהר, להיות ברורים תוך שניות ולהתחבר לתהליך העסקי. ביו סיסטם בונה מוצרים דיגיטליים ברמת פרודקשן — לא מצגת.",
@@ -447,6 +453,9 @@ export const posts: BlogPost[] = [
       title: {
         he: "אוטומציה לעסק — מה לאוטמט קודם ואיך מתחילים נכון",
         en: "Business automation — what to automate first and how to start",
+      },
+      seoTitle: {
+        he: "אוטומציה לעסקים — מה לאוטמט קודם ואיך מתחילים",
       },
       excerpt: {
         he: "אוטומציה לעסק שמחברת אתר, וואטסאפ ו־CRM: מה זה, 8 תהליכים לאוטמט קודם, ואיך מתחילים בלי פרויקט נצחי. בדקו איתנו בוואטסאפ.",
@@ -748,6 +757,9 @@ export const posts: BlogPost[] = [
       title: {
         he: "מערכת ניהול לידים — כל פנייה עם בעלים, סטטוס ומעקב",
         en: "Lead management system — an owner, status and follow-up for every lead",
+      },
+      seoTitle: {
+        he: "מערכת ניהול לידים — כל פנייה עם סטטוס ומעקב",
       },
       excerpt: {
         he: "מערכת ניהול לידים שמרכזת פניות מהאתר, מוואטסאפ ומהטלפון, עם בעלים, סטטוס ותזכורת. מה לבדוק, מתי צריך CRM, ואיך מתחילים. דברו איתנו.",
@@ -1457,6 +1469,9 @@ export const posts: BlogPost[] = [
     title: {
       he: "סוכן AI למעקב מכירות — טלפון ווואטסאפ באותו תהליך",
       en: "AI sales follow-up agent — phone and WhatsApp in one process",
+    },
+    seoTitle: {
+      he: "סוכן AI למעקב מכירות בטלפון ובוואטסאפ",
     },
     excerpt: {
       he: "ליד מתקשר, אחר כך כותב בוואטסאפ — ובצוות זה נראה כמו שתי פניות. מדריך קצר איך סוכן AI מחבר שיחה והודעה לרשומה אחת, בלי לשכפל ערוצים.",
