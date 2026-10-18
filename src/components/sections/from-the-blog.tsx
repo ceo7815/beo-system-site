@@ -9,7 +9,6 @@ const posts: {
   href: string;
   tag: Record<Lang, string>;
   title: Record<Lang, string>;
-  blurb?: Record<Lang, string>;
 }[] = [
   {
     href: "/blog/ai-agents",
@@ -18,41 +17,21 @@ const posts: {
       he: "סוכן AI לעסק — מה הוא עושה בפועל",
       en: "An AI agent for a business — what it actually does",
     },
-    blurb: {
-      he: "קורא פנייה, מחליט וכותב למערכת — לא רק עונה יפה בצ׳אט. מתי זה מתאים ואיך מתחילים מתהליך אחד.",
-      en: "It reads a request, decides, and writes to a system — not only a pretty chat. When it fits and how to start with one process.",
-    },
   },
   {
     href: "/blog/voice-ai-phone-agent",
     tag: { he: "טלפון", en: "Voice" },
     title: {
       he: "סוכן AI טלפוני — מענה לשיחה ותיאום תור",
-      en: "Voice AI phone agent — answer the call, book the slot",
-    },
-  },
-  {
-    href: "/blog/whatsapp-ai-agent",
-    tag: { he: "וואטסאפ", en: "WhatsApp" },
-    title: {
-      he: "בוט לוואטסאפ לעסק — מענה מיידי וסינון לידים",
-      en: "WhatsApp bot for business — instant reply, lead screening",
+      en: "Voice AI phone agent — answers and books",
     },
   },
   {
     href: "/blog/inquiry-management",
     tag: { he: "לידים", en: "Leads" },
     title: {
-      he: "מערכת ניהול לידים — כל פנייה עם סטטוס ומעקב",
-      en: "Lead management — every inquiry with a status and follow-up",
-    },
-  },
-  {
-    href: "/blog/chatbot-vs-agent",
-    tag: { he: "השוואה", en: "Compare" },
-    title: {
-      he: "צ׳אטבוט או סוכן AI — מה ההבדל ומה לבחור",
-      en: "Chatbot or AI agent — the difference, and which to pick",
+      he: "מערכת ניהול לידים — כל פנייה עם סטטוס",
+      en: "Lead management — every inquiry with a status",
     },
   },
   {
@@ -62,36 +41,12 @@ const posts: {
       he: "כמה עולה סוכן AI או מערכת בהתאמה?",
       en: "What does an AI agent or custom system cost?",
     },
-    blurb: {
-      he: "בלי מחירון: הגורמים שקובעים את העלות, איך עובד פרויקט, ואיך מתחילים קטן.",
-      en: "No price list: the factors behind the cost, how a project runs, and how to start small.",
-    },
-  },
-  {
-    href: "/blog/ai-automation-start",
-    tag: { he: "אוטומציה", en: "Automation" },
-    title: {
-      he: "אוטומציה לעסק — מה לאוטמט קודם",
-      en: "Business automation — what to automate first",
-    },
   },
 ];
 
 const copy = {
-  he: {
-    kicker: "מהבלוג",
-    title: "לפני שבונים — כדאי לקרוא.",
-    lead: "מדריכים קצרים על סוכני AI, אוטומציה ומערכות לעסק. בלי באזוורדס.",
-    read: "לקריאה",
-    all: "לכל המאמרים",
-  },
-  en: {
-    kicker: "From the blog",
-    title: "Worth a read before you build.",
-    lead: "Short guides on AI agents, automation and business systems. No buzzwords.",
-    read: "Read",
-    all: "All articles",
-  },
+  he: { kicker: "מהבלוג", title: "כדאי לקרוא לפני שבונים", all: "לכל המאמרים" },
+  en: { kicker: "From the blog", title: "Worth a read before you build", all: "All articles" },
 } as const;
 
 function Arrow() {
@@ -114,7 +69,6 @@ export function FromTheBlog() {
   const c = copy[lang];
   return (
     <section className="from-blog" aria-labelledby="from-blog-title">
-      <div className="from-blog-glow" aria-hidden="true" />
       <div className="from-blog-shell">
         <header className="from-blog-head">
           <div>
@@ -122,7 +76,6 @@ export function FromTheBlog() {
             <h2 id="from-blog-title" className="from-blog-title">
               {c.title}
             </h2>
-            <p className="from-blog-lead">{c.lead}</p>
           </div>
           <Link href="/blog" className="from-blog-all">
             {c.all}
@@ -130,21 +83,12 @@ export function FromTheBlog() {
           </Link>
         </header>
         <ul className="from-blog-grid">
-          {posts.map((post, i) => (
-            <li key={post.href} className={post.blurb ? "is-wide" : undefined}>
+          {posts.map((post) => (
+            <li key={post.href}>
               <Link href={post.href} className="from-blog-card">
-                <span className="from-blog-meta">
-                  <span className="from-blog-tag">{post.tag[lang]}</span>
-                  <span className="from-blog-n">{String(i + 1).padStart(2, "0")}</span>
-                </span>
+                <span className="from-blog-tag">{post.tag[lang]}</span>
                 <span className="from-blog-card-title">{post.title[lang]}</span>
-                {post.blurb ? (
-                  <span className="from-blog-blurb">{post.blurb[lang]}</span>
-                ) : null}
-                <span className="from-blog-read">
-                  {c.read}
-                  <Arrow />
-                </span>
+                <Arrow />
               </Link>
             </li>
           ))}
