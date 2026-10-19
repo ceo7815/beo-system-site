@@ -1937,7 +1937,7 @@ export const posts: BlogPost[] = [
     n: "19",
     date: "2026-10-19",
     minutes: 7,
-    image: "/blog/inquiry-management.webp",
+    image: "/blog/ad-leads-system.webp",
     imageAlt: {
       he: "לידים מפייסבוק, מגוגל ומהאתר נכנסים למערכת לידים אחת עם הודעת וואטסאפ",
       en: "Leads from Facebook, Google and the website flowing into one lead system with a WhatsApp message",

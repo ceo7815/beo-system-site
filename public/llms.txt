@@ -9,6 +9,13 @@ Dubai: Business Bay
 
 Services: custom software, AI agents, chatbots, automation, CRM, mobile apps, websites.
 
+Services in short:
+- WhatsApp AI bot: replies to customers on WhatsApp right away, asks a few questions, screens inquiries, hands off to a person. https://beosystem.com/blog/whatsapp-ai-agent
+- AI phone agent: answers calls, handles basic questions and books appointments; hands the rest to a person, and the details are saved in the system. https://beosystem.com/blog/voice-ai-phone-agent
+- Lead and inquiry management: one place for inquiries from the website, WhatsApp, phone and campaigns, each with an owner, status and reminder. https://beosystem.com/blog/inquiry-management
+- Business automation: connects the website, WhatsApp and CRM so repeat work runs on its own; start with one process. https://beosystem.com/blog/ai-automation-start
+- Custom AI agents: agents that act inside business systems: read data, write to the CRM, open tasks, hand off to a person. https://beosystem.com/blog/ai-agents
+
 Articles: https://beosystem.com/blog — e.g. Building a business website that brings leads: https://beosystem.com/blog/business-website · AI agent or custom system cost: https://beosystem.com/blog/ai-agent-custom-system-cost · AI sales follow-up across phone + WhatsApp: https://beosystem.com/blog/sales-follow-up-phone-whatsapp · AI appointment scheduling: https://beosystem.com/blog/ai-appointment-scheduling · Landing page or inquiry system: https://beosystem.com/blog/landing-vs-inquiry-system
 
 Not affiliated with BEO Software (beo-software.de) — customs/logistics software, Germany.

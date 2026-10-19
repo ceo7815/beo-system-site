@@ -189,6 +189,10 @@ export function organizationGraph() {
           "בינה מלאכותית",
           "סוכני AI",
           "CRM",
+          "בוט AI לוואטסאפ",
+          "סוכן AI טלפוני",
+          "מערכת ניהול לידים",
+          "אוטומציה לעסקים",
         ],
         description: seo.description,
         disambiguatingDescription:
@@ -272,7 +276,7 @@ function faqPageJsonLd(
 }
 
 export function brandFaqJsonLd() {
-  return faqPageJsonLd(`${site.url}/#faq`, "he", [...brandFaq]);
+  return faqPageJsonLd(`${site.url}/#faq`, "he", [...brandFaq, aboutAffiliationFaq.he]);
 }
 
 export function aboutFaqJsonLd() {
