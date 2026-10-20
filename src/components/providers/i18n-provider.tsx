@@ -67,7 +67,7 @@ const copy = {
     aboutParas: [
       "ביו סיסטם (ביוסיסטם, Beo System) היא חברת פיתוח אפליקציות, אתרים ומערכות AI — מערכות חכמות, אוטומציות וסוכנים שמחברים טכנולוגיה לצרכים האמיתיים של העסק.",
       "אנחנו לא מאמינים בפתרונות מדף. כל מערכת מתחילה בהבנת העסק, התהליכים והיעדים — ומשם אנחנו מתכננים ובונים פתרון מדויק שעובד עבורכם, חוסך זמן ומאפשר לעסק לצמוח.",
-      "ההתמחות שלנו כוללת סוכני AI, מערכות ניהול ו-CRM, אוטומציות עסקיות, פיתוח מערכות Web, אפליקציות, פורטלים ודשבורדים, לצד אינטגרציות וחיבורים בין המערכות שכבר קיימות בעסק.",
+      "ההתמחות שלנו כוללת סוכני AI, בוטים לוואטסאפ, סוכני AI טלפוניים, מערכות לניהול לידים, מערכות ניהול ו-CRM, אוטומציות עסקיות, פיתוח מערכות Web, אפליקציות, פורטלים ודשבורדים, לצד אינטגרציות וחיבורים בין המערכות שכבר קיימות בעסק.",
       "אנחנו מלווים את הלקוח משלב הרעיון והאפיון, דרך הפיתוח וההטמעה ועד לתפעול, שיפור והרחבת המערכת לאורך זמן.",
       "עם פעילות בישראל ובדובאי, אנחנו מביאים שילוב של חשיבה עסקית, פיתוח מתקדם ו-AI כדי להפוך תהליכים מורכבים לפשוטים, מהירים וחכמים יותר.",
     ],
@@ -141,7 +141,7 @@ const copy = {
     aboutParas: [
       "Beo System (ביו סיסטם / ביוסיסטם) builds apps, websites, and AI systems — smart platforms, automations, and agents connected to how the business actually works.",
       "We don’t believe in off-the-shelf solutions. Every system starts with understanding the business, the processes, and the goals — then we design and build a precise solution that works for you, saves time, and lets the business grow.",
-      "Our work includes AI agents, management and CRM systems, business automation, web systems, apps, portals and dashboards, plus integrations between the systems already in the business.",
+      "Our work includes AI agents, WhatsApp bots, AI phone agents, lead management systems, management and CRM systems, business automation, web systems, apps, portals and dashboards, plus integrations between the systems already in the business.",
       "We stay with the client from idea and spec, through development and rollout, to running, improving, and expanding the system over time.",
       "With activity in Israel and Dubai, we bring business thinking, advanced development, and AI to turn complex processes into something simpler, faster, and smarter.",
     ],
