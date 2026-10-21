@@ -322,7 +322,7 @@ export function articleJsonLd(post: BlogPost, lang: "he" | "en" = "he") {
     description: post.excerpt[lang],
     image: absUrl(post.image),
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.updated ?? post.date,
     inLanguage: lang === "he" ? "he-IL" : "en",
     author: {
       "@type": "Organization",
@@ -359,7 +359,7 @@ export function sitemapEntries() {
     { path: "/blog", lastModified: now, changeFrequency: "weekly" as const, priority: 0.7 },
     ...posts.map((post) => ({
       path: `/blog/${post.slug}`,
-      lastModified: new Date(`${post.date}T12:00:00Z`),
+      lastModified: new Date(`${post.updated ?? post.date}T12:00:00Z`),
       changeFrequency: "monthly" as const,
       priority: 0.6,
     })),
