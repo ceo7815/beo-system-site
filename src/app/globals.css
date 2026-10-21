@@ -4453,6 +4453,230 @@ html:has(.cookie-bar) .lp-wa {
   margin-top: 0.8rem;
 }
 
+.lp-chat-mock,
+.lp-flow-mock {
+  position: relative;
+  z-index: 2;
+  width: min(22.5rem, calc(100% - 2.3rem));
+  margin: 0.5rem auto 0;
+}
+
+.lp-chat-mock-label,
+.lp-flow-mock figcaption {
+  margin: 0 0 0.4rem;
+  color: #c4b5fd;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.lp-chat-mock-card {
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid rgba(196, 181, 253, 0.28);
+  background: #0b141a;
+  box-shadow:
+    0 22px 50px rgba(0, 0, 0, 0.45),
+    0 0 36px rgba(88, 40, 160, 0.28);
+}
+
+.lp-chat-mock-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 0.7rem;
+  background: #1f2c34;
+}
+
+.lp-chat-mock-avatar {
+  width: 1.7rem;
+  height: 1.7rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #d1fae5, #34d399 36%, #065f46 70%);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.lp-chat-mock-who {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+  line-height: 1.2;
+}
+
+.lp-chat-mock-who strong {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.lp-chat-mock-who span {
+  color: #86efac;
+  font-size: 0.72rem;
+}
+
+.lp-chat-thread {
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+  padding: 0.45rem 0.6rem 0.4rem;
+  background:
+    radial-gradient(70% 50% at 100% 0%, rgba(88, 40, 160, 0.22), transparent 62%),
+    #0b141a;
+}
+
+.lp-wa-in,
+.lp-wa-out,
+.lp-wa-hot {
+  margin: 0;
+}
+
+.lp-wa-in,
+.lp-wa-out {
+  max-width: 88%;
+  padding: 0.32rem 0.55rem 0.18rem;
+  border-radius: 12px;
+  font-size: 0.86rem;
+  line-height: 1.35;
+}
+
+.lp-wa-in time,
+.lp-wa-out time {
+  display: block;
+  margin-top: 0.12rem;
+  color: rgba(243, 238, 248, 0.55);
+  font-size: 0.65rem;
+  text-align: end;
+}
+
+.lp-wa-in {
+  align-self: flex-start;
+  border-start-start-radius: 4px;
+  background: #202c33;
+}
+
+.lp-wa-out {
+  align-self: flex-end;
+  border-start-end-radius: 4px;
+  background: #005c4b;
+}
+
+.lp-wa-hot {
+  align-self: flex-end;
+  margin-top: 0.15rem;
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: rgba(139, 92, 246, 0.95);
+  box-shadow: 0 0 16px rgba(139, 92, 246, 0.55);
+}
+
+.lp-flow-mock {
+  width: min(26rem, calc(100% - 2.3rem));
+  padding: 0.85rem 0.9rem 0.75rem;
+  border-radius: 20px;
+  border: 1px solid rgba(196, 181, 253, 0.28);
+  background:
+    radial-gradient(80% 80% at 50% 0%, rgba(88, 40, 160, 0.35), transparent 70%),
+    rgba(12, 8, 20, 0.72);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.35),
+    0 0 28px rgba(88, 40, 160, 0.22);
+}
+
+.lp-flow-mock-track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.35rem;
+}
+
+.lp-flow-mock-track > span:not(.lp-flow-mock-line) {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  min-width: 4.4rem;
+  height: 2.5rem;
+  padding: 0 0.4rem;
+  border-radius: 12px;
+  border: 1px solid rgba(196, 181, 253, 0.38);
+  background: rgba(8, 6, 14, 0.82);
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.lp-flow-mock-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(196, 181, 253, 0.85), transparent);
+}
+
+.lp-flow-mock-dot {
+  position: absolute;
+  top: calc(50% - 4px);
+  z-index: 2;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 12px #c4b5fd;
+  inset-inline-start: 18%;
+  animation: lp-run 2.8s ease-in-out infinite alternate;
+}
+
+.lp-flow-mock-log {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lp-flow-mock-log li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.38rem 0.6rem;
+  border-radius: 10px;
+  background: rgba(8, 6, 14, 0.55);
+  font-size: 0.82rem;
+}
+
+.lp-flow-mock-log b {
+  font-weight: 600;
+}
+
+.lp-flow-mock-log span {
+  color: #86efac;
+}
+
+.lp-flow-mock figcaption {
+  margin: 0.65rem 0 0;
+}
+
+@media (max-width: 767.98px) {
+  .lp-open {
+    box-sizing: border-box;
+    min-height: 100svh;
+    padding-bottom: calc(15.5rem + env(safe-area-inset-bottom));
+  }
+
+  .lp-chat-mock,
+  .lp-flow-mock {
+    width: auto;
+    margin: 0.5rem 1.15rem 0 calc(max(0.42rem, env(safe-area-inset-left)) + 34px + 0.85rem);
+  }
+
+  .lp-open ~ .lp-section {
+    padding-left: calc(max(0.42rem, env(safe-area-inset-left)) + 34px + 0.7rem);
+  }
+}
+
 .lp-compact .lp-section {
   padding-top: 2.15rem;
 }
@@ -4549,6 +4773,10 @@ html:has(.cookie-bar) .lp-wa {
   font-size: clamp(1.55rem, 6vw, 2.15rem);
 }
 
+html:has(.cookie-bar) .lp-compact .lp-contact.contact-stage {
+  padding-bottom: calc(17rem + env(safe-area-inset-bottom));
+}
+
 @media (min-width: 960px) {
   .lp-compact .lp-hero {
     padding: 6.75rem 2.5rem 0 5.4rem;
@@ -4564,6 +4792,11 @@ html:has(.cookie-bar) .lp-wa {
     margin-inline-start: 16rem;
   }
 
+  .lp-chat-mock,
+  .lp-flow-mock {
+    width: min(24rem, 100%);
+  }
+
   .lp-compact .lp-benefits {
     gap: 0.75rem;
   }
@@ -4574,7 +4807,8 @@ html:has(.cookie-bar) .lp-wa {
   .lp-wa .hud-btn-scan,
   .lp-faq-item summary::after,
   .lp-benefit,
-  .lp-step-body {
+  .lp-step-body,
+  .lp-flow-mock-dot {
     animation: none;
     transition: none;
   }

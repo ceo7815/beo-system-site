@@ -8,8 +8,8 @@ import { TalkButton } from "@/components/layout/talk-button";
 import { LpExamples } from "@/components/lp/lp-examples";
 import { LpForm } from "@/components/lp/lp-form";
 import { benefitIcon, LpIcon } from "@/components/lp/lp-icons";
+import { LpChatMock, LpFlowMock } from "@/components/lp/lp-mocks";
 import { LpShell } from "@/components/lp/lp-shell";
-import { LpStage } from "@/components/lp/lp-stage";
 import type { LpPage } from "@/lib/lp";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -29,7 +29,6 @@ function SectionHead({ kicker, title }: { kicker: string; title: string }) {
 
 export function LpView({ page }: { page: LpPage }) {
   const root = useRef<HTMLDivElement>(null);
-  const compact = page.id === "ai-video-realestate";
 
   useGSAP(
     () => {
@@ -51,45 +50,38 @@ export function LpView({ page }: { page: LpPage }) {
     { scope: root },
   );
 
+  const showExamples = Boolean(page.examples && page.examplesKicker && page.examplesTitle);
+
   return (
     <LpShell source={page.path} waText={`${page.waIntro}\nדף: ${page.path}`}>
-      <div ref={root} className={compact ? "lp-compact" : undefined}>
-        <section className="lp-hero" data-page={page.id}>
-          <div className="lp-hero-orb" aria-hidden />
-          {compact ? null : <div className="lp-hero-orb lp-hero-orb-b" aria-hidden />}
-          <div className="lp-hero-grid">
-            <div className="lp-hero-copy">
-              {compact ? null : <p className="lp-kicker lp-rise">{page.kicker}</p>}
-              <h1 className="lp-hero-title lp-rise-title">{page.title}</h1>
-              <p className="lp-hero-line lp-rise">{page.line}</p>
-              {compact ? null : <p className="lp-hero-lead lp-rise">{page.lead}</p>}
-              {!compact && page.audiences ? (
-                <ul className="lp-audiences lp-rise">
-                  {page.audiences.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              ) : null}
-              <div className="lp-hero-cta lp-rise">
-                <TalkButton href="#lp-lead" className="hud-talk-film" label={page.cta} />
+      <div ref={root} className="lp-compact">
+        <div className={showExamples ? undefined : "lp-open"}>
+          <section className="lp-hero" data-page={page.id}>
+            <div className="lp-hero-orb" aria-hidden />
+            <div className="lp-hero-grid">
+              <div className="lp-hero-copy">
+                <h1 className="lp-hero-title lp-rise-title">{page.title}</h1>
+                <p className="lp-hero-line lp-rise">{page.line}</p>
+                <div className="lp-hero-cta lp-rise">
+                  <TalkButton href="#lp-lead" className="hud-talk-film" label={page.cta} />
+                </div>
               </div>
             </div>
-            {compact ? null : (
-              <div className="lp-hero-stage lp-rise">
-                <LpStage page={page} />
-              </div>
-            )}
-          </div>
-        </section>
+          </section>
 
-        {page.examples && page.examplesKicker && page.examplesTitle ? (
-          <LpExamples
-            kicker={page.examplesKicker}
-            title={page.examplesTitle}
-            lead={page.examplesLead}
-            items={page.examples}
-          />
-        ) : null}
+          {showExamples ? (
+            <LpExamples
+              kicker={page.examplesKicker ?? ""}
+              title={page.examplesTitle ?? ""}
+              lead={page.examplesLead}
+              items={page.examples ?? []}
+            />
+          ) : page.id === "ai-agent" ? (
+            <LpChatMock />
+          ) : (
+            <LpFlowMock />
+          )}
+        </div>
 
         <section className="lp-section" data-lp-block>
           <SectionHead kicker={page.benefitsKicker} title={page.benefitsTitle} />
