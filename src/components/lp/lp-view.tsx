@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { TalkButton } from "@/components/layout/talk-button";
+import { LpExamples } from "@/components/lp/lp-examples";
 import { LpForm } from "@/components/lp/lp-form";
 import { benefitIcon, LpIcon } from "@/components/lp/lp-icons";
 import { LpShell } from "@/components/lp/lp-shell";
@@ -77,6 +78,15 @@ export function LpView({ page }: { page: LpPage }) {
             </div>
           </div>
         </section>
+
+        {page.examples && page.examplesKicker && page.examplesTitle ? (
+          <LpExamples
+            kicker={page.examplesKicker}
+            title={page.examplesTitle}
+            lead={page.examplesLead}
+            items={page.examples}
+          />
+        ) : null}
 
         <section className="lp-section" data-lp-block>
           <SectionHead kicker={page.benefitsKicker} title={page.benefitsTitle} />

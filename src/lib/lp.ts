@@ -35,6 +35,70 @@ export const lpRealEstateVideo = {
   poster: "",
 } as const;
 
+/**
+ * Two example films on the real-estate page.
+ * TODO: for each slot, set ONE source. Leave both empty to keep the cinematic placeholder.
+ * - `src`: a file in /public, e.g. "/lp/example-project.mp4"
+ * - `embedUrl`: a YouTube or Vimeo page URL, used only when `src` is empty
+ * - `poster`: optional still, e.g. "/lp/example-project.webp"
+ * Titles stay generic. Do not put client names, project names, or logos here.
+ */
+export const lpRealEstateExamples = [
+  {
+    src: "",
+    poster: "",
+    title: "סרטון לפרויקט",
+    embedUrl: "",
+  },
+  {
+    src: "",
+    poster: "",
+    title: "גרסה למודעה",
+    embedUrl: "",
+  },
+] as const;
+
+export type LpExample = {
+  src: string;
+  poster: string;
+  title: string;
+  embedUrl?: string;
+};
+
+/** YouTube or Vimeo only. Returns a muted embed URL, or null. */
+export function lpExampleEmbed(url: string) {
+  const raw = url.trim();
+  if (!raw) return null;
+  let parsed: URL;
+  try {
+    parsed = new URL(raw);
+  } catch {
+    return null;
+  }
+  if (parsed.protocol !== "https:" && parsed.protocol !== "http:") return null;
+  const host = parsed.hostname.replace(/^www\./, "").toLowerCase();
+  if (
+    host === "youtu.be" ||
+    host === "youtube.com" ||
+    host === "m.youtube.com" ||
+    host === "youtube-nocookie.com"
+  ) {
+    const parts = parsed.pathname.split("/").filter(Boolean);
+    let id = "";
+    if (host === "youtu.be") id = parts[0] ?? "";
+    else if (parts[0] === "embed" || parts[0] === "shorts" || parts[0] === "live") id = parts[1] ?? "";
+    else id = parsed.searchParams.get("v") ?? "";
+    if (!/^[\w-]{6,20}$/.test(id)) return null;
+    return `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1&mute=1&rel=0&playsinline=1&modestbranding=1`;
+  }
+  if (host === "vimeo.com" || host === "player.vimeo.com") {
+    const id = parsed.pathname.split("/").filter((part) => /^\d{6,12}$/.test(part)).pop();
+    if (!id) return null;
+    return `https://player.vimeo.com/video/${id}?autoplay=1&muted=1&title=0&byline=0&portrait=0&dnt=1`;
+  }
+  return null;
+}
+
 export type LpPage = {
   id: string;
   path: string;
@@ -47,6 +111,10 @@ export type LpPage = {
   cta: string;
   audiences?: readonly string[];
   video?: { src: string; poster: string };
+  examplesKicker?: string;
+  examplesTitle?: string;
+  examplesLead?: string;
+  examples?: readonly LpExample[];
   benefitsKicker: string;
   benefitsTitle: string;
   benefits: readonly { n: string; title: string; body: string }[];
@@ -76,6 +144,10 @@ const realEstate: LpPage = {
   cta: "דברו איתנו",
   audiences: ["יזמים", "קבלנים", "מנהלי שיווק", "משרדי פרסום", "מתווכים"],
   video: lpRealEstateVideo,
+  examplesKicker: "דוגמאות",
+  examplesTitle: "דוגמאות מהעבודה.",
+  examplesLead: "שני אורכים, מאותו סוג סרטון.",
+  examples: lpRealEstateExamples,
   benefitsKicker: "למה סרטון",
   benefitsTitle: "הדמיה שעומדת במקום לא מוכרת.",
   benefits: [

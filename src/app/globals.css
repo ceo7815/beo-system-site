@@ -3805,6 +3805,72 @@ html[dir="rtl"] .cookie-switch.is-on::after {
   text-shadow: 0 0 24px rgba(88, 40, 160, 0.35);
 }
 
+.lp-examples-lead {
+  margin: 0.7rem 0 0;
+  max-width: 36rem;
+  color: #d8d0e4;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.lp-example-grid {
+  display: grid;
+  gap: 1.35rem;
+  margin: 1.45rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lp-example-grid > li {
+  min-width: 0;
+}
+
+.lp-example .lp-screen iframe {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #0c0814;
+}
+
+.lp-example-hit {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.lp-example-hit .lp-play {
+  pointer-events: none;
+}
+
+.lp-ex-b .lp-sky {
+  background:
+    radial-gradient(46% 42% at 18% 18%, rgba(255, 196, 150, 0.34), transparent 62%),
+    radial-gradient(40% 50% at 82% 72%, rgba(88, 40, 160, 0.42), transparent 66%),
+    linear-gradient(180deg, #3a2418 0%, #1a1028 52%, #07050d 100%);
+}
+
+.lp-ex-b .lp-moon {
+  top: 20%;
+  inset-inline-end: auto;
+  inset-inline-start: 16%;
+  width: 12%;
+}
+
+.lp-ex-b .lp-tower.t1 { height: 34%; width: 16%; }
+.lp-ex-b .lp-tower.t2 { height: 62%; width: 20%; }
+.lp-ex-b .lp-tower.t3 { height: 100%; width: 32%; }
+.lp-ex-b .lp-tower.t4 { height: 48%; width: 16%; }
+
 .lp-benefits {
   display: grid;
   gap: 0.75rem;
@@ -4175,6 +4241,11 @@ html[dir="rtl"] .cookie-switch.is-on::after {
   .lp-benefits {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+  }
+
+  .lp-example-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.15rem 1.25rem;
   }
 
   .lp-flow > span:not(.lp-flow-line):not(.lp-flow-dot) {
