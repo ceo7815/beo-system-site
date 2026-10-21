@@ -4424,6 +4424,151 @@ html:has(.cookie-bar) .lp-wa {
   to { inset-inline-start: 76%; }
 }
 
+.lp-compact .lp-hero {
+  min-height: 0;
+  justify-content: flex-start;
+  padding: calc(8.15rem + env(safe-area-inset-top)) 1.15rem 0;
+  overflow: visible;
+}
+
+.lp-compact .lp-hero::after {
+  display: none;
+}
+
+.lp-compact .lp-hero-orb {
+  top: -5rem;
+  width: min(16rem, 62vw);
+  height: min(16rem, 62vw);
+}
+
+.lp-compact .lp-hero-title {
+  margin-top: 0;
+}
+
+.lp-compact .lp-hero-line {
+  margin-top: 0.5rem;
+}
+
+.lp-compact .lp-hero-cta {
+  margin-top: 0.8rem;
+}
+
+.lp-compact .lp-section {
+  padding-top: 2.15rem;
+}
+
+.lp-compact .lp-section-head {
+  padding-bottom: 0.35rem;
+}
+
+.lp-compact .lp-section-title {
+  font-size: clamp(1.4rem, 4.8vw, 1.95rem);
+}
+
+.lp-compact .lp-examples {
+  padding-top: 1rem;
+}
+
+.lp-compact .lp-examples .lp-kicker,
+.lp-compact .lp-examples .lp-section-head::after,
+.lp-compact .lp-examples-lead {
+  display: none;
+}
+
+.lp-compact .lp-examples .lp-section-title {
+  margin-top: 0;
+  font-size: clamp(1.15rem, 3.8vw, 1.45rem);
+}
+
+.lp-compact .lp-example-grid {
+  gap: 0.75rem;
+  margin-top: 0.6rem;
+}
+
+.lp-compact .lp-benefits {
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+
+.lp-compact .lp-benefit {
+  padding: 0.75rem 0.7rem 0.8rem;
+  border-radius: 16px;
+}
+
+.lp-compact .lp-benefit-icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 10px;
+}
+
+.lp-compact .lp-benefit h3 {
+  margin-top: 0.5rem;
+  font-size: 0.98rem;
+}
+
+.lp-compact .lp-benefit p {
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.lp-compact .lp-timeline {
+  gap: 0.45rem;
+  margin-top: 0.75rem;
+}
+
+.lp-compact .lp-step-body {
+  padding: 0.6rem 0.7rem 0.65rem;
+}
+
+.lp-compact .lp-step-body p {
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.lp-compact .lp-faq {
+  gap: 0.4rem;
+  margin-top: 0.7rem;
+}
+
+.lp-compact .lp-faq-item summary {
+  padding: 0.72rem 0;
+  font-size: 0.95rem;
+}
+
+.lp-compact .lp-contact.contact-stage {
+  padding-top: 2.15rem;
+}
+
+.lp-compact .contact-shell {
+  gap: 1.15rem;
+}
+
+.lp-compact .contact-title {
+  font-size: clamp(1.55rem, 6vw, 2.15rem);
+}
+
+@media (min-width: 960px) {
+  .lp-compact .lp-hero {
+    padding: 6.75rem 2.5rem 0 5.4rem;
+  }
+
+  .lp-compact .lp-hero-grid {
+    display: block;
+    width: min(78rem, 100%);
+    margin-inline: auto;
+  }
+
+  .lp-compact .lp-hero-copy {
+    margin-inline-start: 16rem;
+  }
+
+  .lp-compact .lp-benefits {
+    gap: 0.75rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .lp-hero-orb,
   .lp-wa .hud-btn-scan,

@@ -1,5 +1,5 @@
 /**
- * Campaign landing pages — one place for contact details and the real-estate film.
+ * Campaign landing pages — one place for contact details and the real-estate examples.
  *
  * TODO: phone, WhatsApp, and email are not decided yet.
  * Defaults match what the live site shows today:
@@ -22,17 +22,6 @@ export const lpContact = {
   whatsapp: "33632519053",
   /** TODO: confirm the campaign email. */
   email: "ceo@beosystem.co.il",
-} as const;
-
-/**
- * Real-estate project film.
- * TODO: when the film is ready, set `src` (and optional `poster`).
- * Example: src: "/lp/ai-video-realestate.mp4", poster: "/lp/ai-video-realestate.webp"
- * Leave both empty to keep the on-page placeholder.
- */
-export const lpRealEstateVideo = {
-  src: "",
-  poster: "",
 } as const;
 
 /**
@@ -142,11 +131,8 @@ const realEstate: LpPage = {
   line: "בימים, לא בחודשים.",
   lead: "זה כל מה שצריך מאיתכם. הסרטון יוצא לאתר, למודעה, ולוואטסאפ ללקוח.",
   cta: "דברו איתנו",
-  audiences: ["יזמים", "קבלנים", "מנהלי שיווק", "משרדי פרסום", "מתווכים"],
-  video: lpRealEstateVideo,
   examplesKicker: "דוגמאות",
   examplesTitle: "דוגמאות מהעבודה.",
-  examplesLead: "שני אורכים, מאותו סוג סרטון.",
   examples: lpRealEstateExamples,
   benefitsKicker: "למה סרטון",
   benefitsTitle: "הדמיה שעומדת במקום לא מוכרת.",
