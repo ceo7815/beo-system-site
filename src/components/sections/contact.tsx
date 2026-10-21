@@ -3,6 +3,7 @@
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { site, whatsappUrl } from "@/lib/site";
 import { currentPagePath, trackEvent } from "@/lib/analytics";
+import { attributionParams, readAttribution } from "@/lib/attribution";
 import { useI18n } from "@/components/providers/i18n-provider";
 
 export function Contact() {
@@ -39,10 +40,19 @@ export function Contact() {
     const name = String(data.get("name") || "").trim();
     const phone = String(data.get("phone") || "").trim();
     const company = String(data.get("company") || "").trim();
-    const text = [t.waPrefill, name, phone, company, need].filter(Boolean).join("\n");
+    const attr = readAttribution();
+    const sourceLine = attr
+      ? `${lang === "he" ? "מקור" : "Source"}: ${attr.lead_source} · ${attr.landing_page}`
+      : "";
+    const text = [t.waPrefill, name, phone, company, need, sourceLine].filter(Boolean).join("\n");
+    // Queue the conversion before WhatsApp takes focus (beacon transport survives the switch).
+    trackEvent("generate_lead", {
+      page_path: currentPagePath(),
+      method: "contact_form_whatsapp",
+      ...attributionParams(),
+    });
     window.open(whatsappUrl(text), "_blank", "noopener,noreferrer");
     setSent(true);
-    trackEvent("generate_lead", { page_path: currentPagePath() });
   }
 
   return (

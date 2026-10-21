@@ -1,32 +1,28 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Script from "next/script";
-import { cookieAllowed } from "@/lib/cookies";
 import {
   GA_MEASUREMENT_ID,
   analyticsEventForHref,
   currentPagePath,
-  ensureGtag,
   trackEvent,
+  updateConsent,
 } from "@/lib/analytics";
+import { attributionParams, captureAttribution } from "@/lib/attribution";
 
+/**
+ * GA4 with Google Consent Mode v2.
+ * gtag.js always loads. Consent defaults to "denied" for analytics and ads, so before
+ * (or without) consent Google receives cookieless pings only. Accepting analytics in the
+ * cookie bar flips analytics_storage to "granted"; marketing flips the ad_* signals.
+ */
 export function GaAnalytics() {
-  const [enabled, setEnabled] = useState(false);
-
   useEffect(() => {
-    function sync() {
-      setEnabled(Boolean(GA_MEASUREMENT_ID) && cookieAllowed("analytics"));
-    }
-    sync();
-    window.addEventListener("beo-cookies", sync);
-    return () => window.removeEventListener("beo-cookies", sync);
+    captureAttribution();
+    window.addEventListener("beo-cookies", updateConsent);
+    return () => window.removeEventListener("beo-cookies", updateConsent);
   }, []);
-
-  useEffect(() => {
-    if (!enabled) return;
-    ensureGtag();
-  }, [enabled]);
 
   useEffect(() => {
     function onClick(event: MouseEvent) {
@@ -44,21 +40,49 @@ export function GaAnalytics() {
       } catch {
         /* keep the raw href */
       }
-      trackEvent(kind, { page_path: currentPagePath(), link_url });
+      const params: Record<string, string> = { page_path: currentPagePath(), link_url };
+      if (kind !== "contact_click") Object.assign(params, attributionParams());
+      trackEvent(kind, params);
     }
 
     document.addEventListener("click", onClick, true);
     return () => document.removeEventListener("click", onClick, true);
   }, []);
 
-  if (!enabled) return null;
+  if (!GA_MEASUREMENT_ID) return null;
 
+  // Runs before gtag.js processes the queue: consent default first, then the stored choice.
   const config = `
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     window.gtag = window.gtag || gtag;
     if (!window.__beoGa) {
       window.__beoGa = true;
+      var c = null;
+      try {
+        var raw = localStorage.getItem('beo-cookies');
+        if (raw === 'all') c = { analytics: true, marketing: true };
+        else if (raw === 'reject') c = { analytics: false, marketing: false };
+        else if (raw) c = JSON.parse(raw);
+      } catch (e) { c = null; }
+      var a = c && c.analytics ? 'granted' : 'denied';
+      var m = c && c.marketing ? 'granted' : 'denied';
+      window.gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        wait_for_update: 500
+      });
+      window.gtag('set', 'ads_data_redaction', m === 'denied');
+      if (a === 'granted' || m === 'granted') {
+        window.gtag('consent', 'update', {
+          analytics_storage: a,
+          ad_storage: m,
+          ad_user_data: m,
+          ad_personalization: m
+        });
+      }
       window.gtag('js', new Date());
       window.gtag('config', '${GA_MEASUREMENT_ID}');
     }
@@ -66,14 +90,14 @@ export function GaAnalytics() {
 
   return (
     <>
+      <Script id="beo-ga4" strategy="afterInteractive">
+        {config}
+      </Script>
       <Script
         id="beo-ga4-src"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
         strategy="afterInteractive"
       />
-      <Script id="beo-ga4" strategy="afterInteractive">
-        {config}
-      </Script>
     </>
   );
 }

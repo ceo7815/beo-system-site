@@ -18,7 +18,7 @@ declare global {
   }
 }
 
-export type AnalyticsClick = "whatsapp_click" | "contact_click";
+export type AnalyticsClick = "whatsapp_click" | "contact_click" | "phone_click" | "email_click";
 
 export function analyticsEventForHref(href: string, pageHref: string): AnalyticsClick | null {
   let url: URL;
@@ -29,6 +29,9 @@ export function analyticsEventForHref(href: string, pageHref: string): Analytics
   } catch {
     return null;
   }
+
+  if (url.protocol === "tel:") return "phone_click";
+  if (url.protocol === "mailto:") return "email_click";
 
   const host = url.hostname.toLowerCase();
   if (host === "wa.me" || host.endsWith(".wa.me")) return "whatsapp_click";
@@ -57,9 +60,35 @@ export function currentPagePath() {
   return `${window.location.pathname}${window.location.search}`;
 }
 
+type ConsentState = "granted" | "denied";
+
+/**
+ * Google Consent Mode v2 state from the visitor's cookie choice.
+ * Without consent everything stays "denied": gtag sends cookieless pings only
+ * (no _ga cookies, no ad identifiers), so visits and leads are still counted.
+ */
+export function consentState(): Record<string, ConsentState> {
+  const analytics: ConsentState = cookieAllowed("analytics") ? "granted" : "denied";
+  const marketing: ConsentState = cookieAllowed("marketing") ? "granted" : "denied";
+  return {
+    analytics_storage: analytics,
+    ad_storage: marketing,
+    ad_user_data: marketing,
+    ad_personalization: marketing,
+  };
+}
+
+export function updateConsent() {
+  if (typeof window === "undefined") return;
+  ensureGtag();
+  const state = consentState();
+  window.gtag?.("consent", "update", state);
+  window.gtag?.("set", "ads_data_redaction", state.ad_storage === "denied");
+}
+
+/** Events fire in every consent state; Consent Mode decides cookies vs cookieless. */
 export function trackEvent(name: string, params: Record<string, string>) {
   if (typeof window === "undefined") return;
-  if (!cookieAllowed("analytics")) return;
   ensureGtag();
-  window.gtag?.("event", name, params);
+  window.gtag?.("event", name, { ...params, transport_type: "beacon" });
 }
