@@ -34,14 +34,19 @@ export function LpThanks() {
 
   return (
     <LpShell source={source} waText={`היי, השארתי פנייה בדף ${source}`}>
-      <section className="relative mx-auto flex min-h-[100svh] max-w-3xl flex-col items-center justify-center px-5 py-36 text-center md:px-10">
-        <div className="about-type">
-          <p className="about-type-kicker">נשלח</p>
-          <h1 className="about-type-title">קיבלנו.</h1>
-          <p className="about-type-p">
+      <section className="lp-hero lp-hero-thanks">
+        <div className="lp-hero-orb" aria-hidden />
+        <div className="lp-hero-orb lp-hero-orb-b" aria-hidden />
+        <div className="lp-thanks-mark" aria-hidden>
+          <span />
+        </div>
+        <div className="lp-hero-copy">
+          <p className="lp-kicker lp-rise">נשלח</p>
+          <h1 className="lp-hero-title lp-rise-title">קיבלנו.</h1>
+          <p className="lp-hero-lead lp-rise">
             אם וואטסאפ נפתח — שולחים משם. אם לא, חוזרים אליכם לפי הפרטים שהשארתם.
           </p>
-          <p className="lp-thanks-fallback">
+          <p className="lp-thanks-fallback lp-rise">
             <a href={href} data-source={source} target="_blank" rel="noreferrer">
               פתיחת וואטסאפ
             </a>

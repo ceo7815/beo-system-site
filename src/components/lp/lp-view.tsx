@@ -6,11 +6,25 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { TalkButton } from "@/components/layout/talk-button";
 import { LpForm } from "@/components/lp/lp-form";
+import { benefitIcon, LpIcon } from "@/components/lp/lp-icons";
 import { LpShell } from "@/components/lp/lp-shell";
-import { LpVideo } from "@/components/lp/lp-video";
+import { LpStage } from "@/components/lp/lp-stage";
 import type { LpPage } from "@/lib/lp";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
+
+function SectionHead({ kicker, title }: { kicker: string; title: string }) {
+  return (
+    <header className="lp-section-head">
+      <p data-lp className="lp-kicker">
+        {kicker}
+      </p>
+      <h2 data-lp className="lp-section-title">
+        {title}
+      </h2>
+    </header>
+  );
+}
 
 export function LpView({ page }: { page: LpPage }) {
   const root = useRef<HTMLDivElement>(null);
@@ -23,12 +37,12 @@ export function LpView({ page }: { page: LpPage }) {
         const items = block.querySelectorAll("[data-lp]");
         if (!items.length) return;
         gsap.from(items, {
-          y: 28,
+          y: 36,
           opacity: 0,
-          duration: 0.8,
-          stagger: 0.06,
+          duration: 0.9,
+          stagger: 0.07,
           ease: "power3.out",
-          scrollTrigger: { trigger: block, start: "top 78%" },
+          scrollTrigger: { trigger: block, start: "top 80%" },
         });
       });
     },
@@ -38,88 +52,68 @@ export function LpView({ page }: { page: LpPage }) {
   return (
     <LpShell source={page.path} waText={`${page.waIntro}\nדף: ${page.path}`}>
       <div ref={root}>
-        <section className="relative mx-auto flex min-h-[100svh] max-w-4xl flex-col items-center justify-center px-5 pb-16 pt-36 text-center md:px-10 md:pb-24 md:pt-44">
-          <div className="about-type">
-            <p className="about-type-kicker">{page.kicker}</p>
-            <h1 className="about-type-title">{page.title}</h1>
-            <p className="about-type-cta">{page.line}</p>
-            <p className="about-type-p">{page.lead}</p>
-            {page.audiences ? (
-              <ul className="lp-audiences">
-                {page.audiences.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            ) : null}
-            <div className="about-type-action">
-              <TalkButton href="#lp-lead" className="hud-talk-film" label={page.cta} />
+        <section className="lp-hero">
+          <div className="lp-hero-orb" aria-hidden />
+          <div className="lp-hero-orb lp-hero-orb-b" aria-hidden />
+          <div className="lp-hero-grid">
+            <div className="lp-hero-copy">
+              <p className="lp-kicker lp-rise">{page.kicker}</p>
+              <h1 className="lp-hero-title lp-rise-title">{page.title}</h1>
+              <p className="lp-hero-line lp-rise">{page.line}</p>
+              <p className="lp-hero-lead lp-rise">{page.lead}</p>
+              {page.audiences ? (
+                <ul className="lp-audiences lp-rise">
+                  {page.audiences.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              ) : null}
+              <div className="lp-hero-cta lp-rise">
+                <TalkButton href="#lp-lead" className="hud-talk-film" label={page.cta} />
+              </div>
+            </div>
+            <div className="lp-hero-stage lp-rise">
+              <LpStage page={page} />
             </div>
           </div>
         </section>
 
-        {page.video ? <LpVideo src={page.video.src} poster={page.video.poster} /> : null}
-
-        <section className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28" data-lp-block>
-          <p data-lp className="text-[12px] tracking-[0.28em] text-brand-hot uppercase">
-            {page.benefitsKicker}
-          </p>
-          <h2
-            data-lp
-            className="mt-4 max-w-3xl text-3xl leading-tight font-semibold tracking-tight md:text-5xl"
-          >
-            {page.benefitsTitle}
-          </h2>
-          <ul className="mt-12 divide-y divide-line border-y border-line">
-            {page.benefits.map((item) => (
-              <li
-                key={item.n}
-                data-lp
-                className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 py-7 md:grid-cols-[4.5rem_minmax(0,16rem)_1fr] md:items-baseline md:py-8"
-              >
-                <span className="font-mono text-[12px] text-brand-hot">{item.n}</span>
-                <h3 className="text-xl font-medium tracking-tight md:text-2xl">{item.title}</h3>
-                <p className="col-span-2 max-w-xl text-sm leading-7 text-muted md:col-span-1 md:justify-self-end md:text-start">
-                  {item.body}
-                </p>
+        <section className="lp-section" data-lp-block>
+          <SectionHead kicker={page.benefitsKicker} title={page.benefitsTitle} />
+          <ul className="lp-benefits">
+            {page.benefits.map((item, index) => (
+              <li key={item.n} data-lp className="lp-benefit">
+                <span className="lp-benefit-icon">
+                  <LpIcon name={benefitIcon(page.id, index)} />
+                </span>
+                <span className="lp-benefit-n">{item.n}</span>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
               </li>
             ))}
           </ul>
         </section>
 
-        <section className="mx-auto max-w-6xl px-5 pb-20 md:px-8 md:pb-28" data-lp-block>
-          <p data-lp className="text-[12px] tracking-[0.28em] text-brand-hot uppercase">
-            {page.stepsKicker}
-          </p>
-          <h2
-            data-lp
-            className="mt-4 max-w-3xl text-3xl leading-tight font-semibold tracking-tight md:text-5xl"
-          >
-            {page.stepsTitle}
-          </h2>
-          <ol className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-line bg-line md:grid-cols-4">
+        <section className="lp-section" data-lp-block>
+          <SectionHead kicker={page.stepsKicker} title={page.stepsTitle} />
+          <ol className="lp-timeline">
             {page.steps.map((item) => (
-              <li key={item.n} data-lp className="bg-bg p-6 md:min-h-[240px] md:p-7">
-                <span className="font-mono text-[12px] text-brand-hot">{item.n}</span>
-                <h3 className="mt-6 text-xl font-medium">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-muted">{item.body}</p>
+              <li key={item.n} data-lp className="lp-step">
+                <span className="lp-step-index">{item.n}</span>
+                <div className="lp-step-body">
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
+                </div>
               </li>
             ))}
           </ol>
         </section>
 
-        <section className="lp-faq mx-auto max-w-6xl px-5 pb-8 md:px-8" data-lp-block>
-          <p data-lp className="text-[12px] tracking-[0.28em] text-brand-hot uppercase">
-            {page.faqKicker}
-          </p>
-          <h2
-            data-lp
-            className="mt-4 max-w-3xl text-3xl leading-tight font-semibold tracking-tight md:text-5xl"
-          >
-            {page.faqTitle}
-          </h2>
-          <div data-lp className="mt-8 border-t border-line">
+        <section className="lp-section lp-section-faq" data-lp-block>
+          <SectionHead kicker={page.faqKicker} title={page.faqTitle} />
+          <div className="lp-faq" data-lp>
             {page.faq.map((item) => (
-              <details key={item.q}>
+              <details key={item.q} className="lp-faq-item">
                 <summary>{item.q}</summary>
                 <p>{item.a}</p>
               </details>
