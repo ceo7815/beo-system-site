@@ -52,7 +52,7 @@ export function LpView({ page }: { page: LpPage }) {
   return (
     <LpShell source={page.path} waText={`${page.waIntro}\nדף: ${page.path}`}>
       <div ref={root}>
-        <section className="lp-hero">
+        <section className="lp-hero" data-page={page.id}>
           <div className="lp-hero-orb" aria-hidden />
           <div className="lp-hero-orb lp-hero-orb-b" aria-hidden />
           <div className="lp-hero-grid">
