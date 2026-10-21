@@ -44,7 +44,12 @@ export function GaAnalytics() {
       } catch {
         /* keep the raw href */
       }
-      trackEvent(kind, { page_path: currentPagePath(), link_url });
+      const source = anchor.getAttribute("data-source");
+      trackEvent(kind, {
+        page_path: currentPagePath(),
+        link_url,
+        ...(source ? { source } : {}),
+      });
     }
 
     document.addEventListener("click", onClick, true);
