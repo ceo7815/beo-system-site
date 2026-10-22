@@ -43,6 +43,12 @@ export function AboutContent() {
           <nav className="about-type-links">
             <Link href="/projects" prefetch={false}>{t.projectsTitle}</Link>
             <Link href="/blog">{t.blogTitle}</Link>
+            <Link href="/blog/whatsapp-ai-agent" prefetch={false}>
+              {lang === "he" ? "בוט לוואטסאפ לעסק" : "WhatsApp bot for business"}
+            </Link>
+            <Link href="/blog/ai-automation-start" prefetch={false}>
+              {lang === "he" ? "אוטומציה לעסק" : "Business automation"}
+            </Link>
           </nav>
         </div>
       </div>

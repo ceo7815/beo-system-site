@@ -16,6 +16,14 @@ Services in short:
 - Business automation: connects the website, WhatsApp and CRM so repeat work runs on its own; start with one process. https://beosystem.com/blog/ai-automation-start
 - Custom AI agents: agents that act inside business systems: read data, write to the CRM, open tasks, hand off to a person. https://beosystem.com/blog/ai-agents
 
+השירותים בקצרה (עברית):
+- בוט לוואטסאפ: עונה ללקוח בוואטסאפ מיד, שואל כמה שאלות, מסנן פניות ומעביר לאדם. https://beosystem.com/blog/whatsapp-ai-agent
+- סוכן AI טלפוני: עונה לשיחה, עונה על שאלות בסיסיות וקובע תור. מעביר לאדם כשצריך, והפרטים נשמרים במערכת. https://beosystem.com/blog/voice-ai-phone-agent
+- מערכת ניהול לידים ופניות: מקום אחד לפניות מהאתר, מוואטסאפ, מהטלפון ומקמפיינים. לכל פנייה יש אחראי, סטטוס ותזכורת. https://beosystem.com/blog/inquiry-management
+- אוטומציה לעסק: מחברת בין האתר, הוואטסאפ וה־CRM, כך שעבודה שחוזרת רצה לבד. מתחילים מתהליך אחד. https://beosystem.com/blog/ai-automation-start
+- סוכני AI בהתאמה: סוכנים שפועלים בתוך המערכות של העסק: קוראים נתונים, כותבים ל־CRM, פותחים משימות ומעבירים לאדם. https://beosystem.com/blog/ai-agents
+- איך אנחנו עובדים: מתחילים מתהליך אחד, בונים גרסה ראשונה, בודקים על פניות אמיתיות, ורק אז מרחיבים.
+
 Articles: https://beosystem.com/blog — e.g. Building a business website that brings leads: https://beosystem.com/blog/business-website · AI agent or custom system cost: https://beosystem.com/blog/ai-agent-custom-system-cost · AI sales follow-up across phone + WhatsApp: https://beosystem.com/blog/sales-follow-up-phone-whatsapp · AI appointment scheduling: https://beosystem.com/blog/ai-appointment-scheduling · Landing page or inquiry system: https://beosystem.com/blog/landing-vs-inquiry-system
 
 More articles:
