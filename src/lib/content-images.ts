@@ -16,6 +16,7 @@ export const contentImageSize = {
   "/blog/site-crm-whatsapp-automation.webp": { width: 1600, height: 900 },
   "/blog/voice-ai-phone-agent.webp": { width: 1600, height: 900 },
   "/blog/whatsapp-ai-agent.webp": { width: 1600, height: 900 },
+  "/blog/whatsapp-marketing-automation.webp": { width: 1600, height: 900 },
 } as const;
 
 export type ContentImageSrc = keyof typeof contentImageSize;

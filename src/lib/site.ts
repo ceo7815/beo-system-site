@@ -32,11 +32,11 @@ export const site = {
 export const aboutAffiliationFaq = {
   he: {
     q: "האם ביו סיסטם קשורה ל־BEO Software?",
-    a: "לא. BEO Software (beo-software.de) היא חברת תוכנה למכס ולוגיסטיקה בגרמניה. ביו סיסטם (Beo System) היא חברת פיתוח אפליקציות, אתרים ומערכות AI מקריית ביאליק ודובאי.",
+    a: "לא. BEO Software (beo-software.de) היא חברת תוכנה למכס ולוגיסטיקה בגרמניה. ביו סיסטם (Beo System) היא חברה ישראלית מקריית ביאליק ודובאי, שבונה סוכני AI, בוטים לוואטסאפ ואוטומציה לעסקים.",
   },
   en: {
     q: "Is Beo System affiliated with BEO Software?",
-    a: "No. BEO Software (beo-software.de) is a customs and logistics software company in Germany. Beo System (ביו סיסטם) is an apps, websites, and AI systems development company from Kiryat Bialik and Dubai.",
+    a: "No. BEO Software (beo-software.de) is a customs and logistics software company in Germany. Beo System (ביו סיסטם) is an Israeli company from Kiryat Bialik and Dubai that builds AI agents, WhatsApp bots and business automation.",
   },
 } as const;
 

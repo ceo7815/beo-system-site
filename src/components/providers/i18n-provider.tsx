@@ -65,6 +65,9 @@ const copy = {
     aboutKicker: "מי אנחנו",
     aboutTitle: "Beo System",
     aboutParas: [
+      "מי: ביו סיסטם (Beo System) היא חברה ישראלית לפיתוח אתרים, אפליקציות ומערכות AI, מקריית ביאליק ודובאי.",
+      "מה: סוכני AI, בוטים לוואטסאפ, סוכן AI טלפוני, מערכות לניהול לידים ואוטומציה לעסקים.",
+      "איך: מתחילים מתהליך אחד, בודקים על פניות אמיתיות, ורק אז מרחיבים.",
       "ביו סיסטם (ביוסיסטם, Beo System) היא חברת פיתוח אפליקציות, אתרים ומערכות AI — מערכות חכמות, אוטומציות וסוכנים שמחברים טכנולוגיה לצרכים האמיתיים של העסק.",
       "אנחנו לא מאמינים בפתרונות מדף. כל מערכת מתחילה בהבנת העסק, התהליכים והיעדים — ומשם אנחנו מתכננים ובונים פתרון מדויק שעובד עבורכם, חוסך זמן ומאפשר לעסק לצמוח.",
       "ההתמחות שלנו כוללת סוכני AI, בוטים לוואטסאפ, סוכני AI טלפוניים, מערכות לניהול לידים, מערכות ניהול ו-CRM, אוטומציות עסקיות, פיתוח מערכות Web, אפליקציות, פורטלים ודשבורדים, לצד אינטגרציות וחיבורים בין המערכות שכבר קיימות בעסק.",
@@ -139,6 +142,9 @@ const copy = {
     aboutKicker: "About us",
     aboutTitle: "Beo System",
     aboutParas: [
+      "Who: Beo System (ביו סיסטם) is an Israeli website, app and AI systems development company, from Kiryat Bialik and Dubai.",
+      "What: AI agents, WhatsApp bots, an AI phone agent, lead management systems and business automation.",
+      "How: we start with one process, test it on real inquiries, and only then expand.",
       "Beo System (ביו סיסטם / ביוסיסטם) builds apps, websites, and AI systems — smart platforms, automations, and agents connected to how the business actually works.",
       "We don’t believe in off-the-shelf solutions. Every system starts with understanding the business, the processes, and the goals — then we design and build a precise solution that works for you, saves time, and lets the business grow.",
       "Our work includes AI agents, WhatsApp bots, AI phone agents, lead management systems, management and CRM systems, business automation, web systems, apps, portals and dashboards, plus integrations between the systems already in the business.",
