@@ -857,6 +857,92 @@ body[data-menu-open="1"] .social-rail {
   color: #fff;
 }
 
+.about-faq {
+  width: 100%;
+  max-width: 44rem;
+  margin-top: 4rem;
+  text-align: start;
+}
+
+.about-faq-title {
+  margin: 0 0 1.4rem;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+}
+
+.about-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin: 0;
+}
+
+.about-faq-item dt {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.about-faq-item dd {
+  margin: 0.35rem 0 0;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #d8d0e4;
+}
+
+.about-faq-cta {
+  margin-top: 2.4rem;
+  text-align: center;
+}
+
+.about-faq-cta p {
+  margin: 0 0 1rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.about-faq-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.about-faq-buttons a {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border: 1px solid var(--brand-hot);
+  border-radius: 999px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.about-faq-buttons a:first-child {
+  background: var(--brand-hot);
+}
+
+.about-faq-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem 1.2rem;
+  margin-top: 1.8rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.about-faq-links a {
+  color: var(--brand-hot);
+}
+
+.about-faq-links a:hover,
+.about-faq-buttons a:hover {
+  opacity: 0.85;
+}
+
 .film-talk {
   display: flex;
   width: 100%;

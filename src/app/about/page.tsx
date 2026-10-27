@@ -6,9 +6,9 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { aboutFaqJsonLd, breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "מי אנחנו — ביו סיסטם",
+  title: "ביו סיסטם – סוכני AI, וואטסאפ ואוטומציה לעסקים",
   description:
-    "ביו סיסטם (ביוסיסטם) — חברת פיתוח אפליקציות, אתרים ומערכות AI. ישראל (קריית ביאליק) ודובאי.",
+    "ביו סיסטם (Beo System) היא חברה ישראלית שבונה סוכני AI, בוטים לוואטסאפ וניהול לידים לעסקים. קריית ביאליק ודובאי. דברו איתנו בוואטסאפ.",
   path: "/about",
 });
 

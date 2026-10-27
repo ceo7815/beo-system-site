@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { absUrl, aboutAffiliationFaq, services, site } from "@/lib/site";
+import { absUrl, aboutAffiliationFaq, aboutFaq, services, site } from "@/lib/site";
 import { posts, type BlogBlock, type BlogPost } from "@/lib/blog";
 
 export const ogSize = { width: 1200, height: 630 } as const;
@@ -280,10 +280,7 @@ export function brandFaqJsonLd() {
 }
 
 export function aboutFaqJsonLd() {
-  return faqPageJsonLd(`${site.url}/about#faq`, "he", [
-    ...brandFaq,
-    aboutAffiliationFaq.he,
-  ]);
+  return faqPageJsonLd(`${site.url}/about#faq`, "he", [...aboutFaq.he]);
 }
 
 function isFaqHeading(text: string) {

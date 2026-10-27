@@ -40,6 +40,64 @@ export const aboutAffiliationFaq = {
   },
 } as const;
 
+/** Visible FAQ on /about (lead-intent questions). Also used for FAQPage JSON-LD. */
+export const aboutFaq = {
+  he: [
+    {
+      q: "מה ביו סיסטם עושה לעסקים?",
+      a: "ביו סיסטם בונה סוכני AI, בוטים לוואטסאפ, סוכן AI טלפוני, מערכות לניהול לידים ואוטומציה לעסקים. המערכת מחוברת לכלים שכבר יש בעסק.",
+    },
+    {
+      q: "איך מתחילים לעבוד עם ביו סיסטם?",
+      a: "שולחים הודעה בוואטסאפ או ממלאים את טופס יצירת הקשר. בשיחה קצרה בוחרים תהליך אחד, ואז מקבלים הצעה לגרסה ראשונה.",
+    },
+    {
+      q: "כמה עולה מערכת או סוכן AI?",
+      a: "המחיר תלוי בתהליך, בערוצים ובחיבורים למערכות. אחרי שיחה קצרה אנחנו נותנים הצעה כתובה. בבלוג יש מאמר שמסביר ממה המחיר מורכב.",
+    },
+    {
+      q: "למי זה מתאים?",
+      a: "לעסק שמקבל פניות בוואטסאפ, בטלפון או מהאתר, ורוצה שאף ליד לא ילך לאיבוד. גם לעסק שעושה עבודה ידנית שחוזרת כל יום.",
+    },
+    {
+      q: "איפה ביו סיסטם יושבת ובאילו שפות אתם עובדים?",
+      a: "בישראל (החרושת 10, קריית ביאליק) ובדובאי (Business Bay). עובדים בעברית ובאנגלית.",
+    },
+    {
+      q: "מה ההבדל בין צ׳אטבוט לסוכן AI?",
+      a: "צ׳אט עונה. סוכן פועל: קורא נתונים, כותב למערכת, פותח משימה, ומעביר לאדם כשצריך.",
+    },
+    aboutAffiliationFaq.he,
+  ],
+  en: [
+    {
+      q: "What does Beo System do for businesses?",
+      a: "Beo System builds AI agents, WhatsApp bots, an AI phone agent, lead management systems and business automation. The system connects to the tools the business already uses.",
+    },
+    {
+      q: "How do we start working with Beo System?",
+      a: "Send a WhatsApp message or fill in the contact form. In a short call we pick one process, and then you get a proposal for a first version.",
+    },
+    {
+      q: "How much does a system or AI agent cost?",
+      a: "The price depends on the process, the channels and the system integrations. After a short call we send a written proposal. Our blog has an article on what the price is made of.",
+    },
+    {
+      q: "Who is it for?",
+      a: "For a business that gets inquiries on WhatsApp, by phone or from the website, and wants no lead to get lost. Also for a business with manual work that repeats every day.",
+    },
+    {
+      q: "Where is Beo System based, and which languages do you work in?",
+      a: "Israel (10 HaHaroshet, Kiryat Bialik) and Dubai (Business Bay). We work in Hebrew and English.",
+    },
+    {
+      q: "What is the difference between a chatbot and an AI agent?",
+      a: "A chatbot answers. An agent acts: it reads data, writes to the system, opens a task, and hands over to a person when needed.",
+    },
+    aboutAffiliationFaq.en,
+  ],
+} as const;
+
 export const nav = [
   { href: "/", id: "home" },
   { href: "/about", id: "about" },
