@@ -2,6 +2,7 @@
 export const contentImageSize = {
   "/blog/agents.webp": { width: 1536, height: 1024 },
   "/blog/ai-agent-custom-system-cost.webp": { width: 1600, height: 900 },
+  "/blog/ai-agent-for-business.webp": { width: 1600, height: 900 },
   "/blog/ai-automation-start.webp": { width: 1536, height: 1024 },
   "/blog/ai-lead-agent.webp": { width: 1536, height: 1024 },
   "/blog/apps-ai.webp": { width: 1536, height: 1024 },
