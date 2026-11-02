@@ -181,6 +181,12 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>("he");
 
   useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const fromQuery = params.get("lang");
+    if (fromQuery === "en" || fromQuery === "he") {
+      setLangState(fromQuery);
+      return;
+    }
     const saved = window.localStorage.getItem("beo-lang");
     if (saved === "en" || saved === "he") setLangState(saved);
   }, []);
