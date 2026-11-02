@@ -41,7 +41,17 @@ export function AboutContent() {
         <div className="about-type">
           <p className="about-type-kicker">{t.aboutKicker}</p>
           <h1 className="about-type-title">{t.aboutTitle}</h1>
-          {t.aboutParas.map((text) => (
+          <section className="about-brief" aria-labelledby="about-brief-title">
+            <h2 id="about-brief-title" className="about-brief-title">
+              {he ? "בקצרה" : "In short"}
+            </h2>
+            {t.aboutParas.slice(0, 3).map((text) => (
+              <p key={text.slice(0, 40)} className="about-type-p">
+                {text}
+              </p>
+            ))}
+          </section>
+          {t.aboutParas.slice(3).map((text) => (
             <p key={text.slice(0, 40)} className="about-type-p">
               {text}
             </p>

@@ -796,6 +796,33 @@ body[data-menu-open="1"] .social-rail {
   color: var(--brand-hot);
 }
 
+.about-brief {
+  margin: 1.25rem auto 0;
+  max-width: 40rem;
+  padding: 1.1rem 1.15rem 1.2rem;
+  border: 1px solid rgba(196, 181, 253, 0.22);
+  border-radius: 18px;
+  background: rgba(12, 8, 20, 0.55);
+  text-align: center;
+}
+
+.about-brief-title {
+  margin: 0 0 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--brand-hot);
+}
+
+.about-brief .about-type-p {
+  margin-inline: auto;
+}
+
+.about-brief .about-type-p + .about-type-p {
+  margin-top: 0.55rem;
+}
+
 .about-type-p {
   margin: 0;
   max-width: 44rem;
@@ -1136,6 +1163,8 @@ body[data-menu-open="1"] .social-rail {
 .blog-article-next a:hover {
   color: #fff;
 }
+
+
 
 .from-blog {
   position: relative;
