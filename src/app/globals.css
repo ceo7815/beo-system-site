@@ -1165,6 +1165,48 @@ body[data-menu-open="1"] .social-rail {
 }
 
 
+.beo-brief {
+  position: relative;
+  z-index: 2;
+  padding: 2.5rem 1.25rem 1.5rem;
+  background: #06040a;
+}
+
+@media (min-width: 768px) {
+  .beo-brief {
+    padding: 3rem 2rem 2rem;
+  }
+}
+
+.beo-brief-shell {
+  margin-inline: auto;
+  max-width: 42rem;
+  padding: 1.25rem 1.35rem 1.4rem;
+  border: 1px solid rgba(196, 181, 253, 0.2);
+  border-radius: 20px;
+  background: rgba(12, 8, 20, 0.72);
+  text-align: center;
+}
+
+.beo-brief-title {
+  margin: 0 0 1rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--brand-hot);
+}
+
+.beo-brief-line {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--fg);
+}
+
+.beo-brief-line + .beo-brief-line {
+  margin-top: 0.65rem;
+}
 
 .from-blog {
   position: relative;

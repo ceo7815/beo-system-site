@@ -2,6 +2,7 @@ import { ScrollFilm } from "@/components/film/scroll-film";
 import { SmoothScroll } from "@/components/providers/smooth-scroll";
 import { Contact } from "@/components/sections/contact";
 import { FromTheBlog } from "@/components/sections/from-the-blog";
+import { WhoWhatHow } from "@/components/sections/who-what-how";
 import { JsonLd } from "@/components/seo/json-ld";
 import { brandFaqJsonLd, pageMetadata, seo } from "@/lib/seo";
 
@@ -21,6 +22,7 @@ export default function Home() {
           ביו סיסטם — פיתוח אפליקציות, אתרים ובינה מלאכותית
         </h1>
         <ScrollFilm />
+        <WhoWhatHow />
         <FromTheBlog />
         <Contact />
       </main>
