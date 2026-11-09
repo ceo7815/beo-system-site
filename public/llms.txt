@@ -22,11 +22,13 @@ Services in short:
 - מערכת ניהול לידים ופניות: מקום אחד לפניות מהאתר, מוואטסאפ, מהטלפון ומקמפיינים. לכל פנייה יש אחראי, סטטוס ותזכורת. https://beosystem.com/blog/inquiry-management
 - אוטומציה לעסק: מחברת בין האתר, הוואטסאפ וה־CRM, כך שעבודה שחוזרת רצה לבד. מתחילים מתהליך אחד. https://beosystem.com/blog/ai-automation-start
 - סוכני AI בהתאמה: סוכנים שפועלים בתוך המערכות של העסק: קוראים נתונים, כותבים ל־CRM, פותחים משימות ומעבירים לאדם. https://beosystem.com/blog/ai-agents
+- פורטל לקוחות לעסק: אזור אישי לסטטוס, מסמכים ובקשות. https://beosystem.com/blog/customer-portal
 - איך אנחנו עובדים: מתחילים מתהליך אחד, בונים גרסה ראשונה, בודקים על פניות אמיתיות, ורק אז מרחיבים.
 
 Articles: https://beosystem.com/blog — e.g. Building a business website that brings leads: https://beosystem.com/blog/business-website · AI agent or custom system cost: https://beosystem.com/blog/ai-agent-custom-system-cost · AI sales follow-up across phone + WhatsApp: https://beosystem.com/blog/sales-follow-up-phone-whatsapp · AI appointment scheduling: https://beosystem.com/blog/ai-appointment-scheduling · Landing page or inquiry system: https://beosystem.com/blog/landing-vs-inquiry-system
 
 More articles:
+- Customer portal for business (private area for status, documents, requests): https://beosystem.com/blog/customer-portal
 - Personal WhatsApp agent for business (what it is, vs bot, what to check): https://beosystem.com/blog/whatsapp-personal-agent
 - AI agent for business (what it does, when you need one, what to check): https://beosystem.com/blog/ai-agent-for-business
 - WhatsApp marketing software for business (what is allowed, what to check): https://beosystem.com/blog/whatsapp-marketing-automation
