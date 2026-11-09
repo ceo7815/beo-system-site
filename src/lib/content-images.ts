@@ -8,6 +8,7 @@ export const contentImageSize = {
   "/blog/apps-ai.webp": { width: 1536, height: 1024 },
   "/blog/chatbot-vs-agent.webp": { width: 1600, height: 900 },
   "/blog/crm-custom-fit.webp": { width: 1600, height: 900 },
+  "/blog/customer-portal.webp": { width: 1600, height: 900 },
   "/blog/custom.webp": { width: 1536, height: 1024 },
   "/blog/inquiry-management.webp": { width: 1600, height: 900 },
   "/blog/landing-vs-inquiry-system.webp": { width: 1600, height: 900 },
