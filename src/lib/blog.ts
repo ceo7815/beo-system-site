@@ -3062,7 +3062,7 @@ export const posts: BlogPost[] = [
     body: {
       he: [
         { type: "p", text: "לקוח קיים כותב בוואטסאפ על תקלה. אחר מתקשר. שלישי ממלא טופס. אם אין מקום אחד לכל הפניות, חלק נשכחות." },
-        { type: "p", text: "המדריך מסביר איך לנהל פניות שירות: מה צריך במערכת, איפה AI עוזר, ומאיפה מתחילים. בלי מחירים מומצאים." },
+        { type: "p", text: "המדריך מסביר איך לנהל פניות שירות: מה צריך במערכת, איפה AI עוזר, ומאיפה מתחילים." },
         { type: "h2", text: "בקצרה" },
         { type: "p", text: "ניהול פניות שירות = מקום אחד לכל פנייה של לקוח קיים. לכל פנייה יש סטטוס, אחראי וזמן מענה. AI יכול לענות על שאלות חוזרות ולפתוח פנייה לבד." },
         { type: "h2", text: "מי, מה ואיך" },
@@ -3112,7 +3112,7 @@ export const posts: BlogPost[] = [
       ],
       en: [
         { type: "p", text: "An existing customer writes on WhatsApp about a problem. Another calls. A third fills a form. Without one place for all of them, some get lost." },
-        { type: "p", text: "This guide explains how to manage service inquiries: what the system needs, where AI helps, and where to start. No invented prices." },
+        { type: "p", text: "This guide explains how to manage service inquiries: what the system needs, where AI helps, and where to start." },
         { type: "h2", text: "In short" },
         { type: "p", text: "Service inquiry management = one place for every request from an existing customer, each with a status, an owner and a reply time. AI can answer repeat questions and open a request on its own." },
         { type: "h2", text: "Who, what, how" },
@@ -3181,7 +3181,7 @@ export const posts: BlogPost[] = [
     body: {
       he: [
         { type: "p", text: "ליד נכנס בוואטסאפ, השני בטופס באתר, השלישי בשיחה שלא נענתה. מישהו רושם באקסל, מישהו אחר זוכר בראש, ובסוף השבוע אף אחד לא יודע בדיוק מי חזר למי. זה הרגע שבו רוב בעלי העסקים הקטנים מתחילים לחפש CRM לעסקים קטנים." },
-        { type: "p", text: "הבעיה היא שהשוק מלא במערכות, וכל אחת מבטיחה לעשות הכול. המדריך הזה עוזר לבחור לפי מה שהעסק שלכם צריך בפועל — בלי רשימת פיצ׳רים אינסופית ובלי מחירים מומצאים." },
+        { type: "p", text: "הבעיה היא שהשוק מלא במערכות, וכל אחת מבטיחה לעשות הכול. המדריך הזה עוזר לבחור לפי מה שהעסק שלכם צריך בפועל — בלי רשימת פיצ׳רים אינסופית." },
         { type: "h2", text: "בקצרה" },
         { type: "p", text: "מי: עסק קטן (בעלים ועוד כמה עובדים) שמקבל פניות מכמה ערוצים ומאבד מעקב." },
         { type: "p", text: "מה: CRM לעסק קטן = מקום אחד לכל ליד ולקוח, עם סטטוס, אחראי ותזכורת לצעד הבא." },
@@ -3255,7 +3255,7 @@ export const posts: BlogPost[] = [
       ],
       en: [
         { type: "p", text: "One lead arrives on WhatsApp, another through a website form, a third from a call that nobody answered. Someone logs it in a spreadsheet, someone else keeps it in their head, and by the end of the week nobody is sure who followed up with whom. That is usually when small-business owners start looking for a CRM for small businesses." },
-        { type: "p", text: "The market is full of systems, and each one promises to do everything. This guide helps you choose by what your business actually needs — without an endless feature list and without invented prices." },
+        { type: "p", text: "The market is full of systems, and each one promises to do everything. This guide helps you choose by what your business actually needs — without an endless feature list." },
         { type: "h2", text: "In short" },
         { type: "p", text: "Who: a small business (an owner and a few teammates) that receives inquiries from several channels and loses track of them." },
         { type: "p", text: "What: a CRM for a small business = one place for every lead and customer, with a status, an owner, and a reminder for the next step." },
