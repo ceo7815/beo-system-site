@@ -39,6 +39,8 @@ More articles:
 - Site, CRM and WhatsApp automation in one sprint: https://beosystem.com/blog/site-crm-whatsapp-automation
 - No-answer lead follow-up (SMS and WhatsApp): https://beosystem.com/blog/no-answer-lead-follow-up
 - Custom CRM: when spreadsheets and WhatsApp are not enough: https://beosystem.com/blog/crm-custom-fit
+- CRM for small businesses (how to choose, what to check): https://beosystem.com/blog/crm-small-business
+- Customer service inquiry management (status, owner and reply for every request): https://beosystem.com/blog/customer-service-inquiries
 - Custom development: https://beosystem.com/blog/custom-development
 - App or website for a business, built for production: https://beosystem.com/blog/digital-products
 - Apps, websites and AI from one company: https://beosystem.com/blog/apps-websites-ai
