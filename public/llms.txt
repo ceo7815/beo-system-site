@@ -3,6 +3,8 @@
 Beo System (ביו סיסטם, ביוסיסטם) is a software company. We build mobile apps, websites, and AI systems — agents, chatbots, automations, and CRM — for businesses in Israel and Dubai.
 
 Site: https://beosystem.com
+About: https://beosystem.com/about
+Projects (apps, websites and AI systems we built): https://beosystem.com/projects
 Email: ceo@beosystem.co.il
 Israel: 10 HaHaroshet, Kiryat Bialik
 Dubai: Business Bay
