@@ -30,6 +30,7 @@ Services in short:
 Articles: https://beosystem.com/blog — e.g. Building a business website that brings leads: https://beosystem.com/blog/business-website · AI agent or custom system cost: https://beosystem.com/blog/ai-agent-custom-system-cost · AI sales follow-up across phone + WhatsApp: https://beosystem.com/blog/sales-follow-up-phone-whatsapp · AI appointment scheduling: https://beosystem.com/blog/ai-appointment-scheduling · Landing page or inquiry system: https://beosystem.com/blog/landing-vs-inquiry-system
 
 More articles:
+- AI agent to human handoff (when to transfer a conversation, what context must pass): https://beosystem.com/blog/ai-agent-human-handoff
 - Customer portal for business (private area for status, documents, requests): https://beosystem.com/blog/customer-portal
 - Personal WhatsApp agent for business (what it is, vs bot, what to check): https://beosystem.com/blog/whatsapp-personal-agent
 - AI agent for business (what it does, when you need one, what to check): https://beosystem.com/blog/ai-agent-for-business
