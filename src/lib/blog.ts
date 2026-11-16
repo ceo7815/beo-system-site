@@ -439,6 +439,7 @@ export const posts: BlogPost[] = [
     slug: "ai-agent-for-business",
     n: "22",
     date: "2026-10-28",
+    updated: "2026-11-16",
     minutes: 7,
     image: "/blog/ai-agent-for-business.webp",
     imageAlt: {
@@ -450,10 +451,10 @@ export const posts: BlogPost[] = [
       en: "AI agent for business — what it does, when you need one, and what to check",
     },
     seoTitle: {
-      he: "סוכן AI לעסק — מה לבדוק לפני שבוחרים",
+      he: "סוכן AI לעסק — מענה, סינון והעברה לנציג",
     },
     excerpt: {
-      he: "סוכן AI לעסק: מה הוא עושה ביום הראשון, באילו תהליכים הוא חוסך זמן, ומה לבדוק לפני שבוחרים כלי או ספק. בדקו איתנו בוואטסאפ.",
+      he: "סוכן AI לעסק: עונה לפנייה, מסנן, כותב למערכת ומעביר לנציג כשצריך. מה לבדוק לפני שבוחרים. כתבו לנו בוואטסאפ.",
       en: "AI agent for business: what it does on day one, which processes it saves time on, and what to check before you choose a tool or vendor.",
     },
     body: {
@@ -573,6 +574,7 @@ export const posts: BlogPost[] = [
     slug: "whatsapp-marketing-automation",
     n: "21",
     date: "2026-10-26",
+    updated: "2026-11-16",
     minutes: 7,
     image: "/blog/whatsapp-marketing-automation.webp",
     imageAlt: {
@@ -584,7 +586,7 @@ export const posts: BlogPost[] = [
       en: "WhatsApp marketing software for business — what is allowed and what to check",
     },
     seoTitle: {
-      he: "תוכנה לשיווק בוואטסאפ לעסק — מה לבדוק",
+      he: "תוכנה לשיווק בוואטסאפ — מה מותר לשלוח ומה לבדוק",
     },
     excerpt: {
       he: "תוכנה לשיווק בוואטסאפ לעסק: מה מותר לשלוח, 5 תהליכים לאוטמט קודם, ומה לבדוק לפני שבוחרים כלי או ספק. בדקו איתנו בוואטסאפ.",
@@ -2081,7 +2083,7 @@ export const posts: BlogPost[] = [
     slug: "site-crm-whatsapp-automation",
     n: "11",
     date: "2026-09-23",
-    updated: "2026-11-09",
+    updated: "2026-11-16",
     minutes: 6,
     image: "/blog/site-crm-whatsapp-automation.webp",
     imageAlt: {
@@ -2093,7 +2095,7 @@ export const posts: BlogPost[] = [
       en: "Website–CRM–WhatsApp automation — a narrow sprint on one process",
     },
     seoTitle: {
-      he: "חיבור טופס באתר ל־CRM ולוואטסאפ — אוטומציה בתהליך אחד",
+      he: "חיבור טופס באתר ל־CRM ולוואטסאפ",
     },
     excerpt: {
       he: "חיבור טופס באתר ל־CRM ולוואטסאפ בתהליך אחד: סטטוס, אחראי ומענה — בלי להעתיק ידנית. מה לבדוק לפני שמתחילים.",
