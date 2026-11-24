@@ -6,6 +6,10 @@ import { LOGO_FOOTER_SIZES } from "@/lib/logo-mark";
 import { site } from "@/lib/site";
 import { useI18n } from "@/components/providers/i18n-provider";
 
+/** Exact legal entity line for Meta Business verification. Hebrew on every page, including English. */
+const LEGAL_ENTITY_LINE =
+  'ב.א.א פתרונות דיגיטל מתקדמים בע"מ | ח.פ. 516846284 | חרושת 2, קריית ביאליק 2751019';
+
 export function Footer() {
   const { lang, t } = useI18n();
 
@@ -26,6 +30,9 @@ export function Footer() {
           height={88}
         />
       </Link>
+      <p className="site-footer-legal" dir="rtl">
+        {LEGAL_ENTITY_LINE}
+      </p>
     </footer>
   );
 }
