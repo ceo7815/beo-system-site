@@ -76,7 +76,7 @@ const copy = {
     ],
     aboutCta: "יש לכם תהליך שאפשר לייעל או רעיון למערכת? בואו נהפוך אותו לפתרון שעובד.",
     aboutPlaces: [
-      "ישראל: החרושת 10, קריית ביאליק",
+      "ישראל: חרושת 2, קריית ביאליק",
       "דובאי: Business Bay, Dubai",
     ],
     blogKicker: "יומן",
@@ -153,7 +153,7 @@ const copy = {
     ],
     aboutCta: "Have a process to streamline, or an idea for a system? Let’s turn it into something that works.",
     aboutPlaces: [
-      "Israel: 10 HaHaroshet, Kiryat Bialik",
+      "Israel: Haroshet 2, Kiryat Bialik",
       "Dubai: Business Bay, Dubai",
     ],
     blogKicker: "Journal",

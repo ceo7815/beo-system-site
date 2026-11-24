@@ -14,7 +14,7 @@ export const legal = {
         },
         {
           type: "p",
-          text: "Beo System (ביו סיסטם) היא חברת פיתוח תוכנה ובינה מלאכותית, עם פעילות בישראל (החרושת 10, קריית ביאליק) ובדובאי (Business Bay). ליצירת קשר: ceo@beosystem.co.il.",
+          text: "Beo System (ביו סיסטם) היא חברת פיתוח תוכנה ובינה מלאכותית, עם פעילות בישראל (חרושת 2, קריית ביאליק) ובדובאי (Business Bay). ליצירת קשר: ceo@beosystem.co.il.",
         },
         {
           type: "h2",
@@ -69,7 +69,7 @@ export const legal = {
         },
         {
           type: "p",
-          text: "Beo System is a software and AI company, with activity in Israel (10 HaHaroshet, Kiryat Bialik) and Dubai (Business Bay). Contact: ceo@beosystem.co.il.",
+          text: "Beo System is a software and AI company, with activity in Israel (Haroshet 2, Kiryat Bialik) and Dubai (Business Bay). Contact: ceo@beosystem.co.il.",
         },
         {
           type: "h2",
@@ -191,7 +191,7 @@ export const legal = {
         },
         {
           type: "p",
-          text: "רכז הנגישות: Beo System. דוא\"ל: ceo@beosystem.co.il. טלפון: +33 6 32 51 90 53. כתובת: החרושת 10, קריית ביאליק; וכן Business Bay, Dubai. פנייה תאושר תוך שני ימי עסקים. חסם נגישות יתוקן תוך 14 ימי עסקים, או יימסר לוח זמנים מנומק אם נדרש תיקון מערכתי. בפנייה ציינו: כתובת העמוד, הדפדפן, הטכנולוגיה המסייעת אם יש, ותיאור החסם.",
+          text: "רכז הנגישות: Beo System. דוא\"ל: ceo@beosystem.co.il. טלפון: +33 6 32 51 90 53. כתובת: חרושת 2, קריית ביאליק; וכן Business Bay, Dubai. פנייה תאושר תוך שני ימי עסקים. חסם נגישות יתוקן תוך 14 ימי עסקים, או יימסר לוח זמנים מנומק אם נדרש תיקון מערכתי. בפנייה ציינו: כתובת העמוד, הדפדפן, הטכנולוגיה המסייעת אם יש, ותיאור החסם.",
         },
         {
           type: "h2",
@@ -286,7 +286,7 @@ export const legal = {
         },
         {
           type: "p",
-          text: "Coordinator: Beo System. Email: ceo@beosystem.co.il. Phone: +33 6 32 51 90 53. Address: 10 HaHaroshet, Kiryat Bialik; and Business Bay, Dubai. An inquiry will be acknowledged within two business days. An accessibility barrier will be fixed within 14 business days, or a reasoned timeline will be given if a systemic fix is required. Please include: page URL, browser, assistive technology if any, and a description of the barrier.",
+          text: "Coordinator: Beo System. Email: ceo@beosystem.co.il. Phone: +33 6 32 51 90 53. Address: Haroshet 2, Kiryat Bialik; and Business Bay, Dubai. An inquiry will be acknowledged within two business days. An accessibility barrier will be fixed within 14 business days, or a reasoned timeline will be given if a systemic fix is required. Please include: page URL, browser, assistive technology if any, and a description of the barrier.",
         },
         {
           type: "h2",

@@ -150,16 +150,18 @@ export function organizationGraph() {
           "@type": "Place",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "החרושת 10",
+            streetAddress: "חרושת 2",
             addressLocality: "קריית ביאליק",
+            postalCode: "2751019",
             addressCountry: "IL",
           },
         },
         address: [
           {
             "@type": "PostalAddress",
-            streetAddress: "החרושת 10",
+            streetAddress: "חרושת 2",
             addressLocality: "קריית ביאליק",
+            postalCode: "2751019",
             addressCountry: "IL",
           },
           {
@@ -253,7 +255,7 @@ const brandFaq = [
   },
   {
     q: "איפה ביו סיסטם יושבת?",
-    a: "ישראל: החרושת 10, קריית ביאליק. דובאי: Business Bay.",
+    a: "ישראל: חרושת 2, קריית ביאליק. דובאי: Business Bay.",
   },
 ] as const;
 

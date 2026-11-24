@@ -11,9 +11,9 @@ export const site = {
   domain: "beosystem.com",
   places: [
     {
-      he: "ישראל: החרושת 10, קריית ביאליק",
-      en: "Israel: 10 HaHaroshet, Kiryat Bialik",
-      maps: "https://maps.google.com/?q=HaHaroshet+10+Kiryat+Bialik",
+      he: "ישראל: חרושת 2, קריית ביאליק",
+      en: "Israel: Haroshet 2, Kiryat Bialik",
+      maps: "https://maps.google.com/?q=Haroshet+2+Kiryat+Bialik",
     },
     {
       he: "דובאי: Business Bay, Dubai",
@@ -61,7 +61,7 @@ export const aboutFaq = {
     },
     {
       q: "איפה ביו סיסטם יושבת ובאילו שפות אתם עובדים?",
-      a: "בישראל (החרושת 10, קריית ביאליק) ובדובאי (Business Bay). עובדים בעברית ובאנגלית.",
+      a: "בישראל (חרושת 2, קריית ביאליק) ובדובאי (Business Bay). עובדים בעברית ובאנגלית.",
     },
     {
       q: "מה ההבדל בין צ׳אטבוט לסוכן AI?",
@@ -88,7 +88,7 @@ export const aboutFaq = {
     },
     {
       q: "Where is Beo System based, and which languages do you work in?",
-      a: "Israel (10 HaHaroshet, Kiryat Bialik) and Dubai (Business Bay). We work in Hebrew and English.",
+      a: "Israel (Haroshet 2, Kiryat Bialik) and Dubai (Business Bay). We work in Hebrew and English.",
     },
     {
       q: "What is the difference between a chatbot and an AI agent?",

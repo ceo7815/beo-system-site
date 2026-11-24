@@ -6,7 +6,7 @@ Site: https://beosystem.com
 About: https://beosystem.com/about
 Projects (apps, websites and AI systems we built): https://beosystem.com/projects
 Email: ceo@beosystem.co.il
-Israel: 10 HaHaroshet, Kiryat Bialik
+Israel: Haroshet 2, Kiryat Bialik
 Dubai: Business Bay
 
 Services: custom software, AI agents, chatbots, automation, CRM, mobile apps, websites.
